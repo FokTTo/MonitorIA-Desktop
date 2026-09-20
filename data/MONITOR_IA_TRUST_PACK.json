@@ -1,0 +1,488 @@
+{
+  "schema_version": 4,
+  "doc_id": "MONITOR_IA_TRUST_PACK",
+  "title": "Monitor IA",
+  "subtitle": "Trust Pack — evidência paper com fees + caminho até capital real",
+  "locale": "pt-BR",
+  "as_of": "2026-09-18",
+  "snapshot_source": "VPS · v_bot_l_fee_gate / v_bot_l_1h_fee_gate",
+  "disclaimer_short": "Resultados passados em PAPER (simulação com custos de corretagem). Não são garantia de retorno futuro. Risco de perda total do capital. A curva composta por trade NÃO é o saldo da conta. Senhas do app Desktop são criptografadas (bcrypt) — a operação não tem acesso à senha em texto claro.",
+  "brand": {
+    "product": "Monitor IA",
+    "tagline": "Trading sistemático com medição honesta dos resultados — incluindo custos — antes de pensar em capital real.",
+    "contact_email": "giovanni.fochesatto@gmail.com",
+    "contact_note": "Resposta em horário comercial (UTC−3). Call de 20 min para rever números ao vivo."
+  },
+  "page1_intro": "O Monitor IA não vende «promessa de lucro». Vende um processo: medir de verdade, mudar uma coisa de cada vez, só avançar quando os números e a segurança permitem. Este pack mostra a evidência (paper + fees), o que entra no produto, o que fica de fora — e como um cliente começa com segurança.",
+  "trust_pillars": [
+    {
+      "title": "Medição com custos reais (fees)",
+      "body": "Fees são as comissões da corretora em cada compra e venda. Muitos relatórios mostram lucro «bruto» e escondem esse custo. No Monitor IA o filtro de qualidade (gate) só aceita trades já com fees. Assim o Profit Factor e a expectancy medem o que sobra de verdade — não um lucro maquiado."
+    },
+    {
+      "title": "Uma mudança de cada vez",
+      "body": "Se alterarmos entrada, saída e filtros no mesmo mês, ninguém sabe o que ajudou ou atrapalhou. A regra é: uma mudança por ciclo, medir, só então decidir manter ou reverter. Isso protege o usuário de «otimismo de laboratório»."
+    },
+    {
+      "title": "Walk-forward e kill switch",
+      "body": "Walk-forward parte o histórico em treinar no passado e validar no período seguinte — várias vezes — antes de capital sério. Kill switch (freio de emergência) corta novas entradas se o dia ou a sequência de perdas passar limites. Segurança operacional, não marketing."
+    },
+    {
+      "title": "Separação paper / live",
+      "body": "Paper = simulação. Live = dinheiro real. O livro oficial do robô principal (BOT_L) fica isolado. Shadows e torneio são experiências em paralelo: servem para testar ideias, mas não misturam números com o produto que vai a capital real."
+    },
+    {
+      "title": "Infraestrutura always-on",
+      "body": "O sistema corre em servidor 24/7 (VPS), com monitoramento, heartbeat e backups. Objetivo: menos falhas por PC desligado, internet instável ou processo parado no meio de um trade."
+    },
+    {
+      "title": "Senhas criptografadas (sem acesso em texto claro)",
+      "body": "No app Desktop, cada conta guarda a senha apenas como hash bcrypt (irreversível). Nem o administrador consegue ler a senha de um utilizador — só é possível repor uma senha nova. O email identifica a conta; o segredo nunca fica em aberto no sistema."
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Fees (custos / comissões)",
+      "meaning": "O que a corretora cobra em cada operação. Ignorar fees infla o resultado. Aqui os números já vêm descontados."
+    },
+    {
+      "term": "Gate (porta de qualidade)",
+      "meaning": "Regras mínimas para dizer que o robô está maduro o bastante para avançar: amostra grande de trades, resultado médio positivo e Profit Factor acima de 1."
+    },
+    {
+      "term": "Profit Factor",
+      "meaning": "Soma dos lucros ÷ soma das perdas. Acima de 1,0 = no conjunto ganhou mais do que perdeu. Ex.: 1.28 ≈ US$ 1.28 ganho para cada US$ 1 perdido (em paper, com fees)."
+    },
+    {
+      "term": "Expectancy (expectativa por trade)",
+      "meaning": "Resultado médio de um trade, em % do valor operado (notional). Ex.: +0.0448% por operação. Não é a rentabilidade mensal da conta inteira."
+    },
+    {
+      "term": "Taxa de acerto (win rate)",
+      "meaning": "Percentual de trades que fecharam no lucro. Sozinha não prova qualidade: importa também o tamanho dos ganhos vs perdas."
+    },
+    {
+      "term": "Notional (valor operado)",
+      "meaning": "Quanto de capital está de fato na operação aberta. A expectancy é medida sobre esse valor — não automaticamente sobre todo o saldo da conta."
+    },
+    {
+      "term": "Drawdown",
+      "meaning": "Queda da curva a partir de um pico anterior até o fundo seguinte. Meses «médios» positivos podem esconder esses buracos — por isso a projeção guarda reserva para drawdown."
+    },
+    {
+      "term": "Slippage",
+      "meaning": "Diferença entre o preço esperado e o preço real de execução. Em live costuma ser um pouco pior que em paper."
+    },
+    {
+      "term": "Walk-forward",
+      "meaning": "Teste que valida a estratégia em pedaços futuros do histórico, não só no trecho em que foi «ajustada»."
+    },
+    {
+      "term": "Kill switch (freio de emergência)",
+      "meaning": "Trava automática: se o dia correr muito mal ou vier uma sequência longa de perdas, o sistema para de abrir trades novos."
+    },
+    {
+      "term": "Hash bcrypt (senha)",
+      "meaning": "Forma de guardar a senha transformada por um algoritmo de mão única. Serve para verificar se a senha está correta no login, mas não permite descobrir a senha original — inclusive para o administrador."
+    },
+    {
+      "term": "Shadows e torneio",
+      "meaning": "Robôs-sombra e experiências paralelas. Medem ideias novas sem misturar com o resultado oficial do robô principal."
+    },
+    {
+      "term": "Paper → micro-live → real",
+      "meaning": "Paper = simulação. Micro-live = pouco capital real com freios. Real = capital de verdade. O usuário decide ligar."
+    }
+  ],
+  "governance_timeline": [
+    {
+      "date": "2026-05",
+      "event": "BOT_L em paper com fees — início da amostra oficial"
+    },
+    {
+      "date": "2026-06",
+      "event": "Cenário D: bloqueio long em tendência MTF bearish (uma mudança por ciclo)"
+    },
+    {
+      "date": "2026-07",
+      "event": "Paper lane #2 (BOT_L_1H) em paralelo — sem misturar com live do 5m"
+    },
+    {
+      "date": "2026-08",
+      "event": "Gate fee-gate >1000 trades · Trust Pack com evidência mensal e drawdown"
+    },
+    {
+      "date": "2026-09",
+      "event": "Gate fee-gate ~1106 trades · PF 1.35 · Trust Pack atualizado 2026-09-04"
+    },
+    {
+      "date": "próximo",
+      "event": "Walk-forward 2 (~19/set) + checklist humano antes de qualquer micro-live"
+    }
+  ],
+  "robots": [
+    {
+      "id": "BOT_L",
+      "name": "BOT_L · BTC LONG 5m",
+      "role": "Robô principal — candidato a operar com capital real (depois dos testes)",
+      "status": "Em paper (simulação na corretora de teste / conta paper)",
+      "period_start": "2026-05-22",
+      "period_end": "2026-09-18",
+      "trades": 1234,
+      "trades_strategy_view": 1215,
+      "trades_30d": 247,
+      "trades_90d": 952,
+      "profit_factor": 1.28,
+      "win_rate_pct": 53.97,
+      "expectancy_pct_per_trade": 0.0448,
+      "avg_win_pct": 0.3596,
+      "avg_loss_pct": -0.3244,
+      "worst_trade_pct": -1.3473,
+      "best_trade_pct": 2.4548,
+      "max_drawdown_pct": 9.37,
+      "cumulative_compound_return_pct": 72.04,
+      "cumulative_note": "Índice composto reinvestindo o retorno de cada trade no notional — NÃO é o lucro da conta com capital parado.",
+      "windows": {
+        "rolling_30d": {
+          "trades": 247,
+          "profit_factor": 0.99,
+          "win_rate_pct": 46.15,
+          "expectancy_pct_per_trade": -0.0114
+        },
+        "rolling_90d": {
+          "trades": 952,
+          "profit_factor": 1.36,
+          "win_rate_pct": 55.36,
+          "expectancy_pct_per_trade": 0.0502
+        },
+        "last_30_trades": {
+          "trades": 30,
+          "profit_factor": 2.26,
+          "win_rate_pct": 53.33,
+          "expectancy_pct_per_trade": 0.0474
+        },
+        "last_90_trades": {
+          "trades": 90,
+          "profit_factor": 0.95,
+          "win_rate_pct": 45.56,
+          "expectancy_pct_per_trade": -0.0272
+        }
+      },
+      "monthly": [
+        {
+          "month": "2026-05",
+          "trades": 72,
+          "profit_factor": 1.78,
+          "win_rate_pct": 58.33,
+          "expectancy_pct_per_trade": 0.0828
+        },
+        {
+          "month": "2026-06",
+          "trades": 352,
+          "profit_factor": 1.06,
+          "win_rate_pct": 50.85,
+          "expectancy_pct_per_trade": 0.0293
+        },
+        {
+          "month": "2026-07",
+          "trades": 369,
+          "profit_factor": 1.41,
+          "win_rate_pct": 57.45,
+          "expectancy_pct_per_trade": 0.0653
+        },
+        {
+          "month": "2026-08",
+          "trades": 269,
+          "profit_factor": 1.74,
+          "win_rate_pct": 58.36,
+          "expectancy_pct_per_trade": 0.0726
+        },
+        {
+          "month": "2026-09",
+          "trades": 172,
+          "profit_factor": 0.87,
+          "win_rate_pct": 44.19,
+          "expectancy_pct_per_trade": -0.0272
+        }
+      ],
+      "buy_hold_btc": {
+        "price_start": 75355.65,
+        "price_end": 78399.99,
+        "return_pct": 4.04,
+        "note": "Proxy buy&hold no mesmo período (1.º preço de entrada → último preço de saída dos trades fee-gate)."
+      },
+      "equity_curve_sample": [
+        {
+          "i": 1,
+          "equity": 1.0017
+        },
+        {
+          "i": 113,
+          "equity": 0.983
+        },
+        {
+          "i": 225,
+          "equity": 1.0757
+        },
+        {
+          "i": 337,
+          "equity": 1.1305
+        },
+        {
+          "i": 449,
+          "equity": 1.216
+        },
+        {
+          "i": 561,
+          "equity": 1.3563
+        },
+        {
+          "i": 674,
+          "equity": 1.4095
+        },
+        {
+          "i": 786,
+          "equity": 1.5026
+        },
+        {
+          "i": 898,
+          "equity": 1.6627
+        },
+        {
+          "i": 1010,
+          "equity": 1.8267
+        },
+        {
+          "i": 1122,
+          "equity": 1.7901
+        },
+        {
+          "i": 1234,
+          "equity": 1.7204
+        }
+      ],
+      "notes": [
+        "Todos os números com fees. Vista strategy (exclusões): 1215 trades · PF 1.26 · exp +0.0441%.",
+        "Últimos 30 trades: PF 2.26 · exp +0.0474%. Calendário 30d: PF 0.99.",
+        "Max drawdown do índice composto ≈ 9.4% — meses positivos não eliminam buracos no caminho."
+      ],
+      "profit_factor_strategy": 1.26
+    },
+    {
+      "id": "BOT_L_1H",
+      "name": "BOT_L_1H · BTC LONG 1H",
+      "role": "Segundo robô em paper (1 hora) — NÃO opera live no mesmo mês que o BOT_L",
+      "status": "Paper — mantido para diversificar horizonte temporal",
+      "period_start": "2026-07-13",
+      "period_end": "2026-09-18",
+      "trades": 498,
+      "trades_strategy_view": null,
+      "trades_30d": 213,
+      "trades_90d": 498,
+      "profit_factor": 1.24,
+      "win_rate_pct": 52.01,
+      "expectancy_pct_per_trade": 0.0111,
+      "avg_win_pct": 0.2763,
+      "avg_loss_pct": -0.2762,
+      "worst_trade_pct": -0.769,
+      "best_trade_pct": 0.6282,
+      "max_drawdown_pct": 10.85,
+      "cumulative_compound_return_pct": 5.46,
+      "cumulative_note": "Índice composto por trade (notional) — não é saldo da conta.",
+      "windows": {
+        "rolling_30d": {
+          "trades": 213,
+          "profit_factor": 0.85,
+          "win_rate_pct": 43.66,
+          "expectancy_pct_per_trade": -0.0318
+        },
+        "rolling_90d": {
+          "trades": 498,
+          "profit_factor": 1.24,
+          "win_rate_pct": 52.01,
+          "expectancy_pct_per_trade": 0.0111
+        },
+        "last_30_trades": {
+          "trades": 30,
+          "profit_factor": 2.06,
+          "win_rate_pct": 63.33,
+          "expectancy_pct_per_trade": 0.0893
+        },
+        "last_90_trades": {
+          "trades": 90,
+          "profit_factor": 0.88,
+          "win_rate_pct": 47.78,
+          "expectancy_pct_per_trade": 0.0039
+        }
+      },
+      "monthly": [
+        {
+          "month": "2026-07",
+          "trades": 135,
+          "profit_factor": 1.12,
+          "win_rate_pct": 53.33,
+          "expectancy_pct_per_trade": 0.0046
+        },
+        {
+          "month": "2026-08",
+          "trades": 248,
+          "profit_factor": 1.51,
+          "win_rate_pct": 54.84,
+          "expectancy_pct_per_trade": 0.0273
+        },
+        {
+          "month": "2026-09",
+          "trades": 115,
+          "profit_factor": 0.86,
+          "win_rate_pct": 44.35,
+          "expectancy_pct_per_trade": -0.016
+        }
+      ],
+      "buy_hold_btc": {
+        "price_start": 62533.82,
+        "price_end": 81030.15,
+        "return_pct": 29.58,
+        "note": "No período do 1H compara processo vs mercado com cautela (não é buy&hold)."
+      },
+      "equity_curve_sample": [
+        {
+          "i": 1,
+          "equity": 0.9965
+        },
+        {
+          "i": 46,
+          "equity": 1.0211
+        },
+        {
+          "i": 91,
+          "equity": 1.0008
+        },
+        {
+          "i": 137,
+          "equity": 1.0069
+        },
+        {
+          "i": 182,
+          "equity": 1.0311
+        },
+        {
+          "i": 227,
+          "equity": 1.0748
+        },
+        {
+          "i": 272,
+          "equity": 1.1155
+        },
+        {
+          "i": 317,
+          "equity": 1.1398
+        },
+        {
+          "i": 362,
+          "equity": 1.0896
+        },
+        {
+          "i": 408,
+          "equity": 1.0513
+        },
+        {
+          "i": 453,
+          "equity": 1.0294
+        },
+        {
+          "i": 498,
+          "equity": 1.0546
+        }
+      ],
+      "notes": [
+        "Amostra menor e período mais curto que o 5m (início jul/2026).",
+        "Política: não ligar 5m e 1H em capital real no mesmo mês de início."
+      ]
+    }
+  ],
+  "honest_failures": [
+    "Robôs-sombra (ETH e clones) que falham o filtro de fees / expectancy negativa não entram no produto live — ficam só no laboratório.",
+    "Junho/2026 no BOT_L foi o mês mais fraco (PF ≈ 1,06): ainda positivo, mas mostra que não é «todo mês igual».",
+    "Os últimos 30 trades do BOT_L (exp +0.0474%, PF 2.26) podem divergir dos 30 dias de calendário (PF 0.99) — variância de curto prazo é real; por isso usamos amostra grande e walk-forward.",
+    "Paper ≠ live: slippage, latência e mudança de regime podem piorar o resultado real."
+  ],
+  "monthly_projection": {
+    "method": "illustrative_notional_adjusted",
+    "explanation": "Como ler a tabela: partimos do resultado médio por trade em paper, ajustamos para a conta notional (slippage + capital efetivamente em uso + reserva para drawdown) e multiplicamos pelos trades estimados no mês. Continua ilustrativo — não é promessa.",
+    "exclusions_explained": "Estes três efeitos entram na conta notional: (1) Slippage live — desconto por trade. (2) Capital parado — só uma fração do capital conta como valor operado. (3) Drawdowns — reserva da projeção mensal para períodos ruins.",
+    "base_robot_id": "BOT_L",
+    "trades_per_month_est": 316,
+    "trades_per_month_note": "Estimativa ≈ 1234 trades ÷ cerca de 3.9 meses de histórico (2026-05–2026-09).",
+    "notional_adjustments": {
+      "slippage_pct_per_trade": 0.01,
+      "slippage_note": "Desconto fixo por trade vs paper (preço real um pouco pior).",
+      "capital_utilization": 0.35,
+      "capital_utilization_note": "Só ~35% do capital da conta conta como notional médio em uso.",
+      "drawdown_reserve": 0.25,
+      "drawdown_reserve_note": "Mostramos 75% da projeção mensal já ajustada — 25% fica como colchão para drawdowns.",
+      "aggressive_utilization": 1.0,
+      "prudent_utilization": 0.1
+    },
+    "scenarios": {
+      "conservador": {
+        "label": "Conservador",
+        "detail": "Usa só metade da média histórica — para imaginar um mês mais fraco que o passado.",
+        "expectancy_mult": 0.5
+      },
+      "base": {
+        "label": "Base",
+        "detail": "Usa a média paper medida, já com os ajustes de notional abaixo.",
+        "expectancy_mult": 1.0
+      },
+      "otimista": {
+        "label": "Otimista",
+        "detail": "Usa 20% acima da média — mês melhor que o histórico; não é o cenário planejado.",
+        "expectancy_mult": 1.2
+      }
+    },
+    "capitals_usd": [
+      100,
+      500,
+      1000,
+      5000,
+      10000,
+      50000,
+      100000
+    ]
+  },
+  "what_you_get": [
+    "Operação paper/monitoramento 24/7 em VPS com heartbeat e backups.",
+    "Métricas com fees (gate) — sem maquiagem de lucro bruto.",
+    "Kill switch e regras de uma mudança por ciclo.",
+    "App Desktop com login: senha só em hash bcrypt (irrecuperável em texto claro).",
+    "Perfil ADM vê capital agregado; perfil USER vê só o seu aporte e lucro proporcional.",
+    "Relatórios periódicos (gate, saúde, weekly) e revisão humana antes de micro-live.",
+    "Onboarding por fases: paper → micro-live → escala (você decide ligar)."
+  ],
+  "client_phases": [
+    {
+      "name": "1 · Paper / evidência",
+      "body": "Acompanhar o robô principal em simulação com fees. Sem capital real. Entender drawdown e variância."
+    },
+    {
+      "name": "2 · Micro-live",
+      "body": "Pouco capital real, freios ligados, checklist humano. Validar execução (slippage/latência) antes de escalar."
+    },
+    {
+      "name": "3 · Escala",
+      "body": "Só depois de walk-forward e estabilidade. Aumento gradual — nunca «all-in» no primeiro mês live."
+    }
+  ],
+  "cta": {
+    "headline": "Próximo passo",
+    "body": "Agende uma call de 20 minutos para rever estes números ao vivo (gate, curva, mês a mês) e ver se o Monitor IA faz sentido para o seu perfil de risco.",
+    "action": "Escreva para o contacto abaixo com o assunto: Trust Pack — call 20 min."
+  },
+  "what_we_do_not_claim": [
+    "Não prometemos rentabilidade fixa mensal.",
+    "Robôs experimentais com mau resultado após fees não entram no produto live.",
+    "Passado em paper ≠ futuro em corretora real (slippage, latência, mudança de mercado).",
+    "O início com capital real começa pequeno e só após checklist humano.",
+    "A curva composta por trade não é o retorno da conta com capital parado."
+  ]
+}
