@@ -1,8 +1,8 @@
 {
-  "schema_version": 2,
-  "generated_at": "2026-09-20T23:33:11",
-  "git_sha": "303bad5",
-  "source": "PUBLIC",
+  "schema_version": 3,
+  "generated_at": "2026-09-20T23:52:20",
+  "git_sha": "2423a9e",
+  "source": "VPS",
   "read_only": true,
   "primary": {
     "portfolio_id": "BOT_L",
@@ -1574,6 +1574,1719 @@
       }
     ]
   },
+  "qa_book": {
+    "label": "QA · motor + KEEP (desde 22/mai)",
+    "initial_usd_per_sleeve": 500.0,
+    "position_fraction": 0.33,
+    "primary_profit_usd": 102.98,
+    "paper2_profit_usd": 57.1,
+    "keep_profit_usd": 83.86,
+    "combined_profit_usd": 243.94,
+    "keep_lanes": [
+      {
+        "portfolio_id": "BOT_L_5M_E3",
+        "ex_op": false,
+        "excluded_ops_total": 0,
+        "capital_model": {
+          "initial_usd": 500.0,
+          "position_fraction": 0.33,
+          "final_usd": 525.78,
+          "profit_usd": 25.78
+        },
+        "periods": {
+          "daily": {
+            "label": "Hoje",
+            "since": "2026-09-20T00:00:00",
+            "trades": 20,
+            "wins": 12,
+            "losses": 8,
+            "win_rate_pct": 60.0,
+            "pnl_usd": 1.48,
+            "profit_factor": 1.41,
+            "avg_pnl_usd": 0.07,
+            "expectancy_pct": 0.043
+          },
+          "weekly": {
+            "label": "Semana (seg—hoje)",
+            "since": "2026-09-14T00:00:00",
+            "trades": 154,
+            "wins": 100,
+            "losses": 54,
+            "win_rate_pct": 64.9,
+            "pnl_usd": 25.78,
+            "profit_factor": 2.0,
+            "avg_pnl_usd": 0.17,
+            "expectancy_pct": 0.099
+          },
+          "monthly": {
+            "label": "Mês atual",
+            "since": "2026-09-01T00:00:00",
+            "trades": 154,
+            "wins": 100,
+            "losses": 54,
+            "win_rate_pct": 64.9,
+            "pnl_usd": 25.78,
+            "profit_factor": 2.0,
+            "avg_pnl_usd": 0.17,
+            "expectancy_pct": 0.099
+          },
+          "annual": {
+            "label": "Anual (2026 · desde 22/mai fee-era)",
+            "since": "2026-05-22T00:00:00",
+            "trades": 154,
+            "wins": 100,
+            "losses": 54,
+            "win_rate_pct": 64.9,
+            "pnl_usd": 25.78,
+            "profit_factor": 2.0,
+            "avg_pnl_usd": 0.17,
+            "expectancy_pct": 0.099
+          }
+        },
+        "recent_trades": [
+          {
+            "closed_at": "2026-09-20T23:40:17",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.11,
+            "pnl_pct": 0.064,
+            "notional_usd": 173.47,
+            "position_id": 154
+          },
+          {
+            "closed_at": "2026-09-20T22:09:48",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.68,
+            "pnl_pct": 0.391,
+            "notional_usd": 173.25,
+            "position_id": 153
+          },
+          {
+            "closed_at": "2026-09-20T21:03:09",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.77,
+            "pnl_pct": -0.443,
+            "notional_usd": 173.5,
+            "position_id": 152
+          },
+          {
+            "closed_at": "2026-09-20T19:58:43",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.2,
+            "pnl_pct": -0.114,
+            "notional_usd": 173.57,
+            "position_id": 151
+          },
+          {
+            "closed_at": "2026-09-20T18:28:12",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.53,
+            "pnl_pct": 0.308,
+            "notional_usd": 173.39,
+            "position_id": 150
+          },
+          {
+            "closed_at": "2026-09-20T18:06:41",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.57,
+            "pnl_pct": -0.326,
+            "notional_usd": 173.58,
+            "position_id": 149
+          },
+          {
+            "closed_at": "2026-09-20T16:37:11",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.54,
+            "pnl_pct": 0.314,
+            "notional_usd": 173.4,
+            "position_id": 148
+          },
+          {
+            "closed_at": "2026-09-20T16:11:36",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.63,
+            "pnl_pct": 0.362,
+            "notional_usd": 173.19,
+            "position_id": 147
+          },
+          {
+            "closed_at": "2026-09-20T15:02:24",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.56,
+            "pnl_pct": 0.326,
+            "notional_usd": 173.0,
+            "position_id": 146
+          },
+          {
+            "closed_at": "2026-09-20T14:49:01",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.55,
+            "pnl_pct": 0.318,
+            "notional_usd": 172.82,
+            "position_id": 145
+          },
+          {
+            "closed_at": "2026-09-20T14:18:22",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.6,
+            "pnl_pct": -0.345,
+            "notional_usd": 173.02,
+            "position_id": 144
+          },
+          {
+            "closed_at": "2026-09-20T14:03:58",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.59,
+            "pnl_pct": 0.344,
+            "notional_usd": 172.82,
+            "position_id": 143
+          },
+          {
+            "closed_at": "2026-09-20T13:25:13",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.09,
+            "pnl_pct": 0.055,
+            "notional_usd": 172.79,
+            "position_id": 142
+          },
+          {
+            "closed_at": "2026-09-20T11:54:41",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.56,
+            "pnl_pct": 0.322,
+            "notional_usd": 172.61,
+            "position_id": 141
+          },
+          {
+            "closed_at": "2026-09-20T11:18:56",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.31,
+            "pnl_pct": -0.177,
+            "notional_usd": 172.71,
+            "position_id": 140
+          },
+          {
+            "closed_at": "2026-09-20T09:48:27",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.18,
+            "pnl_pct": 0.104,
+            "notional_usd": 172.65,
+            "position_id": 139
+          },
+          {
+            "closed_at": "2026-09-20T08:17:57",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.09,
+            "pnl_pct": 0.049,
+            "notional_usd": 172.62,
+            "position_id": 138
+          },
+          {
+            "closed_at": "2026-09-20T06:42:21",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.54,
+            "pnl_pct": -0.314,
+            "notional_usd": 172.8,
+            "position_id": 137
+          },
+          {
+            "closed_at": "2026-09-20T02:29:09",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.53,
+            "pnl_pct": -0.306,
+            "notional_usd": 172.98,
+            "position_id": 136
+          },
+          {
+            "closed_at": "2026-09-20T01:04:44",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.13,
+            "pnl_pct": -0.074,
+            "notional_usd": 173.02,
+            "position_id": 135
+          },
+          {
+            "closed_at": "2026-09-19T23:34:14",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.55,
+            "pnl_pct": 0.317,
+            "notional_usd": 172.84,
+            "position_id": 134
+          },
+          {
+            "closed_at": "2026-09-19T21:14:23",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.53,
+            "pnl_pct": -0.308,
+            "notional_usd": 173.01,
+            "position_id": 133
+          },
+          {
+            "closed_at": "2026-09-19T20:28:30",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.26,
+            "pnl_pct": -0.149,
+            "notional_usd": 173.1,
+            "position_id": 132
+          },
+          {
+            "closed_at": "2026-09-19T18:57:58",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.01,
+            "pnl_pct": -0.008,
+            "notional_usd": 173.1,
+            "position_id": 131
+          },
+          {
+            "closed_at": "2026-09-19T17:27:28",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.6,
+            "pnl_pct": -0.344,
+            "notional_usd": 173.3,
+            "position_id": 130
+          },
+          {
+            "closed_at": "2026-09-19T16:13:12",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.59,
+            "pnl_pct": 0.341,
+            "notional_usd": 173.11,
+            "position_id": 129
+          },
+          {
+            "closed_at": "2026-09-19T16:04:52",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.63,
+            "pnl_pct": -0.361,
+            "notional_usd": 173.31,
+            "position_id": 128
+          },
+          {
+            "closed_at": "2026-09-19T15:41:19",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.6,
+            "pnl_pct": 0.345,
+            "notional_usd": 173.11,
+            "position_id": 127
+          },
+          {
+            "closed_at": "2026-09-19T14:30:06",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.59,
+            "pnl_pct": 0.341,
+            "notional_usd": 172.92,
+            "position_id": 126
+          },
+          {
+            "closed_at": "2026-09-19T12:52:38",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.01,
+            "pnl_pct": -0.009,
+            "notional_usd": 172.92,
+            "position_id": 125
+          },
+          {
+            "closed_at": "2026-09-19T11:22:05",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.07,
+            "pnl_pct": 0.041,
+            "notional_usd": 172.9,
+            "position_id": 124
+          },
+          {
+            "closed_at": "2026-09-19T09:51:34",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.02,
+            "pnl_pct": -0.01,
+            "notional_usd": 172.91,
+            "position_id": 123
+          },
+          {
+            "closed_at": "2026-09-19T08:21:04",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.68,
+            "pnl_pct": 0.396,
+            "notional_usd": 172.68,
+            "position_id": 122
+          },
+          {
+            "closed_at": "2026-09-19T07:18:46",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.55,
+            "pnl_pct": 0.317,
+            "notional_usd": 172.5,
+            "position_id": 121
+          },
+          {
+            "closed_at": "2026-09-19T06:14:39",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.05,
+            "pnl_pct": 0.031,
+            "notional_usd": 172.48,
+            "position_id": 120
+          },
+          {
+            "closed_at": "2026-09-19T04:39:03",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.52,
+            "pnl_pct": -0.303,
+            "notional_usd": 172.66,
+            "position_id": 119
+          },
+          {
+            "closed_at": "2026-09-19T04:15:31",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.16,
+            "pnl_pct": -0.091,
+            "notional_usd": 172.71,
+            "position_id": 118
+          },
+          {
+            "closed_at": "2026-09-19T02:24:58",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.53,
+            "pnl_pct": 0.305,
+            "notional_usd": 172.53,
+            "position_id": 117
+          },
+          {
+            "closed_at": "2026-09-19T00:32:44",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.7,
+            "pnl_pct": 0.404,
+            "notional_usd": 172.3,
+            "position_id": 116
+          },
+          {
+            "closed_at": "2026-09-18T23:38:34",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.55,
+            "pnl_pct": -0.318,
+            "notional_usd": 172.49,
+            "position_id": 115
+          }
+        ],
+        "patch": "A.7.81-E3",
+        "verdict": "CANDIDATE_KEEP"
+      },
+      {
+        "portfolio_id": "BOT_L_5M_X2",
+        "ex_op": false,
+        "excluded_ops_total": 0,
+        "capital_model": {
+          "initial_usd": 500.0,
+          "position_fraction": 0.33,
+          "final_usd": 522.28,
+          "profit_usd": 22.28
+        },
+        "periods": {
+          "daily": {
+            "label": "Hoje",
+            "since": "2026-09-20T00:00:00",
+            "trades": 18,
+            "wins": 11,
+            "losses": 7,
+            "win_rate_pct": 61.1,
+            "pnl_usd": 1.42,
+            "profit_factor": 1.54,
+            "avg_pnl_usd": 0.08,
+            "expectancy_pct": 0.046
+          },
+          "weekly": {
+            "label": "Semana (seg—hoje)",
+            "since": "2026-09-14T00:00:00",
+            "trades": 154,
+            "wins": 95,
+            "losses": 59,
+            "win_rate_pct": 61.7,
+            "pnl_usd": 22.28,
+            "profit_factor": 1.85,
+            "avg_pnl_usd": 0.14,
+            "expectancy_pct": 0.086
+          },
+          "monthly": {
+            "label": "Mês atual",
+            "since": "2026-09-01T00:00:00",
+            "trades": 154,
+            "wins": 95,
+            "losses": 59,
+            "win_rate_pct": 61.7,
+            "pnl_usd": 22.28,
+            "profit_factor": 1.85,
+            "avg_pnl_usd": 0.14,
+            "expectancy_pct": 0.086
+          },
+          "annual": {
+            "label": "Anual (2026 · desde 22/mai fee-era)",
+            "since": "2026-05-22T00:00:00",
+            "trades": 154,
+            "wins": 95,
+            "losses": 59,
+            "win_rate_pct": 61.7,
+            "pnl_usd": 22.28,
+            "profit_factor": 1.85,
+            "avg_pnl_usd": 0.14,
+            "expectancy_pct": 0.086
+          }
+        },
+        "recent_trades": [
+          {
+            "closed_at": "2026-09-20T23:40:53",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.1,
+            "pnl_pct": 0.057,
+            "notional_usd": 172.32,
+            "position_id": 154
+          },
+          {
+            "closed_at": "2026-09-20T22:10:22",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.58,
+            "pnl_pct": 0.334,
+            "notional_usd": 172.13,
+            "position_id": 153
+          },
+          {
+            "closed_at": "2026-09-20T21:02:39",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.56,
+            "pnl_pct": -0.326,
+            "notional_usd": 172.32,
+            "position_id": 152
+          },
+          {
+            "closed_at": "2026-09-20T20:01:06",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.15,
+            "pnl_pct": -0.088,
+            "notional_usd": 172.37,
+            "position_id": 151
+          },
+          {
+            "closed_at": "2026-09-20T18:30:35",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.52,
+            "pnl_pct": 0.302,
+            "notional_usd": 172.19,
+            "position_id": 150
+          },
+          {
+            "closed_at": "2026-09-20T18:06:00",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.55,
+            "pnl_pct": -0.318,
+            "notional_usd": 172.37,
+            "position_id": 149
+          },
+          {
+            "closed_at": "2026-09-20T16:37:31",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.52,
+            "pnl_pct": 0.302,
+            "notional_usd": 172.2,
+            "position_id": 148
+          },
+          {
+            "closed_at": "2026-09-20T16:11:57",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.68,
+            "pnl_pct": 0.395,
+            "notional_usd": 171.98,
+            "position_id": 147
+          },
+          {
+            "closed_at": "2026-09-20T15:02:45",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.63,
+            "pnl_pct": 0.369,
+            "notional_usd": 171.77,
+            "position_id": 146
+          },
+          {
+            "closed_at": "2026-09-20T14:38:12",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.02,
+            "pnl_pct": 0.01,
+            "notional_usd": 171.76,
+            "position_id": 145
+          },
+          {
+            "closed_at": "2026-09-20T13:07:41",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.52,
+            "pnl_pct": 0.306,
+            "notional_usd": 171.59,
+            "position_id": 144
+          },
+          {
+            "closed_at": "2026-09-20T12:50:14",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.15,
+            "pnl_pct": 0.086,
+            "notional_usd": 171.54,
+            "position_id": 143
+          },
+          {
+            "closed_at": "2026-09-20T11:19:43",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.2,
+            "pnl_pct": -0.117,
+            "notional_usd": 171.61,
+            "position_id": 142
+          },
+          {
+            "closed_at": "2026-09-20T09:49:13",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.25,
+            "pnl_pct": 0.144,
+            "notional_usd": 171.53,
+            "position_id": 141
+          },
+          {
+            "closed_at": "2026-09-20T08:18:40",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.09,
+            "pnl_pct": 0.051,
+            "notional_usd": 171.5,
+            "position_id": 140
+          },
+          {
+            "closed_at": "2026-09-20T06:43:03",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.56,
+            "pnl_pct": -0.328,
+            "notional_usd": 171.68,
+            "position_id": 139
+          },
+          {
+            "closed_at": "2026-09-20T02:26:44",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.52,
+            "pnl_pct": -0.303,
+            "notional_usd": 171.86,
+            "position_id": 138
+          },
+          {
+            "closed_at": "2026-09-20T01:04:20",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.08,
+            "pnl_pct": -0.048,
+            "notional_usd": 171.88,
+            "position_id": 137
+          },
+          {
+            "closed_at": "2026-09-19T23:33:47",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.59,
+            "pnl_pct": 0.346,
+            "notional_usd": 171.69,
+            "position_id": 136
+          },
+          {
+            "closed_at": "2026-09-19T21:10:52",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.52,
+            "pnl_pct": -0.301,
+            "notional_usd": 171.86,
+            "position_id": 135
+          },
+          {
+            "closed_at": "2026-09-19T20:26:00",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.16,
+            "pnl_pct": -0.093,
+            "notional_usd": 171.91,
+            "position_id": 134
+          },
+          {
+            "closed_at": "2026-09-19T18:55:31",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.21,
+            "pnl_pct": -0.124,
+            "notional_usd": 171.98,
+            "position_id": 133
+          },
+          {
+            "closed_at": "2026-09-19T17:25:02",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.54,
+            "pnl_pct": -0.315,
+            "notional_usd": 172.16,
+            "position_id": 132
+          },
+          {
+            "closed_at": "2026-09-19T16:19:51",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.52,
+            "pnl_pct": 0.3,
+            "notional_usd": 171.99,
+            "position_id": 131
+          },
+          {
+            "closed_at": "2026-09-19T15:59:22",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.57,
+            "pnl_pct": -0.33,
+            "notional_usd": 172.18,
+            "position_id": 130
+          },
+          {
+            "closed_at": "2026-09-19T15:42:55",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.56,
+            "pnl_pct": 0.323,
+            "notional_usd": 171.99,
+            "position_id": 129
+          },
+          {
+            "closed_at": "2026-09-19T15:05:11",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.55,
+            "pnl_pct": 0.318,
+            "notional_usd": 171.81,
+            "position_id": 128
+          },
+          {
+            "closed_at": "2026-09-19T14:23:23",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.39,
+            "pnl_pct": 0.225,
+            "notional_usd": 171.69,
+            "position_id": 127
+          },
+          {
+            "closed_at": "2026-09-19T12:52:51",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.02,
+            "pnl_pct": -0.013,
+            "notional_usd": 171.69,
+            "position_id": 126
+          },
+          {
+            "closed_at": "2026-09-19T11:22:21",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.06,
+            "pnl_pct": 0.038,
+            "notional_usd": 171.67,
+            "position_id": 125
+          },
+          {
+            "closed_at": "2026-09-19T09:51:50",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.03,
+            "pnl_pct": 0.016,
+            "notional_usd": 171.66,
+            "position_id": 124
+          },
+          {
+            "closed_at": "2026-09-19T08:21:20",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.72,
+            "pnl_pct": 0.419,
+            "notional_usd": 171.43,
+            "position_id": 123
+          },
+          {
+            "closed_at": "2026-09-19T07:27:15",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.14,
+            "pnl_pct": 0.081,
+            "notional_usd": 171.38,
+            "position_id": 122
+          },
+          {
+            "closed_at": "2026-09-19T05:56:45",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.08,
+            "pnl_pct": -0.047,
+            "notional_usd": 171.41,
+            "position_id": 121
+          },
+          {
+            "closed_at": "2026-09-19T04:26:15",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.31,
+            "pnl_pct": -0.182,
+            "notional_usd": 171.51,
+            "position_id": 120
+          },
+          {
+            "closed_at": "2026-09-19T02:10:35",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.52,
+            "pnl_pct": 0.306,
+            "notional_usd": 171.34,
+            "position_id": 119
+          },
+          {
+            "closed_at": "2026-09-19T00:30:31",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.53,
+            "pnl_pct": 0.309,
+            "notional_usd": 171.16,
+            "position_id": 118
+          },
+          {
+            "closed_at": "2026-09-18T23:40:30",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.55,
+            "pnl_pct": -0.323,
+            "notional_usd": 171.34,
+            "position_id": 117
+          },
+          {
+            "closed_at": "2026-09-18T21:45:12",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.31,
+            "pnl_pct": 0.184,
+            "notional_usd": 171.24,
+            "position_id": 116
+          },
+          {
+            "closed_at": "2026-09-18T18:34:11",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.24,
+            "pnl_pct": 0.138,
+            "notional_usd": 171.16,
+            "position_id": 115
+          }
+        ],
+        "patch": "A.7.81-X2",
+        "verdict": "CANDIDATE_KEEP"
+      },
+      {
+        "portfolio_id": "BOT_L_5M_P6",
+        "ex_op": false,
+        "excluded_ops_total": 0,
+        "capital_model": {
+          "initial_usd": 500.0,
+          "position_fraction": 0.33,
+          "final_usd": 524.14,
+          "profit_usd": 24.14
+        },
+        "periods": {
+          "daily": {
+            "label": "Hoje",
+            "since": "2026-09-20T00:00:00",
+            "trades": 23,
+            "wins": 12,
+            "losses": 11,
+            "win_rate_pct": 52.2,
+            "pnl_usd": 2.75,
+            "profit_factor": 1.94,
+            "avg_pnl_usd": 0.12,
+            "expectancy_pct": 0.069
+          },
+          "weekly": {
+            "label": "Semana (seg—hoje)",
+            "since": "2026-09-14T00:00:00",
+            "trades": 122,
+            "wins": 75,
+            "losses": 47,
+            "win_rate_pct": 61.5,
+            "pnl_usd": 24.14,
+            "profit_factor": 2.46,
+            "avg_pnl_usd": 0.2,
+            "expectancy_pct": 0.117
+          },
+          "monthly": {
+            "label": "Mês atual",
+            "since": "2026-09-01T00:00:00",
+            "trades": 122,
+            "wins": 75,
+            "losses": 47,
+            "win_rate_pct": 61.5,
+            "pnl_usd": 24.14,
+            "profit_factor": 2.46,
+            "avg_pnl_usd": 0.2,
+            "expectancy_pct": 0.117
+          },
+          "annual": {
+            "label": "Anual (2026 · desde 22/mai fee-era)",
+            "since": "2026-05-22T00:00:00",
+            "trades": 122,
+            "wins": 75,
+            "losses": 47,
+            "win_rate_pct": 61.5,
+            "pnl_usd": 24.14,
+            "profit_factor": 2.46,
+            "avg_pnl_usd": 0.2,
+            "expectancy_pct": 0.117
+          }
+        },
+        "recent_trades": [
+          {
+            "closed_at": "2026-09-20T23:40:16",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.21,
+            "pnl_pct": 0.123,
+            "notional_usd": 172.89,
+            "position_id": 122
+          },
+          {
+            "closed_at": "2026-09-20T22:09:39",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.65,
+            "pnl_pct": 0.375,
+            "notional_usd": 172.68,
+            "position_id": 121
+          },
+          {
+            "closed_at": "2026-09-20T21:02:21",
+            "side": "LONG",
+            "exit_reason": "p6_soft_scratch",
+            "pnl_usd": -0.44,
+            "pnl_pct": -0.252,
+            "notional_usd": 172.82,
+            "position_id": 120
+          },
+          {
+            "closed_at": "2026-09-20T20:37:35",
+            "side": "LONG",
+            "exit_reason": "p6_soft_scratch",
+            "pnl_usd": -0.26,
+            "pnl_pct": -0.152,
+            "notional_usd": 172.91,
+            "position_id": 119
+          },
+          {
+            "closed_at": "2026-09-20T19:49:32",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.15,
+            "pnl_pct": 0.087,
+            "notional_usd": 172.86,
+            "position_id": 118
+          },
+          {
+            "closed_at": "2026-09-20T18:18:58",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.07,
+            "pnl_pct": -0.042,
+            "notional_usd": 172.89,
+            "position_id": 117
+          },
+          {
+            "closed_at": "2026-09-20T16:38:12",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.67,
+            "pnl_pct": 0.385,
+            "notional_usd": 172.67,
+            "position_id": 116
+          },
+          {
+            "closed_at": "2026-09-20T16:12:30",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.57,
+            "pnl_pct": 0.33,
+            "notional_usd": 172.48,
+            "position_id": 115
+          },
+          {
+            "closed_at": "2026-09-20T15:54:59",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.52,
+            "pnl_pct": 0.301,
+            "notional_usd": 172.31,
+            "position_id": 114
+          },
+          {
+            "closed_at": "2026-09-20T14:53:52",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.61,
+            "pnl_pct": 0.356,
+            "notional_usd": 172.1,
+            "position_id": 113
+          },
+          {
+            "closed_at": "2026-09-20T14:18:04",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.55,
+            "pnl_pct": -0.317,
+            "notional_usd": 172.29,
+            "position_id": 112
+          },
+          {
+            "closed_at": "2026-09-20T14:03:37",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.6,
+            "pnl_pct": 0.348,
+            "notional_usd": 172.09,
+            "position_id": 111
+          },
+          {
+            "closed_at": "2026-09-20T13:04:30",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.53,
+            "pnl_pct": 0.306,
+            "notional_usd": 171.91,
+            "position_id": 110
+          },
+          {
+            "closed_at": "2026-09-20T12:30:47",
+            "side": "LONG",
+            "exit_reason": "p6_soft_scratch",
+            "pnl_usd": -0.28,
+            "pnl_pct": -0.164,
+            "notional_usd": 172.01,
+            "position_id": 109
+          },
+          {
+            "closed_at": "2026-09-20T11:54:01",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.52,
+            "pnl_pct": 0.304,
+            "notional_usd": 171.83,
+            "position_id": 108
+          },
+          {
+            "closed_at": "2026-09-20T11:02:03",
+            "side": "LONG",
+            "exit_reason": "p6_soft_scratch",
+            "pnl_usd": -0.28,
+            "pnl_pct": -0.161,
+            "notional_usd": 171.93,
+            "position_id": 107
+          },
+          {
+            "closed_at": "2026-09-20T09:34:34",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.54,
+            "pnl_pct": 0.314,
+            "notional_usd": 171.75,
+            "position_id": 106
+          },
+          {
+            "closed_at": "2026-09-20T08:50:37",
+            "side": "LONG",
+            "exit_reason": "p6_soft_scratch",
+            "pnl_usd": -0.27,
+            "pnl_pct": -0.156,
+            "notional_usd": 171.84,
+            "position_id": 105
+          },
+          {
+            "closed_at": "2026-09-20T08:23:00",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.09,
+            "pnl_pct": 0.052,
+            "notional_usd": 171.81,
+            "position_id": 104
+          },
+          {
+            "closed_at": "2026-09-20T06:52:26",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.23,
+            "pnl_pct": -0.132,
+            "notional_usd": 171.88,
+            "position_id": 103
+          },
+          {
+            "closed_at": "2026-09-20T02:31:24",
+            "side": "LONG",
+            "exit_reason": "p6_soft_scratch",
+            "pnl_usd": -0.27,
+            "pnl_pct": -0.155,
+            "notional_usd": 171.97,
+            "position_id": 102
+          },
+          {
+            "closed_at": "2026-09-20T01:16:06",
+            "side": "LONG",
+            "exit_reason": "p6_soft_scratch",
+            "pnl_usd": -0.26,
+            "pnl_pct": -0.153,
+            "notional_usd": 172.06,
+            "position_id": 101
+          },
+          {
+            "closed_at": "2026-09-20T01:03:43",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.01,
+            "pnl_pct": -0.004,
+            "notional_usd": 172.06,
+            "position_id": 100
+          },
+          {
+            "closed_at": "2026-09-19T23:33:12",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.54,
+            "pnl_pct": 0.313,
+            "notional_usd": 171.88,
+            "position_id": 99
+          },
+          {
+            "closed_at": "2026-09-19T20:51:18",
+            "side": "LONG",
+            "exit_reason": "p6_soft_scratch",
+            "pnl_usd": -0.43,
+            "pnl_pct": -0.248,
+            "notional_usd": 172.02,
+            "position_id": 98
+          },
+          {
+            "closed_at": "2026-09-19T19:40:02",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.13,
+            "pnl_pct": -0.073,
+            "notional_usd": 172.06,
+            "position_id": 97
+          },
+          {
+            "closed_at": "2026-09-19T18:09:29",
+            "side": "LONG",
+            "exit_reason": "p6_soft_scratch",
+            "pnl_usd": -0.26,
+            "pnl_pct": -0.151,
+            "notional_usd": 172.15,
+            "position_id": 96
+          },
+          {
+            "closed_at": "2026-09-19T17:24:29",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.53,
+            "pnl_pct": -0.309,
+            "notional_usd": 172.32,
+            "position_id": 95
+          },
+          {
+            "closed_at": "2026-09-19T16:25:20",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.52,
+            "pnl_pct": 0.302,
+            "notional_usd": 172.15,
+            "position_id": 94
+          },
+          {
+            "closed_at": "2026-09-19T15:56:35",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.55,
+            "pnl_pct": -0.319,
+            "notional_usd": 172.34,
+            "position_id": 93
+          },
+          {
+            "closed_at": "2026-09-19T15:43:04",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.53,
+            "pnl_pct": 0.306,
+            "notional_usd": 172.16,
+            "position_id": 92
+          },
+          {
+            "closed_at": "2026-09-19T15:05:15",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.55,
+            "pnl_pct": 0.318,
+            "notional_usd": 171.98,
+            "position_id": 91
+          },
+          {
+            "closed_at": "2026-09-19T14:23:23",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.38,
+            "pnl_pct": 0.222,
+            "notional_usd": 171.86,
+            "position_id": 90
+          },
+          {
+            "closed_at": "2026-09-19T12:52:49",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.01,
+            "pnl_pct": -0.009,
+            "notional_usd": 171.86,
+            "position_id": 89
+          },
+          {
+            "closed_at": "2026-09-19T11:22:14",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.08,
+            "pnl_pct": 0.046,
+            "notional_usd": 171.83,
+            "position_id": 88
+          },
+          {
+            "closed_at": "2026-09-19T09:51:40",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.02,
+            "pnl_pct": -0.01,
+            "notional_usd": 171.84,
+            "position_id": 87
+          },
+          {
+            "closed_at": "2026-09-19T08:21:07",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.72,
+            "pnl_pct": 0.418,
+            "notional_usd": 171.6,
+            "position_id": 86
+          },
+          {
+            "closed_at": "2026-09-19T07:18:41",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.54,
+            "pnl_pct": 0.317,
+            "notional_usd": 171.42,
+            "position_id": 85
+          },
+          {
+            "closed_at": "2026-09-19T06:14:32",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.09,
+            "pnl_pct": 0.052,
+            "notional_usd": 171.39,
+            "position_id": 84
+          },
+          {
+            "closed_at": "2026-09-19T04:38:50",
+            "side": "LONG",
+            "exit_reason": "p6_soft_scratch",
+            "pnl_usd": -0.34,
+            "pnl_pct": -0.201,
+            "notional_usd": 171.51,
+            "position_id": 83
+          }
+        ],
+        "patch": "A.7.83-P6",
+        "verdict": "CANDIDATE_KEEP"
+      },
+      {
+        "portfolio_id": "BOT_L_5M_P7",
+        "ex_op": false,
+        "excluded_ops_total": 0,
+        "capital_model": {
+          "initial_usd": 500.0,
+          "position_fraction": 0.33,
+          "final_usd": 511.66,
+          "profit_usd": 11.66
+        },
+        "periods": {
+          "daily": {
+            "label": "Hoje",
+            "since": "2026-09-20T00:00:00",
+            "trades": 20,
+            "wins": 11,
+            "losses": 9,
+            "win_rate_pct": 55.0,
+            "pnl_usd": 1.16,
+            "profit_factor": 1.45,
+            "avg_pnl_usd": 0.06,
+            "expectancy_pct": 0.034
+          },
+          "weekly": {
+            "label": "Semana (seg—hoje)",
+            "since": "2026-09-14T00:00:00",
+            "trades": 70,
+            "wins": 45,
+            "losses": 25,
+            "win_rate_pct": 64.3,
+            "pnl_usd": 11.66,
+            "profit_factor": 2.45,
+            "avg_pnl_usd": 0.17,
+            "expectancy_pct": 0.1
+          },
+          "monthly": {
+            "label": "Mês atual",
+            "since": "2026-09-01T00:00:00",
+            "trades": 70,
+            "wins": 45,
+            "losses": 25,
+            "win_rate_pct": 64.3,
+            "pnl_usd": 11.66,
+            "profit_factor": 2.45,
+            "avg_pnl_usd": 0.17,
+            "expectancy_pct": 0.1
+          },
+          "annual": {
+            "label": "Anual (2026 · desde 22/mai fee-era)",
+            "since": "2026-05-22T00:00:00",
+            "trades": 70,
+            "wins": 45,
+            "losses": 25,
+            "win_rate_pct": 64.3,
+            "pnl_usd": 11.66,
+            "profit_factor": 2.45,
+            "avg_pnl_usd": 0.17,
+            "expectancy_pct": 0.1
+          }
+        },
+        "recent_trades": [
+          {
+            "closed_at": "2026-09-20T23:41:17",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.09,
+            "pnl_pct": 0.052,
+            "notional_usd": 168.82,
+            "position_id": 70
+          },
+          {
+            "closed_at": "2026-09-20T22:10:36",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.57,
+            "pnl_pct": 0.339,
+            "notional_usd": 168.63,
+            "position_id": 69
+          },
+          {
+            "closed_at": "2026-09-20T21:03:12",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.94,
+            "pnl_pct": -0.559,
+            "notional_usd": 168.94,
+            "position_id": 68
+          },
+          {
+            "closed_at": "2026-09-20T19:50:30",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.07,
+            "pnl_pct": 0.042,
+            "notional_usd": 168.92,
+            "position_id": 67
+          },
+          {
+            "closed_at": "2026-09-20T18:19:42",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.04,
+            "pnl_pct": 0.023,
+            "notional_usd": 168.91,
+            "position_id": 66
+          },
+          {
+            "closed_at": "2026-09-20T16:38:26",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.75,
+            "pnl_pct": 0.444,
+            "notional_usd": 168.66,
+            "position_id": 65
+          },
+          {
+            "closed_at": "2026-09-20T16:12:04",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.55,
+            "pnl_pct": 0.327,
+            "notional_usd": 168.48,
+            "position_id": 64
+          },
+          {
+            "closed_at": "2026-09-20T15:54:46",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.53,
+            "pnl_pct": 0.314,
+            "notional_usd": 168.3,
+            "position_id": 63
+          },
+          {
+            "closed_at": "2026-09-20T14:55:49",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.39,
+            "pnl_pct": 0.232,
+            "notional_usd": 168.17,
+            "position_id": 62
+          },
+          {
+            "closed_at": "2026-09-20T13:25:27",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.14,
+            "pnl_pct": 0.084,
+            "notional_usd": 168.13,
+            "position_id": 61
+          },
+          {
+            "closed_at": "2026-09-20T11:54:07",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.52,
+            "pnl_pct": 0.311,
+            "notional_usd": 167.95,
+            "position_id": 60
+          },
+          {
+            "closed_at": "2026-09-20T11:03:56",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.16,
+            "pnl_pct": -0.098,
+            "notional_usd": 168.01,
+            "position_id": 59
+          },
+          {
+            "closed_at": "2026-09-20T09:33:25",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.11,
+            "pnl_pct": 0.065,
+            "notional_usd": 167.97,
+            "position_id": 58
+          },
+          {
+            "closed_at": "2026-09-20T06:56:20",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.51,
+            "pnl_pct": -0.303,
+            "notional_usd": 168.14,
+            "position_id": 57
+          },
+          {
+            "closed_at": "2026-09-20T06:08:51",
+            "side": "LONG",
+            "exit_reason": "p7_regime_flip",
+            "pnl_usd": -0.05,
+            "pnl_pct": -0.031,
+            "notional_usd": 168.16,
+            "position_id": 56
+          },
+          {
+            "closed_at": "2026-09-20T05:55:36",
+            "side": "LONG",
+            "exit_reason": "p7_regime_flip",
+            "pnl_usd": -0.1,
+            "pnl_pct": -0.059,
+            "notional_usd": 168.19,
+            "position_id": 55
+          },
+          {
+            "closed_at": "2026-09-20T05:39:58",
+            "side": "LONG",
+            "exit_reason": "p7_regime_flip",
+            "pnl_usd": -0.1,
+            "pnl_pct": -0.059,
+            "notional_usd": 168.22,
+            "position_id": 54
+          },
+          {
+            "closed_at": "2026-09-20T05:18:25",
+            "side": "LONG",
+            "exit_reason": "p7_regime_flip",
+            "pnl_usd": -0.1,
+            "pnl_pct": -0.062,
+            "notional_usd": 168.26,
+            "position_id": 53
+          },
+          {
+            "closed_at": "2026-09-20T02:27:09",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.51,
+            "pnl_pct": -0.303,
+            "notional_usd": 168.43,
+            "position_id": 52
+          },
+          {
+            "closed_at": "2026-09-20T01:04:39",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.12,
+            "pnl_pct": -0.07,
+            "notional_usd": 168.47,
+            "position_id": 51
+          },
+          {
+            "closed_at": "2026-09-19T23:34:10",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.53,
+            "pnl_pct": 0.317,
+            "notional_usd": 168.29,
+            "position_id": 50
+          },
+          {
+            "closed_at": "2026-09-19T20:57:58",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.52,
+            "pnl_pct": -0.307,
+            "notional_usd": 168.46,
+            "position_id": 49
+          },
+          {
+            "closed_at": "2026-09-19T19:53:22",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.19,
+            "pnl_pct": -0.111,
+            "notional_usd": 168.52,
+            "position_id": 48
+          },
+          {
+            "closed_at": "2026-09-19T18:12:31",
+            "side": "LONG",
+            "exit_reason": "p7_regime_flip",
+            "pnl_usd": -0.13,
+            "pnl_pct": -0.079,
+            "notional_usd": 168.57,
+            "position_id": 47
+          },
+          {
+            "closed_at": "2026-09-19T17:27:41",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.58,
+            "pnl_pct": -0.344,
+            "notional_usd": 168.76,
+            "position_id": 46
+          },
+          {
+            "closed_at": "2026-09-19T17:12:36",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.08,
+            "pnl_pct": 0.046,
+            "notional_usd": 168.73,
+            "position_id": 45
+          },
+          {
+            "closed_at": "2026-09-19T15:41:48",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.57,
+            "pnl_pct": 0.34,
+            "notional_usd": 168.54,
+            "position_id": 44
+          },
+          {
+            "closed_at": "2026-09-19T14:30:14",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.57,
+            "pnl_pct": 0.341,
+            "notional_usd": 168.35,
+            "position_id": 43
+          },
+          {
+            "closed_at": "2026-09-19T12:52:46",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.01,
+            "pnl_pct": -0.009,
+            "notional_usd": 168.36,
+            "position_id": 42
+          },
+          {
+            "closed_at": "2026-09-19T11:22:12",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.07,
+            "pnl_pct": 0.045,
+            "notional_usd": 168.33,
+            "position_id": 41
+          },
+          {
+            "closed_at": "2026-09-19T09:51:33",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.03,
+            "pnl_pct": 0.016,
+            "notional_usd": 168.32,
+            "position_id": 40
+          },
+          {
+            "closed_at": "2026-09-19T08:21:00",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.52,
+            "pnl_pct": 0.31,
+            "notional_usd": 168.15,
+            "position_id": 39
+          },
+          {
+            "closed_at": "2026-09-19T07:24:44",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.16,
+            "pnl_pct": 0.098,
+            "notional_usd": 168.1,
+            "position_id": 38
+          },
+          {
+            "closed_at": "2026-09-19T05:54:03",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.11,
+            "pnl_pct": -0.063,
+            "notional_usd": 168.13,
+            "position_id": 37
+          },
+          {
+            "closed_at": "2026-09-19T04:23:14",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": -0.3,
+            "pnl_pct": -0.176,
+            "notional_usd": 168.23,
+            "position_id": 36
+          },
+          {
+            "closed_at": "2026-09-19T02:52:44",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.24,
+            "pnl_pct": 0.143,
+            "notional_usd": 168.15,
+            "position_id": 35
+          },
+          {
+            "closed_at": "2026-09-19T00:32:02",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.68,
+            "pnl_pct": 0.403,
+            "notional_usd": 167.93,
+            "position_id": 34
+          },
+          {
+            "closed_at": "2026-09-18T23:40:36",
+            "side": "LONG",
+            "exit_reason": "max_loss",
+            "pnl_usd": -0.54,
+            "pnl_pct": -0.323,
+            "notional_usd": 168.11,
+            "position_id": 33
+          },
+          {
+            "closed_at": "2026-09-18T21:45:34",
+            "side": "LONG",
+            "exit_reason": "time_exit",
+            "pnl_usd": 0.3,
+            "pnl_pct": 0.18,
+            "notional_usd": 168.01,
+            "position_id": 32
+          },
+          {
+            "closed_at": "2026-09-18T17:48:55",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "pnl_usd": 0.57,
+            "pnl_pct": 0.339,
+            "notional_usd": 167.82,
+            "position_id": 31
+          }
+        ],
+        "patch": "A.7.83-P7",
+        "verdict": "CANDIDATE_KEEP"
+      }
+    ],
+    "keep_count": 4,
+    "note": "QA: BOT_L + BOT_L_1H + 4 lane(s) CANDIDATE_KEEP · $500/sleeve · 33%/trade · janela anual desde 22/mai (fee-era). Só apresentação."
+  },
   "health": {
     "available": true,
     "heartbeat": {
@@ -1706,46 +3419,46 @@
       {
         "patch": "A.7.81-E3",
         "lane_id": "BOT_L_5M_E3",
-        "progress": "153/40",
-        "n": 153,
+        "progress": "154/40",
+        "n": 154,
         "verdict": "CANDIDATE_KEEP",
-        "pf_fee": 1.9973,
-        "pnl_usd_fee": 45.5952,
+        "pf_fee": 2.0015,
+        "pnl_usd_fee": 45.7873,
         "alert_ready": false
       },
       {
         "patch": "A.7.81-X2",
         "lane_id": "BOT_L_5M_X2",
-        "progress": "153/40",
-        "n": 153,
+        "progress": "154/40",
+        "n": 154,
         "verdict": "CANDIDATE_KEEP",
-        "pf_fee": 1.9268,
-        "pnl_usd_fee": 24.9478,
+        "pf_fee": 1.9306,
+        "pnl_usd_fee": 25.05,
         "alert_ready": false
       },
       {
         "patch": "A.7.83-P6",
         "lane_id": "BOT_L_5M_P6",
-        "progress": "121/40",
-        "n": 121,
+        "progress": "122/40",
+        "n": 122,
         "verdict": "CANDIDATE_KEEP",
-        "pf_fee": 2.4411,
-        "pnl_usd_fee": 25.6599,
+        "pf_fee": 2.4535,
+        "pnl_usd_fee": 25.8819,
         "alert_ready": false
       },
       {
         "patch": "A.7.83-P7",
         "lane_id": "BOT_L_5M_P7",
-        "progress": "69/40",
-        "n": 69,
+        "progress": "70/40",
+        "n": 70,
         "verdict": "CANDIDATE_KEEP",
-        "pf_fee": 2.335,
-        "pnl_usd_fee": 12.2241,
+        "pf_fee": 2.3453,
+        "pnl_usd_fee": 12.3186,
         "alert_ready": false
       }
     ],
     "policy": "Sugere veredito — NÃO aplica patch / dormant / primário",
-    "generated_at": "2026-09-20T23:33:13"
+    "generated_at": "2026-09-20T23:52:21"
   },
   "shadows": [
     {
@@ -1861,41 +3574,41 @@
     {
       "patch": "A.7.81-E3",
       "lane_id": "BOT_L_5M_E3",
-      "progress": "153/40",
-      "n": 153,
+      "progress": "154/40",
+      "n": 154,
       "verdict": "CANDIDATE_KEEP",
-      "pf_fee": 1.9973,
-      "pnl_usd_fee": 45.5952,
+      "pf_fee": 2.0015,
+      "pnl_usd_fee": 45.7873,
       "alert_ready": false
     },
     {
       "patch": "A.7.81-X2",
       "lane_id": "BOT_L_5M_X2",
-      "progress": "153/40",
-      "n": 153,
+      "progress": "154/40",
+      "n": 154,
       "verdict": "CANDIDATE_KEEP",
-      "pf_fee": 1.9268,
-      "pnl_usd_fee": 24.9478,
+      "pf_fee": 1.9306,
+      "pnl_usd_fee": 25.05,
       "alert_ready": false
     },
     {
       "patch": "A.7.83-P6",
       "lane_id": "BOT_L_5M_P6",
-      "progress": "121/40",
-      "n": 121,
+      "progress": "122/40",
+      "n": 122,
       "verdict": "CANDIDATE_KEEP",
-      "pf_fee": 2.4411,
-      "pnl_usd_fee": 25.6599,
+      "pf_fee": 2.4535,
+      "pnl_usd_fee": 25.8819,
       "alert_ready": false
     },
     {
       "patch": "A.7.83-P7",
       "lane_id": "BOT_L_5M_P7",
-      "progress": "69/40",
-      "n": 69,
+      "progress": "70/40",
+      "n": 70,
       "verdict": "CANDIDATE_KEEP",
-      "pf_fee": 2.335,
-      "pnl_usd_fee": 12.2241,
+      "pf_fee": 2.3453,
+      "pnl_usd_fee": 12.3186,
       "alert_ready": false
     }
   ],
@@ -1905,5 +3618,5 @@
     "mode": "compound_per_bot",
     "note": "Apresentação: capital base $500/robô · 33% da carteira por trade (composto). Não altera o sizing real do paper/runner."
   },
-  "notes": "Primário/paper2 no Desktop = capital base $500/robô · 33% carteira/trade (composto via pnl_pct; só apresentação). Lucro ADM = soma dos lucros compostos dos dois robôs. Shadows/labs = fee-norm shadow (? gate live)."
+  "notes": "Primário/paper2 no Desktop = capital base $500/robô · 33% carteira/trade (composto via pnl_pct; só apresentação). QA book = primário+secundário+lanes CANDIDATE_KEEP ($500·33% desde 22/mai). Shadows/labs = fee-norm shadow (≠ gate live)."
 }
