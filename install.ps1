@@ -131,8 +131,13 @@ exit /b 0
 function Confirm-Continue {
     try {
         Add-Type -AssemblyName System.Windows.Forms -ErrorAction Stop
+        $docs = [Environment]::GetFolderPath("MyDocuments")
+        $destHint = Join-Path $docs "MonitorIA"
         $r = [System.Windows.Forms.MessageBox]::Show(
-            "Instalar o Monitor IA agora?`n`nPode demorar alguns minutos (Python + bibliotecas).`nNo fim o aplicativo abre sozinho.",
+            "Instalar o Monitor IA agora?`n`n" +
+            "O app fica em:`n$destHint`n`n" +
+            "Depois pode apagar a pasta extraida (ex.: Area de Trabalho).`n`n" +
+            "Pode demorar alguns minutos (Python + bibliotecas).",
             "Monitor IA — Continuar a instalacao",
             [System.Windows.Forms.MessageBoxButtons]::OKCancel,
             [System.Windows.Forms.MessageBoxIcon]::Information
@@ -146,18 +151,49 @@ function Confirm-Continue {
     }
 }
 
-$Root = (Get-Location).Path
-$appProbe = Join-Path $Root "desktop_app\app.py"
+function Move-ToPermanentInstall([string]$Source) {
+    $docs = [Environment]::GetFolderPath("MyDocuments")
+    if (-not $docs) { $docs = Join-Path $env:USERPROFILE "Documents" }
+    $Target = Join-Path $docs "MonitorIA"
+    $srcFull = [System.IO.Path]::GetFullPath($Source).TrimEnd('\')
+    $dstFull = [System.IO.Path]::GetFullPath($Target).TrimEnd('\')
+    if ($srcFull -ieq $dstFull) {
+        Write-Host "Ja esta na pasta permanente: $dstFull"
+        return $dstFull
+    }
+    Write-Step "A copiar para pasta permanente..."
+    Write-Host "Origem:  $srcFull"
+    Write-Host "Destino: $dstFull"
+    New-Item -ItemType Directory -Force -Path $dstFull | Out-Null
+    # Sem /PURGE: preserva users.sqlite / sessao se ja existirem no destino
+    & robocopy $srcFull $dstFull /E /XD __pycache__ .git /XF *.pyc /NFL /NDL /NJH /NJS /nc /ns /np | Out-Null
+    if ($LASTEXITCODE -ge 8) {
+        throw "Falha ao copiar para Documentos\MonitorIA (codigo robocopy=$LASTEXITCODE)."
+    }
+    $probe = Join-Path $dstFull "desktop_app\app.py"
+    if (-not (Test-Path $probe)) {
+        throw "Copia incompleta — falta desktop_app\app.py em $dstFull"
+    }
+    Write-Host "OK — instalacao permanente em Documentos\MonitorIA"
+    Write-Host "Pode apagar a pasta temporaria: $srcFull"
+    return $dstFull
+}
+
+$Source = (Get-Location).Path
+$appProbe = Join-Path $Source "desktop_app\app.py"
 if (-not (Test-Path $appProbe)) {
     throw "Pasta errada. Extraia o ZIP e corra INSTALAR.cmd DENTRO da pasta (deve existir desktop_app\app.py)."
 }
 
 Confirm-Continue
 
+$Root = Move-ToPermanentInstall $Source
+Set-Location -LiteralPath $Root
+
 Write-Host "========================================"
 Write-Host "  Monitor IA — instalacao"
 Write-Host "========================================"
-Write-Host "Pasta: $Root"
+Write-Host "Pasta permanente: $Root"
 
 try {
     Get-ChildItem -LiteralPath $Root -Recurse -Force -ErrorAction SilentlyContinue |
@@ -189,6 +225,9 @@ New-DesktopShortcut -Root $Root -PythonExe $realPy
 
 Write-Host ""
 Write-Host "Instalacao concluida!" -ForegroundColor Green
+Write-Host "Pasta permanente: $Root"
+Write-Host "Atalho: Ambiente de Trabalho / Menu Iniciar -> Monitor IA"
+Write-Host "Pode apagar a pasta temporaria do ZIP (ex.: Area de Trabalho)."
 Write-Host "A abrir o Monitor IA..."
 $boot = Join-Path $Root "desktop_app\bootstrap_launch.py"
 if (-not (Test-Path $boot)) { $boot = Join-Path $Root "desktop_app\app.py" }
