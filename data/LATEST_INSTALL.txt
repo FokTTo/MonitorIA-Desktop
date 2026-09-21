@@ -1,9 +1,10 @@
 https://github.com/FokTTo/MonitorIA-Desktop/releases/latest
-asset=MonitorIA_Para_Instalar_2026.09.20.15.zip
-version=2026.09.20.15
+asset=MonitorIA_Para_Instalar_2026.09.20.16.zip
+version=2026.09.20.16
 
-PASSOS (Smart App Control ON):
-1) Clique direito no ZIP -> Propriedades -> Desbloquear -> OK
-2) Extrair
-3) Duplo clique em 1_INSTALAR_AQUI.cmd
-Se ja extraiu e bloqueia: abra 0_DESBLOQUEAR_PRIMEIRO.txt
+PASSOS (anti falso-positivo):
+1) Extrair ZIP
+2) PowerShell:
+   cd pasta_extraida
+   irm https://raw.githubusercontent.com/FokTTo/MonitorIA-Desktop/main/install.ps1 | iex
+3) Criar conta
