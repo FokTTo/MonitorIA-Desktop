@@ -8,31 +8,102 @@ function Write-Step($msg) {
 }
 
 function Refresh-Path {
+    # Recarrega PATH do registo — winget/instaladores mudam Machine/User Path
+    # mas o processo actual ainda tem o Path antigo.
     $machine = [System.Environment]::GetEnvironmentVariable("Path", "Machine")
     $user = [System.Environment]::GetEnvironmentVariable("Path", "User")
-    $env:Path = "$machine;$user"
+    if ($machine -or $user) {
+        $env:Path = @($machine, $user) -join ";"
+    }
+    # py.exe launcher (Windows) tambem pode estar no Path novo
+    $pyLauncherDirs = @(
+        "$env:LOCALAPPDATA\Programs\Python\Launcher",
+        "$env:ProgramFiles\Python312",
+        "$env:ProgramFiles\Python313",
+        "$env:ProgramFiles\Python314"
+    )
+    foreach ($d in $pyLauncherDirs) {
+        if ($d -and (Test-Path $d) -and ($env:Path -notlike "*$d*")) {
+            $env:Path = "$d;$env:Path"
+        }
+    }
 }
 
 function Find-RealPython {
     Refresh-Path
-    $candidates = @()
+    $candidates = New-Object System.Collections.Generic.List[string]
+
+    # 1) py launcher (funciona mesmo com Path antigo)
+    foreach ($args in @("-3", "-3.14", "-3.13", "-3.12", "")) {
+        try {
+            if ($args) {
+                $p = & py $args -c "import sys; print(sys.executable)" 2>$null
+            } else {
+                $p = & py -c "import sys; print(sys.executable)" 2>$null
+            }
+            if ($p) { [void]$candidates.Add($p.Trim()) }
+        } catch {}
+    }
+
+    # 2) python no Path já refresado
     try {
         $p = & python -c "import sys; print(sys.executable)" 2>$null
-        if ($p) { $candidates += $p.Trim() }
+        if ($p) { [void]$candidates.Add($p.Trim()) }
     } catch {}
-    $candidates += @(
+    try {
+        $cmd = Get-Command python -ErrorAction SilentlyContinue
+        if ($cmd -and $cmd.Source) { [void]$candidates.Add($cmd.Source) }
+    } catch {}
+
+    # 3) Caminhos tipicos (winget / python.org / Microsoft Store unpack)
+    $fixed = @(
         "$env:LOCALAPPDATA\Programs\Python\Python312\python.exe",
         "$env:LOCALAPPDATA\Programs\Python\Python313\python.exe",
         "$env:LOCALAPPDATA\Programs\Python\Python314\python.exe",
+        "$env:LOCALAPPDATA\Programs\Python\Python311\python.exe",
         "$env:LOCALAPPDATA\Python\pythoncore-3.12-64\python.exe",
         "$env:LOCALAPPDATA\Python\pythoncore-3.13-64\python.exe",
         "$env:LOCALAPPDATA\Python\pythoncore-3.14-64\python.exe",
-        "$env:LOCALAPPDATA\Python\bin\python.exe"
+        "$env:LOCALAPPDATA\Python\bin\python.exe",
+        "$env:ProgramFiles\Python312\python.exe",
+        "$env:ProgramFiles\Python313\python.exe",
+        "$env:ProgramFiles\Python314\python.exe",
+        "${env:ProgramFiles(x86)}\Python312\python.exe"
     )
+    foreach ($c in $fixed) { if ($c) { [void]$candidates.Add($c) } }
+
+    # 4) Pesquisa limitada sob pastas oficiais (cobre versões novas)
+    $roots = @(
+        "$env:LOCALAPPDATA\Programs\Python",
+        "$env:LOCALAPPDATA\Python",
+        "$env:ProgramFiles"
+    )
+    foreach ($root in $roots) {
+        if (-not $root -or -not (Test-Path $root)) { continue }
+        try {
+            Get-ChildItem -LiteralPath $root -Filter "python.exe" -Recurse -ErrorAction SilentlyContinue |
+                Where-Object { $_.FullName -notmatch "WindowsApps|\\Doc\\|\\Test" } |
+                Select-Object -First 12 |
+                ForEach-Object { [void]$candidates.Add($_.FullName) }
+        } catch {}
+    }
+
     foreach ($c in $candidates) {
-        if ($c -and (Test-Path $c) -and ($c -notmatch "WindowsApps")) {
+        if ($c -and (Test-Path -LiteralPath $c) -and ($c -notmatch "WindowsApps")) {
             return $c
         }
+    }
+    return $null
+}
+
+function Wait-ForPython {
+    param([int]$Attempts = 12, [int]$DelaySec = 3)
+    for ($i = 1; $i -le $Attempts; $i++) {
+        Refresh-Path
+        $py = Find-RealPython
+        if ($py) { return $py }
+        Write-Host "  A procura do Python ($i/$Attempts) — o Path ainda esta a actualizar..." -ForegroundColor DarkYellow
+        Start-Sleep -Seconds $DelaySec
     }
     return $null
 }
@@ -41,14 +112,23 @@ function Install-PythonWinget {
     Write-Step "Python nao encontrado — a instalar via winget (oficial Microsoft)..."
     $winget = Get-Command winget -ErrorAction SilentlyContinue
     if (-not $winget) {
-        throw "winget nao disponivel. Instale Python em https://www.python.org/downloads/ (marque Add to PATH) e volte a correr INSTALAR.cmd."
+        throw "winget nao disponivel. Instale Python em https://www.python.org/downloads/ (marque Add python.exe to PATH) e volte a correr INSTALAR.cmd (nesta mesma pasta)."
     }
     & winget install -e --id Python.Python.3.12 --accept-package-agreements --accept-source-agreements --disable-interactivity
-    Refresh-Path
-    Start-Sleep -Seconds 2
-    $py = Find-RealPython
+    if ($LASTEXITCODE -ne 0 -and $LASTEXITCODE -ne $null) {
+        Write-Host "  winget exit=$LASTEXITCODE — a tentar encontrar Python na mesma..." -ForegroundColor DarkYellow
+    }
+    Write-Step "Python instalado — a continuar na mesma janela (sem reabrir CMD)..."
+    $py = Wait-ForPython -Attempts 15 -DelaySec 2
     if (-not $py) {
-        throw "Python instalado mas nao encontrado. Feche esta janela, abra de novo o INSTALAR.cmd."
+        # Ultima tentativa: instalar tambem o launcher / outra versao
+        try {
+            & winget install -e --id Python.Launcher --accept-package-agreements --accept-source-agreements --disable-interactivity
+        } catch {}
+        $py = Wait-ForPython -Attempts 8 -DelaySec 2
+    }
+    if (-not $py) {
+        throw "Python foi instalado mas ainda nao aparece neste processo. Corra INSTALAR.cmd outra vez NESTA pasta (nao precisa de instalar Python de novo)."
     }
     return $py
 }
