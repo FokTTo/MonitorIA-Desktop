@@ -1,5 +1,5 @@
-# Monitor IA — instalador cliente (correr via: irm .../install.ps1 | iex)
-# Nao descarregue este ficheiro para disco se o AV reclamar — cole o one-liner do COMECE_AQUI.txt
+# Monitor IA — instalador cliente
+# Chamado por INSTALAR.cmd  OU  irm .../install.ps1 | iex
 $ErrorActionPreference = "Stop"
 
 function Write-Step($msg) {
@@ -41,14 +41,14 @@ function Install-PythonWinget {
     Write-Step "Python nao encontrado — a instalar via winget (oficial Microsoft)..."
     $winget = Get-Command winget -ErrorAction SilentlyContinue
     if (-not $winget) {
-        throw "winget nao disponivel. Instale Python em https://www.python.org/downloads/ (marque Add to PATH) e volte a correr o comando."
+        throw "winget nao disponivel. Instale Python em https://www.python.org/downloads/ (marque Add to PATH) e volte a correr INSTALAR.cmd."
     }
     & winget install -e --id Python.Python.3.12 --accept-package-agreements --accept-source-agreements --disable-interactivity
     Refresh-Path
     Start-Sleep -Seconds 2
     $py = Find-RealPython
     if (-not $py) {
-        throw "Python instalado mas nao encontrado. Feche o PowerShell, abra outro e volte a colar o comando."
+        throw "Python instalado mas nao encontrado. Feche esta janela, abra de novo o INSTALAR.cmd."
     }
     return $py
 }
@@ -73,11 +73,31 @@ function New-DesktopShortcut([string]$Root, [string]$PythonExe) {
     Write-Host "Atalho: $lnk"
 }
 
+function Confirm-Continue {
+    try {
+        Add-Type -AssemblyName System.Windows.Forms -ErrorAction Stop
+        $r = [System.Windows.Forms.MessageBox]::Show(
+            "Instalar o Monitor IA agora?`n`nPode demorar alguns minutos (Python + bibliotecas).`nNo fim o aplicativo abre sozinho.",
+            "Monitor IA — Continuar a instalacao",
+            [System.Windows.Forms.MessageBoxButtons]::OKCancel,
+            [System.Windows.Forms.MessageBoxIcon]::Information
+        )
+        if ($r -ne [System.Windows.Forms.DialogResult]::OK) {
+            Write-Host "Instalacao cancelada."
+            exit 0
+        }
+    } catch {
+        # sem UI (ex.: ja veio do pause do INSTALAR.cmd) — segue
+    }
+}
+
 $Root = (Get-Location).Path
 $appProbe = Join-Path $Root "desktop_app\app.py"
 if (-not (Test-Path $appProbe)) {
-    throw "Pasta errada. cd para a pasta extraida do Monitor IA (deve existir desktop_app\app.py) e volte a colar o comando."
+    throw "Pasta errada. Extraia o ZIP e corra INSTALAR.cmd DENTRO da pasta (deve existir desktop_app\app.py)."
 }
+
+Confirm-Continue
 
 Write-Host "========================================"
 Write-Host "  Monitor IA — instalacao"
@@ -107,7 +127,7 @@ if (Test-Path $iconScript) {
     & $realPy $iconScript
 }
 
-Write-Step "A criar atalho (so .lnk — sem .vbs)..."
+Write-Step "A criar atalho no Ambiente de Trabalho..."
 New-DesktopShortcut -Root $Root -PythonExe $realPy
 
 & $realPy -c "from desktop_app.auth import init_db; init_db(); print('OK base local')"
