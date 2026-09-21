@@ -57,20 +57,75 @@ function New-DesktopShortcut([string]$Root, [string]$PythonExe) {
     $dir = Split-Path -Parent $PythonExe
     $pyw = Join-Path $dir "pythonw.exe"
     if (-not (Test-Path $pyw)) { $pyw = $PythonExe }
-    $appPy = Join-Path $Root "desktop_app\app.py"
+    $boot = Join-Path $Root "desktop_app\bootstrap_launch.py"
+    if (-not (Test-Path $boot)) { $boot = Join-Path $Root "desktop_app\app.py" }
+    $launcher = Join-Path $Root "ABRIR_MONITOR_IA.cmd"
     $icon = Join-Path $Root "desktop_app\assets\MonitorIA.ico"
+    # Guarda caminho do Python para o launcher CMD
+    $pyFile = Join-Path $Root "artifacts\desktop\python_path.txt"
+    New-Item -ItemType Directory -Force -Path (Split-Path $pyFile) | Out-Null
+    Set-Content -LiteralPath $pyFile -Value $pyw -Encoding ascii
+
+    # Launcher CMD: encontra Python e abre bootstrap (erros com MessageBox)
+    $cmd = @"
+@echo off
+setlocal EnableExtensions
+cd /d "%~dp0"
+set "LOG=%~dp0artifacts\desktop\last_launch.log"
+if not exist "%~dp0artifacts\desktop" mkdir "%~dp0artifacts\desktop"
+echo %date% %time% ABRIR >> "%LOG%"
+set "PY="
+if exist "%~dp0artifacts\desktop\python_path.txt" (
+  set /p PY=<"%~dp0artifacts\desktop\python_path.txt"
+)
+if not defined PY set "PY=$pyw"
+if not exist "%PY%" set "PY=$PythonExe"
+if not exist "%PY%" (
+  where pythonw >nul 2>&1 && for /f "delims=" %%i in ('where pythonw') do set "PY=%%i"
+)
+if not exist "%PY%" (
+  where python >nul 2>&1 && for /f "delims=" %%i in ('where python') do set "PY=%%i"
+)
+if not exist "%PY%" (
+  echo Sem Python. Corra INSTALAR.cmd de novo. >> "%LOG%"
+  powershell -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Python nao encontrado. Corra INSTALAR.cmd outra vez.','Monitor IA')"
+  exit /b 1
+)
+echo Usando %PY% >> "%LOG%"
+start "" /D "%~dp0" "%PY%" "%~dp0desktop_app\bootstrap_launch.py"
+exit /b 0
+"@
+    # Normalizar newlines Windows
+    $cmd = $cmd -replace "`n", "`r`n"
+    [System.IO.File]::WriteAllText($launcher, $cmd, [System.Text.UTF8Encoding]::new($false))
+
+    $wsh = New-Object -ComObject WScript.Shell
+    # Ambiente de Trabalho
     $desktop = [Environment]::GetFolderPath("Desktop")
     $lnk = Join-Path $desktop "Monitor IA.lnk"
-    $wsh = New-Object -ComObject WScript.Shell
     $sc = $wsh.CreateShortcut($lnk)
-    $sc.TargetPath = $pyw
-    $sc.Arguments = "`"$appPy`""
+    $sc.TargetPath = $launcher
     $sc.WorkingDirectory = $Root
-    $sc.WindowStyle = 1
+    $sc.WindowStyle = 7
     $sc.Description = "Monitor IA"
     if (Test-Path $icon) { $sc.IconLocation = "$icon,0" }
     $sc.Save()
-    Write-Host "Atalho: $lnk"
+    Write-Host "Atalho Desktop: $lnk"
+    # Menu Iniciar
+    try {
+        $startDir = Join-Path $env:APPDATA "Microsoft\Windows\Start Menu\Programs"
+        if (Test-Path $startDir) {
+            $slnk = Join-Path $startDir "Monitor IA.lnk"
+            $sc2 = $wsh.CreateShortcut($slnk)
+            $sc2.TargetPath = $launcher
+            $sc2.WorkingDirectory = $Root
+            $sc2.WindowStyle = 7
+            $sc2.Description = "Monitor IA"
+            if (Test-Path $icon) { $sc2.IconLocation = "$icon,0" }
+            $sc2.Save()
+            Write-Host "Atalho Iniciar: $slnk"
+        }
+    } catch {}
 }
 
 function Confirm-Continue {
@@ -127,7 +182,7 @@ if (Test-Path $iconScript) {
     & $realPy $iconScript
 }
 
-Write-Step "A criar atalho no Ambiente de Trabalho..."
+Write-Step "A criar atalho (Desktop + Menu Iniciar)..."
 New-DesktopShortcut -Root $Root -PythonExe $realPy
 
 & $realPy -c "from desktop_app.auth import init_db; init_db(); print('OK base local')"
@@ -135,5 +190,9 @@ New-DesktopShortcut -Root $Root -PythonExe $realPy
 Write-Host ""
 Write-Host "Instalacao concluida!" -ForegroundColor Green
 Write-Host "A abrir o Monitor IA..."
-Start-Process -FilePath $realPy -ArgumentList @((Join-Path $Root "desktop_app\app.py")) -WorkingDirectory $Root
+$boot = Join-Path $Root "desktop_app\bootstrap_launch.py"
+if (-not (Test-Path $boot)) { $boot = Join-Path $Root "desktop_app\app.py" }
+$pyw = Join-Path (Split-Path -Parent $realPy) "pythonw.exe"
+if (-not (Test-Path $pyw)) { $pyw = $realPy }
+Start-Process -FilePath $pyw -ArgumentList @($boot) -WorkingDirectory $Root
 Write-Host ""
