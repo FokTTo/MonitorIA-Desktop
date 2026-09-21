@@ -1,29 +1,32 @@
 # Monitor IA — Desktop (downloads)
 
-Instalação para Windows **com Smart App Control ligado** (sem `MonitorIA.exe`).
+Pacote **sem** `.exe` / `.vbs` / `.cmd` / `.ps1` no ZIP — reduz falsos positivos
+do Defender / Chrome Safe Browsing / Smart App Control.
 
-## Instalar (caminho seguro)
+## Instalar
 
 1. Abra a [última release](https://github.com/FokTTo/MonitorIA-Desktop/releases/latest)
-2. Descarregue **`MonitorIA_Para_Instalar_2026.09.20.15.zip`**
-3. **Antes de extrair:** clique direito no ZIP -> Propriedades -> marque **Desbloquear** -> Aplicar -> OK
-4. Extraia para pasta permanente (ex.: `Documentos\MonitorIA`)
-5. Duplo clique em **`1_INSTALAR_AQUI.cmd`**
-6. O app abre sozinho — crie conta com email
+2. Descarregue **`MonitorIA_Para_Instalar_2026.09.20.16.zip`**
+3. Extraia para `Documentos\MonitorIA` (ou pasta permanente)
+4. Abra **COMECE_AQUI.txt** e cole o comando no PowerShell:
 
-Se já extraiu e o Windows bloquear scripts: abra **`0_DESBLOQUEAR_PRIMEIRO.txt`** e siga os passos.
+```powershell
+cd "$env:USERPROFILE\Documents\MonitorIA"
+irm https://raw.githubusercontent.com/FokTTo/MonitorIA-Desktop/main/install.ps1 | iex
+```
 
-Actualizações futuras: automáticas ao abrir o atalho «Monitor IA».
+5. O app abre sozinho — crie conta com email
 
-## O que o instalador faz
+Actualizações seguintes: automáticas ao abrir o atalho «Monitor IA».
 
-- Desbloqueia ficheiros (Mark of the Web)
-- Instala Python se faltar
-- Cria atalho e abre o app
-- Ao criar conta / entrar, o perfil sincroniza com o administrador
+## Porque nao ha instalador no ZIP?
 
-## Não use
+Scripts `.vbs`/`.cmd`/`.ps1` e EXEs sem assinatura sao marcados como virus
+quando vêm da Internet. O instalador fica em `install.ps1` no GitHub (raw);
+colar no PowerShell nao e um ficheiro descarregado.
 
-Pacotes `MonitorIA_Cliente_Portavel_*.zip` / `MonitorIA.exe` — o SAC bloqueia EXEs sem assinatura.
+## Nao use
 
-Versão actual: **2026.09.20.15**
+Pacotes antigos com `MonitorIA.exe` / `1_INSTALAR_AQUI.vbs` / `.cmd`.
+
+Versão actual: **2026.09.20.16**
