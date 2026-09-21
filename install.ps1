@@ -134,78 +134,21 @@ function Install-PythonWinget {
 }
 
 function New-DesktopShortcut([string]$Root, [string]$PythonExe) {
-    $dir = Split-Path -Parent $PythonExe
-    $pyw = Join-Path $dir "pythonw.exe"
-    if (-not (Test-Path $pyw)) { $pyw = $PythonExe }
-    $boot = Join-Path $Root "desktop_app\bootstrap_launch.py"
-    if (-not (Test-Path $boot)) { $boot = Join-Path $Root "desktop_app\app.py" }
-    $launcher = Join-Path $Root "ABRIR_MONITOR_IA.cmd"
-    $icon = Join-Path $Root "desktop_app\assets\MonitorIA.ico"
-    # Guarda caminho do Python para o launcher CMD
-    $pyFile = Join-Path $Root "artifacts\desktop\python_path.txt"
-    New-Item -ItemType Directory -Force -Path (Split-Path $pyFile) | Out-Null
-    Set-Content -LiteralPath $pyFile -Value $pyw -Encoding ascii
-
-    # Launcher CMD: encontra Python e abre bootstrap (erros com MessageBox)
-    $cmd = @"
-@echo off
-setlocal EnableExtensions
-cd /d "%~dp0"
-set "LOG=%~dp0artifacts\desktop\last_launch.log"
-if not exist "%~dp0artifacts\desktop" mkdir "%~dp0artifacts\desktop"
-echo %date% %time% ABRIR >> "%LOG%"
-set "PY="
-if exist "%~dp0artifacts\desktop\python_path.txt" (
-  set /p PY=<"%~dp0artifacts\desktop\python_path.txt"
-)
-if not defined PY set "PY=$pyw"
-if not exist "%PY%" set "PY=$PythonExe"
-if not exist "%PY%" (
-  where pythonw >nul 2>&1 && for /f "delims=" %%i in ('where pythonw') do set "PY=%%i"
-)
-if not exist "%PY%" (
-  where python >nul 2>&1 && for /f "delims=" %%i in ('where python') do set "PY=%%i"
-)
-if not exist "%PY%" (
-  echo Sem Python. Corra INSTALAR.cmd de novo. >> "%LOG%"
-  powershell -NoProfile -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Python nao encontrado. Corra INSTALAR.cmd outra vez.','Monitor IA')"
-  exit /b 1
-)
-echo Usando %PY% >> "%LOG%"
-start "" /D "%~dp0" "%PY%" "%~dp0desktop_app\bootstrap_launch.py"
-exit /b 0
+    # SSOT: desktop_app.win_shell.install_shortcuts
+    # — pythonw absoluto + bootstrap + IconLocation Bitcoin + AppUserModelID
+    # (evita pin da taskbar a apontar para pythonw sem args / ícone genérico)
+    $code = @"
+from pathlib import Path
+from desktop_app.win_shell import install_shortcuts
+print(install_shortcuts(Path(r'$Root'), python_exe=Path(r'$PythonExe')))
 "@
-    # Normalizar newlines Windows
-    $cmd = $cmd -replace "`n", "`r`n"
-    [System.IO.File]::WriteAllText($launcher, $cmd, [System.Text.UTF8Encoding]::new($false))
-
-    $wsh = New-Object -ComObject WScript.Shell
-    # Ambiente de Trabalho
-    $desktop = [Environment]::GetFolderPath("Desktop")
-    $lnk = Join-Path $desktop "Monitor IA.lnk"
-    $sc = $wsh.CreateShortcut($lnk)
-    $sc.TargetPath = $launcher
-    $sc.WorkingDirectory = $Root
-    $sc.WindowStyle = 7
-    $sc.Description = "Monitor IA"
-    if (Test-Path $icon) { $sc.IconLocation = "$icon,0" }
-    $sc.Save()
-    Write-Host "Atalho Desktop: $lnk"
-    # Menu Iniciar
-    try {
-        $startDir = Join-Path $env:APPDATA "Microsoft\Windows\Start Menu\Programs"
-        if (Test-Path $startDir) {
-            $slnk = Join-Path $startDir "Monitor IA.lnk"
-            $sc2 = $wsh.CreateShortcut($slnk)
-            $sc2.TargetPath = $launcher
-            $sc2.WorkingDirectory = $Root
-            $sc2.WindowStyle = 7
-            $sc2.Description = "Monitor IA"
-            if (Test-Path $icon) { $sc2.IconLocation = "$icon,0" }
-            $sc2.Save()
-            Write-Host "Atalho Iniciar: $slnk"
-        }
-    } catch {}
+    & $PythonExe -c $code
+    if ($LASTEXITCODE -ne 0) {
+        throw "Falha a criar atalho Monitor IA (win_shell.install_shortcuts)."
+    }
+    Write-Host "Atalho Desktop + Menu Iniciar: Monitor IA (icone Bitcoin)"
+    Write-Host "Para fixar na barra: clique direito no atalho do Ambiente de Trabalho / Menu Iniciar -> Fixar na barra de tarefas."
+    Write-Host "(Nao fixe a partir da janela aberta do Python — use o atalho.)"
 }
 
 function Confirm-Continue {
