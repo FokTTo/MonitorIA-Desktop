@@ -146,9 +146,9 @@ print(install_shortcuts(Path(r'$Root'), python_exe=Path(r'$PythonExe')))
     if ($LASTEXITCODE -ne 0) {
         throw "Falha a criar atalho Monitor IA (win_shell.install_shortcuts)."
     }
-    Write-Host "Atalho Desktop + Menu Iniciar: Monitor IA (icone Bitcoin)"
-    Write-Host "Para fixar na barra: clique direito no atalho do Ambiente de Trabalho / Menu Iniciar -> Fixar na barra de tarefas."
-    Write-Host "(Nao fixe a partir da janela aberta do Python — use o atalho.)"
+    Write-Host "Atalho Desktop + Menu Iniciar: Monitor IA (launcher sem args + icone Bitcoin)"
+    Write-Host "Para fixar na barra: clique direito no atalho do Ambiente de Trabalho / Menu Iniciar -> Fixar."
+    Write-Host "Depois feche o app e reabra pelo pin (nao fixe a partir da janela aberta)."
 }
 
 function Confirm-Continue {
