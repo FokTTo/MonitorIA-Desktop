@@ -235,7 +235,8 @@ print(install_shortcuts(ROOT, python_exe=Path(r'''$PythonExe''')))
     }
     Write-Host "Atalho Desktop + Menu Iniciar: Monitor IA (launcher sem args + icone Bitcoin)"
     Write-Host "Para fixar na barra: clique direito no atalho do Ambiente de Trabalho / Menu Iniciar -> Fixar."
-    Write-Host "Depois feche o app e reabra pelo pin (nao fixe a partir da janela aberta)."
+    Write-Host "Se o pin tiver icone Python e nao abrir: Desafixar -> abrir pelo atalho Desktop -> Fixar de novo."
+    Write-Host "Depois feche o app e reabra pelo pin (confirme icone Bitcoin)."
 }
 
 function Confirm-Continue {
