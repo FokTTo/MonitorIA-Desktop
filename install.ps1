@@ -133,18 +133,105 @@ function Install-PythonWinget {
     return $py
 }
 
+function Write-MinimalLaunchers([string]$Root, [string]$PythonExe) {
+    # Fallback se win_shell falhar — irmao pode abrir via ABRIR_MONITOR_IA.cmd
+    $art = Join-Path $Root "artifacts\desktop"
+    New-Item -ItemType Directory -Force -Path $art | Out-Null
+    $pyw = Join-Path (Split-Path -Parent $PythonExe) "pythonw.exe"
+    if (-not (Test-Path -LiteralPath $pyw)) { $pyw = $PythonExe }
+    Set-Content -LiteralPath (Join-Path $art "python_path.txt") -Value $pyw -Encoding ASCII
+    $cmdPath = Join-Path $Root "ABRIR_MONITOR_IA.cmd"
+    $cmdText = @"
+@echo off
+setlocal EnableExtensions
+cd /d "%~dp0"
+set "LOG=%~dp0artifacts\desktop\last_launch.log"
+if not exist "%~dp0artifacts\desktop" mkdir "%~dp0artifacts\desktop"
+echo %date% %time% ABRIR_MINIMAL >> "%LOG%"
+set "PY="
+if exist "%~dp0artifacts\desktop\python_path.txt" (
+  set /p PY=<"%~dp0artifacts\desktop\python_path.txt"
+)
+if not defined PY set "PY=$pyw"
+if not exist "%PY%" (
+  where pythonw >nul 2>&1 && for /f "delims=" %%i in ('where pythonw') do set "PY=%%i"
+)
+set "BOOT=%~dp0desktop_app\bootstrap_launch.py"
+if not exist "%BOOT%" set "BOOT=%~dp0desktop_app\app.py"
+start "" /D "%~dp0" "%PY%" "%BOOT%"
+exit /b 0
+"@
+    Set-Content -LiteralPath $cmdPath -Value $cmdText -Encoding ASCII
+    # Atalho minimo (Desktop) via WScript — sem AppUserModelID completo
+    try {
+        $desktop = [Environment]::GetFolderPath("Desktop")
+        if (-not $desktop) { $desktop = Join-Path $env:USERPROFILE "Desktop" }
+        $lnkPath = Join-Path $desktop "Monitor IA.lnk"
+        $w = New-Object -ComObject WScript.Shell
+        $s = $w.CreateShortcut($lnkPath)
+        $s.TargetPath = $cmdPath
+        $s.WorkingDirectory = $Root
+        $ico = Join-Path $Root "desktop_app\assets\MonitorIA.ico"
+        if (Test-Path -LiteralPath $ico) { $s.IconLocation = "$ico,0" }
+        $s.Description = "Monitor IA"
+        $s.Save()
+        Write-Host "OK launcher minimo + atalho Desktop: $lnkPath"
+    } catch {
+        Write-Host "AVISO: atalho Desktop minimo falhou — use ABRIR_MONITOR_IA.cmd em $Root" -ForegroundColor DarkYellow
+    }
+}
+
+function Invoke-PythonAtRoot([string]$Root, [string]$PythonExe, [string]$PyBody, [string]$Label) {
+    # OneDrive / cwd / PYTHONPATH: forca install root no sys.path antes do import
+    $art = Join-Path $Root "artifacts\desktop"
+    New-Item -ItemType Directory -Force -Path $art | Out-Null
+    $helper = Join-Path $art ("_run_" + $Label + ".py")
+    $code = @"
+import sys
+from pathlib import Path
+ROOT = Path(r'''$Root''').resolve()
+sys.path.insert(0, str(ROOT))
+import os
+os.chdir(ROOT)
+$PyBody
+"@
+    # UTF8 sem BOM — evita SyntaxError no Python
+    $utf8 = New-Object System.Text.UTF8Encoding $false
+    [System.IO.File]::WriteAllText($helper, $code, $utf8)
+    $prevPp = $env:PYTHONPATH
+    $env:PYTHONPATH = $Root
+    Push-Location -LiteralPath $Root
+    try {
+        & $PythonExe $helper
+        return $LASTEXITCODE
+    } finally {
+        Pop-Location
+        if ($null -eq $prevPp) { Remove-Item Env:PYTHONPATH -ErrorAction SilentlyContinue }
+        else { $env:PYTHONPATH = $prevPp }
+        Remove-Item -LiteralPath $helper -Force -ErrorAction SilentlyContinue
+    }
+}
+
 function New-DesktopShortcut([string]$Root, [string]$PythonExe) {
     # SSOT: desktop_app.win_shell.install_shortcuts
     # — pythonw absoluto + bootstrap + IconLocation Bitcoin + AppUserModelID
-    # (evita pin da taskbar a apontar para pythonw sem args / ícone genérico)
-    $code = @"
-from pathlib import Path
+    # Nao falha a instalacao inteira se o atalho falhar (app ja esta OK).
+    $winShell = Join-Path $Root "desktop_app\win_shell.py"
+    if (-not (Test-Path -LiteralPath $winShell)) {
+        Write-Host "AVISO: falta desktop_app\win_shell.py — a criar launcher minimo..." -ForegroundColor DarkYellow
+        Write-MinimalLaunchers -Root $Root -PythonExe $PythonExe
+        return
+    }
+    $body = @"
 from desktop_app.win_shell import install_shortcuts
-print(install_shortcuts(Path(r'$Root'), python_exe=Path(r'$PythonExe')))
+print(install_shortcuts(ROOT, python_exe=Path(r'''$PythonExe''')))
 "@
-    & $PythonExe -c $code
-    if ($LASTEXITCODE -ne 0) {
-        throw "Falha a criar atalho Monitor IA (win_shell.install_shortcuts)."
+    $exit = Invoke-PythonAtRoot -Root $Root -PythonExe $PythonExe -PyBody $body -Label "shortcuts"
+    if ($exit -ne 0) {
+        Write-Host "AVISO: atalho via win_shell falhou (exit=$exit) — a criar launcher minimo..." -ForegroundColor DarkYellow
+        Write-MinimalLaunchers -Root $Root -PythonExe $PythonExe
+        Write-Host "Instalacao continua. Abra Documentos\MonitorIA\ABRIR_MONITOR_IA.cmd se o atalho faltar." -ForegroundColor DarkYellow
+        return
     }
     Write-Host "Atalho Desktop + Menu Iniciar: Monitor IA (launcher sem args + icone Bitcoin)"
     Write-Host "Para fixar na barra: clique direito no atalho do Ambiente de Trabalho / Menu Iniciar -> Fixar."
@@ -242,14 +329,28 @@ if (Test-Path $iconScript) {
 }
 
 Write-Step "A criar atalho (Desktop + Menu Iniciar)..."
-New-DesktopShortcut -Root $Root -PythonExe $realPy
+try {
+    New-DesktopShortcut -Root $Root -PythonExe $realPy
+} catch {
+    Write-Host "AVISO: atalho falhou: $_ — a criar launcher minimo..." -ForegroundColor DarkYellow
+    try { Write-MinimalLaunchers -Root $Root -PythonExe $realPy } catch {}
+}
 
-& $realPy -c "from desktop_app.auth import init_db; init_db(); print('OK base local')"
+$authBody = @"
+from desktop_app.auth import init_db
+init_db()
+print('OK base local')
+"@
+$authExit = Invoke-PythonAtRoot -Root $Root -PythonExe $realPy -PyBody $authBody -Label "auth"
+if ($authExit -ne 0) {
+    Write-Host "AVISO: init_db falhou (exit=$authExit) — app pode pedir setup no 1o arranque" -ForegroundColor DarkYellow
+}
 
 Write-Host ""
 Write-Host "Instalacao concluida!" -ForegroundColor Green
 Write-Host "Pasta permanente: $Root"
 Write-Host "Atalho: Ambiente de Trabalho / Menu Iniciar -> Monitor IA"
+Write-Host "Se o atalho faltar: Documentos\MonitorIA\ABRIR_MONITOR_IA.cmd"
 Write-Host "Pode apagar a pasta temporaria do ZIP (ex.: Area de Trabalho)."
 Write-Host "A abrir o Monitor IA..."
 $boot = Join-Path $Root "desktop_app\bootstrap_launch.py"
