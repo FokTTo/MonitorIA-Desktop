@@ -130,7 +130,7 @@
       "period_end": "2026-09-22",
       "trades": 1285,
       "trades_strategy_view": 1266,
-      "trades_30d": 231,
+      "trades_30d": 230,
       "trades_90d": 945,
       "profit_factor": 1.28,
       "win_rate_pct": 53.85,
@@ -144,10 +144,10 @@
       "cumulative_note": "Índice composto reinvestindo o retorno de cada trade no notional — NÃO é o lucro da conta com capital parado.",
       "windows": {
         "rolling_30d": {
-          "trades": 231,
-          "profit_factor": 0.93,
-          "win_rate_pct": 44.16,
-          "expectancy_pct_per_trade": -0.0218
+          "trades": 230,
+          "profit_factor": 0.94,
+          "win_rate_pct": 44.35,
+          "expectancy_pct_per_trade": -0.0205
         },
         "rolling_90d": {
           "trades": 945,
@@ -263,7 +263,7 @@
       ],
       "notes": [
         "Todos os números com fees. Vista strategy (exclusões): 1266 trades · PF 1.26 · exp +0.0439%.",
-        "Últimos 30 trades: PF 1.29 · exp +0.0409%. Calendário 30d: PF 0.93.",
+        "Últimos 30 trades: PF 1.29 · exp +0.0409%. Calendário 30d: PF 0.94.",
         "Max drawdown do índice composto ≈ 9.4% — meses positivos não eliminam buracos no caminho."
       ],
       "profit_factor_strategy": 1.26
@@ -403,7 +403,7 @@
   "honest_failures": [
     "Robôs-sombra (ETH e clones) que falham o filtro de fees / expectancy negativa não entram no produto live — ficam só no laboratório.",
     "Junho/2026 no BOT_L foi o mês mais fraco (PF ≈ 1,06): ainda positivo, mas mostra que não é «todo mês igual».",
-    "Os últimos 30 trades do BOT_L (exp +0.0409%, PF 1.29) podem divergir dos 30 dias de calendário (PF 0.93) — variância de curto prazo é real; por isso usamos amostra grande e walk-forward.",
+    "Os últimos 30 trades do BOT_L (exp +0.0409%, PF 1.29) podem divergir dos 30 dias de calendário (PF 0.94) — variância de curto prazo é real; por isso usamos amostra grande e walk-forward.",
     "Paper ≠ live: slippage, latência e mudança de regime podem piorar o resultado real."
   ],
   "monthly_projection": {
