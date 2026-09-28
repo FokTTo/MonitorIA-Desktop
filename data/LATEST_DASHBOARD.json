@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-09-28T10:30:44-03:00",
+  "generated_at": "2026-09-28T10:35:51-03:00",
   "timezone": "America/Sao_Paulo",
   "git_sha": "2228fac",
   "source": "VPS",
@@ -4303,8 +4303,8 @@
     "position_fraction": 0.33,
     "primary_profit_usd": 97.39,
     "paper2_profit_usd": 58.83,
-    "keep_profit_usd": 104.11,
-    "combined_profit_usd": 260.33,
+    "keep_profit_usd": 104.64,
+    "combined_profit_usd": 260.86,
     "keep_lanes": [
       {
         "portfolio_id": "BOT_L_5M_E3",
@@ -6363,60 +6363,84 @@
         "capital_model": {
           "initial_usd": 500.0,
           "position_fraction": 0.33,
-          "final_usd": 531.92,
-          "profit_usd": 31.92
+          "final_usd": 532.45,
+          "profit_usd": 32.45
         },
         "periods": {
           "daily": {
             "label": "Hoje",
             "since": "2026-09-28T03:00:00",
-            "trades": 7,
-            "wins": 3,
+            "trades": 8,
+            "wins": 4,
             "losses": 4,
-            "win_rate_pct": 42.9,
-            "pnl_usd": -0.15,
-            "profit_factor": 0.93,
-            "avg_pnl_usd": -0.02,
-            "expectancy_pct": -0.012
+            "win_rate_pct": 50.0,
+            "pnl_usd": 0.38,
+            "profit_factor": 1.19,
+            "avg_pnl_usd": 0.05,
+            "expectancy_pct": 0.027
           },
           "weekly": {
             "label": "Semana (seg—hoje)",
             "since": "2026-09-28T03:00:00",
-            "trades": 7,
-            "wins": 3,
+            "trades": 8,
+            "wins": 4,
             "losses": 4,
-            "win_rate_pct": 42.9,
-            "pnl_usd": -0.15,
-            "profit_factor": 0.93,
-            "avg_pnl_usd": -0.02,
-            "expectancy_pct": -0.012
+            "win_rate_pct": 50.0,
+            "pnl_usd": 0.38,
+            "profit_factor": 1.19,
+            "avg_pnl_usd": 0.05,
+            "expectancy_pct": 0.027
           },
           "monthly": {
             "label": "Mês atual",
             "since": "2026-09-01T03:00:00",
-            "trades": 311,
-            "wins": 167,
+            "trades": 312,
+            "wins": 168,
             "losses": 144,
-            "win_rate_pct": 53.7,
-            "pnl_usd": 31.92,
-            "profit_factor": 1.56,
+            "win_rate_pct": 53.8,
+            "pnl_usd": 32.45,
+            "profit_factor": 1.57,
             "avg_pnl_usd": 0.1,
-            "expectancy_pct": 0.06
+            "expectancy_pct": 0.061
           },
           "annual": {
             "label": "Anual (2026 · desde 22/mai fee-era)",
             "since": "2026-05-22T03:00:00",
-            "trades": 311,
-            "wins": 167,
+            "trades": 312,
+            "wins": 168,
             "losses": 144,
-            "win_rate_pct": 53.7,
-            "pnl_usd": 31.92,
-            "profit_factor": 1.56,
+            "win_rate_pct": 53.8,
+            "pnl_usd": 32.45,
+            "profit_factor": 1.57,
             "avg_pnl_usd": 0.1,
-            "expectancy_pct": 0.06
+            "expectancy_pct": 0.061
           }
         },
         "recent_trades": [
+          {
+            "closed_at": "2026-09-28T13:35:10",
+            "opened_at": "2026-09-28T13:08:37",
+            "side": "LONG",
+            "exit_reason": "profit_lock",
+            "exit_tag": "PROFIT_LOCK",
+            "entry_reason": "—",
+            "pnl_usd": 0.53,
+            "pnl_pct": 0.302,
+            "notional_usd": 175.53,
+            "entry_price": 83348.40625,
+            "exit_price": 83600.0,
+            "quantity": 0.0018,
+            "fee_usd": null,
+            "symbol": "BTC-USD",
+            "duration_min": 26.555806,
+            "mfe_usd": 0.452869,
+            "mae_usd": -0.067853,
+            "peak_return_pct": 0.302,
+            "peak_price": 83600.0001,
+            "trough_price": 83310.7101,
+            "entry_score": 33.8,
+            "position_id": 312
+          },
           {
             "closed_at": "2026-09-28T13:08:28",
             "opened_at": "2026-09-28T12:58:11",
@@ -7352,30 +7376,6 @@
             "trough_price": 84048.0,
             "entry_score": 54.0,
             "position_id": 273
-          },
-          {
-            "closed_at": "2026-09-26T16:13:06",
-            "opened_at": "2026-09-26T14:42:44",
-            "side": "LONG",
-            "exit_reason": "time_exit",
-            "exit_tag": "TIME_EXIT",
-            "entry_reason": "—",
-            "pnl_usd": 0.24,
-            "pnl_pct": 0.137,
-            "notional_usd": 175.41,
-            "entry_price": 84020.601562,
-            "exit_price": 84136.0,
-            "quantity": 0.003571,
-            "fee_usd": null,
-            "symbol": "BTC-USD",
-            "duration_min": 90.378125,
-            "mfe_usd": 0.554392,
-            "mae_usd": -0.047286,
-            "peak_return_pct": 0.185,
-            "peak_price": 84175.85,
-            "trough_price": 84007.3599,
-            "entry_score": 35.4,
-            "position_id": 272
           }
         ],
         "patch": "A.7.83-P6",
@@ -8642,11 +8642,11 @@
       {
         "patch": "A.7.83-P6",
         "lane_id": "BOT_L_5M_P6",
-        "progress": "311/40",
-        "n": 311,
+        "progress": "312/40",
+        "n": 312,
         "verdict": "CANDIDATE_KEEP",
-        "pf_fee": 1.5318,
-        "pnl_usd_fee": 32.4741,
+        "pf_fee": 1.5392,
+        "pnl_usd_fee": 32.927,
         "alert_ready": false
       },
       {
@@ -8661,7 +8661,7 @@
       }
     ],
     "policy": "Sugere veredito — NÃO aplica patch / dormant / primário",
-    "generated_at": "2026-09-28T13:30:45"
+    "generated_at": "2026-09-28T13:35:54"
   },
   "shadows": [
     {
@@ -8877,11 +8877,11 @@
     {
       "patch": "A.7.83-P6",
       "lane_id": "BOT_L_5M_P6",
-      "progress": "311/40",
-      "n": 311,
+      "progress": "312/40",
+      "n": 312,
       "verdict": "CANDIDATE_KEEP",
-      "pf_fee": 1.5318,
-      "pnl_usd_fee": 32.4741,
+      "pf_fee": 1.5392,
+      "pnl_usd_fee": 32.927,
       "alert_ready": false
     },
     {
