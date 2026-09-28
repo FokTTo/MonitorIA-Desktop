@@ -51,11 +51,11 @@
     },
     {
       "term": "Profit Factor",
-      "meaning": "Soma dos lucros ÷ soma das perdas. Acima de 1,0 = no conjunto ganhou mais do que perdeu. Ex.: 1.26 ≈ US$ 1.26 ganho para cada US$ 1 perdido (em paper, com fees)."
+      "meaning": "Soma dos lucros ÷ soma das perdas. Acima de 1,0 = no conjunto ganhou mais do que perdeu. Ex.: 1.27 ≈ US$ 1.27 ganho para cada US$ 1 perdido (em paper, com fees)."
     },
     {
       "term": "Expectancy (expectativa por trade)",
-      "meaning": "Resultado médio de um trade, em % do valor operado (notional). Ex.: +0.0395% por operação. Não é a rentabilidade mensal da conta inteira."
+      "meaning": "Resultado médio de um trade, em % do valor operado (notional). Ex.: +0.0400% por operação. Não é a rentabilidade mensal da conta inteira."
     },
     {
       "term": "Taxa de acerto (win rate)",
@@ -128,44 +128,44 @@
       "status": "Em paper (simulação na corretora de teste / conta paper)",
       "period_start": "2026-05-22",
       "period_end": "2026-09-28",
-      "trades": 1343,
-      "trades_strategy_view": 1324,
-      "trades_30d": 281,
-      "trades_90d": 931,
-      "profit_factor": 1.26,
-      "win_rate_pct": 52.94,
-      "expectancy_pct_per_trade": 0.0395,
+      "trades": 1345,
+      "trades_strategy_view": 1327,
+      "trades_30d": 283,
+      "trades_90d": 930,
+      "profit_factor": 1.27,
+      "win_rate_pct": 53.01,
+      "expectancy_pct_per_trade": 0.04,
       "avg_win_pct": 0.3572,
       "avg_loss_pct": -0.3179,
       "worst_trade_pct": -1.3473,
       "best_trade_pct": 2.4548,
       "max_drawdown_pct": 9.64,
-      "cumulative_compound_return_pct": 68.19,
+      "cumulative_compound_return_pct": 69.46,
       "cumulative_note": "Índice composto reinvestindo o retorno de cada trade no notional — NÃO é o lucro da conta com capital parado.",
       "windows": {
         "rolling_30d": {
-          "trades": 281,
-          "profit_factor": 0.93,
-          "win_rate_pct": 43.06,
-          "expectancy_pct_per_trade": -0.0245
+          "trades": 283,
+          "profit_factor": 0.95,
+          "win_rate_pct": 43.46,
+          "expectancy_pct_per_trade": -0.0217
         },
         "rolling_90d": {
-          "trades": 931,
+          "trades": 930,
           "profit_factor": 1.32,
-          "win_rate_pct": 53.49,
-          "expectancy_pct_per_trade": 0.0413
+          "win_rate_pct": 53.44,
+          "expectancy_pct_per_trade": 0.041
         },
         "last_30_trades": {
           "trades": 30,
-          "profit_factor": 0.78,
-          "win_rate_pct": 33.33,
-          "expectancy_pct_per_trade": -0.0585
+          "profit_factor": 0.98,
+          "win_rate_pct": 36.67,
+          "expectancy_pct_per_trade": -0.0332
         },
         "last_90_trades": {
           "trades": 90,
-          "profit_factor": 1.05,
+          "profit_factor": 1.07,
           "win_rate_pct": 40.0,
-          "expectancy_pct_per_trade": -0.0267
+          "expectancy_pct_per_trade": -0.0255
         }
       },
       "monthly": [
@@ -199,16 +199,16 @@
         },
         {
           "month": "2026-09",
-          "trades": 281,
-          "profit_factor": 0.93,
-          "win_rate_pct": 43.06,
-          "expectancy_pct_per_trade": -0.0245
+          "trades": 283,
+          "profit_factor": 0.95,
+          "win_rate_pct": 43.46,
+          "expectancy_pct_per_trade": -0.0217
         }
       ],
       "buy_hold_btc": {
         "price_start": 75355.65,
-        "price_end": 83300.01,
-        "return_pct": 10.54,
+        "price_end": 83925.4,
+        "return_pct": 11.37,
         "note": "Proxy buy&hold no mesmo período (1.º preço de entrada → último preço de saída dos trades fee-gate)."
       },
       "equity_curve_sample": [
@@ -225,48 +225,48 @@
           "equity": 1.0663
         },
         {
-          "i": 367,
-          "equity": 1.1463
+          "i": 368,
+          "equity": 1.1502
         },
         {
-          "i": 489,
-          "equity": 1.3095
+          "i": 490,
+          "equity": 1.3047
         },
         {
-          "i": 611,
-          "equity": 1.3435
+          "i": 612,
+          "equity": 1.3496
         },
         {
-          "i": 733,
-          "equity": 1.4285
+          "i": 734,
+          "equity": 1.4269
         },
         {
-          "i": 855,
-          "equity": 1.5944
+          "i": 856,
+          "equity": 1.6003
         },
         {
-          "i": 977,
-          "equity": 1.7569
+          "i": 978,
+          "equity": 1.7542
         },
         {
-          "i": 1099,
-          "equity": 1.8205
+          "i": 1101,
+          "equity": 1.8202
         },
         {
-          "i": 1221,
-          "equity": 1.6899
+          "i": 1223,
+          "equity": 1.6837
         },
         {
-          "i": 1343,
-          "equity": 1.6819
+          "i": 1345,
+          "equity": 1.6946
         }
       ],
       "notes": [
-        "Todos os números com fees. Vista strategy (exclusões): 1324 trades · PF 1.24 · exp +0.0388%.",
-        "Últimos 30 trades fracos (exp negativa) — mostramos de propósito. Janela calendário 30d: PF 0.93.",
+        "Todos os números com fees. Vista strategy (exclusões): 1327 trades · PF 1.25 · exp +0.0393%.",
+        "Últimos 30 trades fracos (exp negativa) — mostramos de propósito. Janela calendário 30d: PF 0.95.",
         "Max drawdown do índice composto ≈ 9.6% — meses positivos não eliminam buracos no caminho."
       ],
-      "profit_factor_strategy": 1.24
+      "profit_factor_strategy": 1.25
     },
     {
       "id": "BOT_L_1H",
@@ -275,44 +275,44 @@
       "status": "Paper — mantido para diversificar horizonte temporal",
       "period_start": "2026-07-13",
       "period_end": "2026-09-28",
-      "trades": 560,
+      "trades": 561,
       "trades_strategy_view": null,
       "trades_30d": 212,
-      "trades_90d": 560,
-      "profit_factor": 1.21,
-      "win_rate_pct": 52.14,
-      "expectancy_pct_per_trade": 0.0107,
-      "avg_win_pct": 0.2752,
+      "trades_90d": 561,
+      "profit_factor": 1.22,
+      "win_rate_pct": 52.23,
+      "expectancy_pct_per_trade": 0.0112,
+      "avg_win_pct": 0.2753,
       "avg_loss_pct": -0.2776,
       "worst_trade_pct": -0.769,
       "best_trade_pct": 0.6282,
       "max_drawdown_pct": 10.85,
-      "cumulative_compound_return_pct": 5.89,
+      "cumulative_compound_return_pct": 6.21,
       "cumulative_note": "Índice composto por trade (notional) — não é saldo da conta.",
       "windows": {
         "rolling_30d": {
           "trades": 212,
           "profit_factor": 0.95,
           "win_rate_pct": 46.7,
-          "expectancy_pct_per_trade": -0.014
+          "expectancy_pct_per_trade": -0.0134
         },
         "rolling_90d": {
-          "trades": 560,
-          "profit_factor": 1.21,
-          "win_rate_pct": 52.14,
-          "expectancy_pct_per_trade": 0.0107
+          "trades": 561,
+          "profit_factor": 1.22,
+          "win_rate_pct": 52.23,
+          "expectancy_pct_per_trade": 0.0112
         },
         "last_30_trades": {
           "trades": 30,
-          "profit_factor": 1.24,
+          "profit_factor": 1.27,
           "win_rate_pct": 60.0,
-          "expectancy_pct_per_trade": 0.041
+          "expectancy_pct_per_trade": 0.0415
         },
         "last_90_trades": {
           "trades": 90,
-          "profit_factor": 1.18,
+          "profit_factor": 1.2,
           "win_rate_pct": 55.56,
-          "expectancy_pct_per_trade": 0.0279
+          "expectancy_pct_per_trade": 0.0269
         }
       },
       "monthly": [
@@ -332,16 +332,16 @@
         },
         {
           "month": "2026-09",
-          "trades": 177,
-          "profit_factor": 0.92,
-          "win_rate_pct": 47.46,
-          "expectancy_pct_per_trade": -0.0079
+          "trades": 178,
+          "profit_factor": 0.93,
+          "win_rate_pct": 47.75,
+          "expectancy_pct_per_trade": -0.0062
         }
       ],
       "buy_hold_btc": {
         "price_start": 62533.82,
-        "price_end": 83182.01,
-        "return_pct": 33.02,
+        "price_end": 83952.36,
+        "return_pct": 34.25,
         "note": "No período do 1H compara processo vs mercado com cautela (não é buy&hold)."
       },
       "equity_curve_sample": [
@@ -358,16 +358,16 @@
           "equity": 1.0066
         },
         {
-          "i": 153,
-          "equity": 1.0229
+          "i": 154,
+          "equity": 1.0258
         },
         {
-          "i": 204,
-          "equity": 1.0556
+          "i": 205,
+          "equity": 1.0566
         },
         {
-          "i": 255,
-          "equity": 1.0885
+          "i": 256,
+          "equity": 1.0822
         },
         {
           "i": 306,
@@ -382,16 +382,16 @@
           "equity": 1.0513
         },
         {
-          "i": 458,
-          "equity": 1.0245
+          "i": 459,
+          "equity": 1.0213
         },
         {
-          "i": 509,
-          "equity": 1.0456
+          "i": 510,
+          "equity": 1.0425
         },
         {
-          "i": 560,
-          "equity": 1.0589
+          "i": 561,
+          "equity": 1.0621
         }
       ],
       "notes": [
@@ -402,7 +402,7 @@
   ],
   "honest_failures": [
     "Junho/2026 no BOT_L foi um mês fraco (PF ≈ 1,06): ainda positivo, mas mostra que não é «todo mês igual».",
-    "Os últimos 30 trades do BOT_L (exp -0.0585%, PF 0.78) podem divergir dos 30 dias de calendário (PF 0.93) — variância de curto prazo é real; por isso usamos amostra grande e walk-forward.",
+    "Os últimos 30 trades do BOT_L (exp -0.0332%, PF 0.98) podem divergir dos 30 dias de calendário (PF 0.95) — variância de curto prazo é real; por isso usamos amostra grande e walk-forward.",
     "Paper ≠ live: slippage, latência e mudança de regime podem piorar o resultado real.",
     "Live e micro-live ainda não existem; em PRODUÇÃO o app mostra o capital a $0 até lá.",
     "Um patch de cada vez: sobe de QA para pré-produção só com o botão Subir, e para o robô live só quando o micro-live existir."
@@ -413,7 +413,7 @@
     "exclusions_explained": "Estes três efeitos entram na conta notional: (1) Slippage live — desconto por trade. (2) Capital parado — só uma fração do capital conta como valor operado. (3) Drawdowns — reserva da projeção mensal para períodos ruins.",
     "base_robot_id": "BOT_L",
     "trades_per_month_est": 317,
-    "trades_per_month_note": "Estimativa ≈ 1343 trades ÷ cerca de 4.2 meses de histórico (2026-05–2026-09).",
+    "trades_per_month_note": "Estimativa ≈ 1345 trades ÷ cerca de 4.2 meses de histórico (2026-05–2026-09).",
     "notional_adjustments": {
       "slippage_pct_per_trade": 0.01,
       "slippage_note": "Desconto fixo por trade vs paper (preço real um pouco pior).",
