@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-10-02T11:44:38-03:00",
+  "generated_at": "2026-10-02T11:49:53-03:00",
   "timezone": "America/Sao_Paulo",
-  "git_sha": "18d507d",
+  "git_sha": "a326be3",
   "source": "VPS",
   "read_only": true,
   "primary": {
@@ -7866,7 +7866,7 @@
       }
     ],
     "policy": "Sugere veredito — NÃO aplica patch / dormant / primário",
-    "generated_at": "2026-10-02T14:44:40"
+    "generated_at": "2026-10-02T14:49:55"
   },
   "shadows": [
     {
@@ -8629,5 +8629,107 @@
       },
       "recent_trades": []
     }
+  },
+  "testnet_book": {
+    "portfolio_id": "BOT_L",
+    "venue": "testnet",
+    "source": "live_ledger",
+    "list_title": "Trades testnet · BOT_L",
+    "capital_note": "Capital desta vista é Spot Testnet, não a conta real.",
+    "has_sent_fills": true,
+    "open_quantity": 0.0,
+    "last_closed_at": "2026-10-02T14:28:46.212138+00:00",
+    "periods": {
+      "daily": {
+        "trades": 2,
+        "wins": 1,
+        "losses": 1,
+        "win_rate_pct": 50.0,
+        "pnl_usd": 0.81,
+        "profit_factor": 2.98,
+        "avg_pnl_usd": 0.41,
+        "label": "Hoje",
+        "since": "2026-10-02T03:00:00",
+        "tz": "America/Sao_Paulo"
+      },
+      "weekly": {
+        "trades": 2,
+        "wins": 1,
+        "losses": 1,
+        "win_rate_pct": 50.0,
+        "pnl_usd": 0.81,
+        "profit_factor": 2.98,
+        "avg_pnl_usd": 0.41,
+        "label": "Semana (seg—hoje)",
+        "since": "2026-09-28T03:00:00",
+        "tz": "America/Sao_Paulo"
+      },
+      "monthly": {
+        "trades": 2,
+        "wins": 1,
+        "losses": 1,
+        "win_rate_pct": 50.0,
+        "pnl_usd": 0.81,
+        "profit_factor": 2.98,
+        "avg_pnl_usd": 0.41,
+        "label": "Mês atual",
+        "since": "2026-10-01T03:00:00",
+        "tz": "America/Sao_Paulo"
+      },
+      "annual": {
+        "trades": 2,
+        "wins": 1,
+        "losses": 1,
+        "win_rate_pct": 50.0,
+        "pnl_usd": 0.81,
+        "profit_factor": 2.98,
+        "avg_pnl_usd": 0.41,
+        "label": "Anual",
+        "since": "2026-05-22T03:00:00",
+        "tz": "America/Sao_Paulo"
+      }
+    },
+    "recent_trades": [
+      {
+        "closed_at": "2026-10-02T14:28:46.212138+00:00",
+        "opened_at": "2026-10-02T13:58:39.367477+00:00",
+        "side": "LONG",
+        "exit_reason": "MAX_LOSS_CLOSE",
+        "exit_tag": "MAX_LOSS",
+        "entry_reason": "—",
+        "pnl_usd": -0.41,
+        "pnl_pct": -0.405,
+        "notional_usd": 100.0,
+        "entry_price": 86582.31,
+        "exit_price": 86231.37,
+        "quantity": 0.001154970306435278,
+        "symbol": "BTC-USD",
+        "duration_min": 30.1,
+        "position_id": 2,
+        "portfolio_id": "BOT_L",
+        "timeframe": "5m",
+        "venue": "testnet"
+      },
+      {
+        "closed_at": "2026-10-02T13:48:05.688614+00:00",
+        "opened_at": "2026-10-02T12:07:40.552908+00:00",
+        "side": "LONG",
+        "exit_reason": "PROFIT_LOCK",
+        "exit_tag": "PROFIT_LOCK",
+        "entry_reason": "—",
+        "pnl_usd": 1.22,
+        "pnl_pct": 0.609,
+        "notional_usd": 200.0,
+        "entry_price": 86415.37,
+        "exit_price": 86941.99,
+        "quantity": 0.002314403008048067,
+        "symbol": "BTC-USD",
+        "duration_min": 100.4,
+        "position_id": 1,
+        "portfolio_id": "BOT_L",
+        "timeframe": "5m",
+        "venue": "testnet"
+      }
+    ]
   }
 }
