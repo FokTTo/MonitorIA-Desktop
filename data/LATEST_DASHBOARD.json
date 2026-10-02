@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-10-02T11:34:14-03:00",
+  "generated_at": "2026-10-02T11:39:33-03:00",
   "timezone": "America/Sao_Paulo",
-  "git_sha": "c445d55",
+  "git_sha": "18d507d",
   "source": "VPS",
   "read_only": true,
   "primary": {
@@ -7866,7 +7866,7 @@
       }
     ],
     "policy": "Sugere veredito — NÃO aplica patch / dormant / primário",
-    "generated_at": "2026-10-02T14:34:16"
+    "generated_at": "2026-10-02T14:39:35"
   },
   "shadows": [
     {
@@ -8377,6 +8377,257 @@
       "pf": null,
       "expectancy_pct": null,
       "target": 30
+    }
+  },
+  "preprod_measured": {
+    "BOT_L": {
+      "portfolio_id": "BOT_L_PREPROD",
+      "patch_id": "A.7.81-E3",
+      "patch_label": "E3",
+      "measurement_since": "2026-10-02T02:53:35+00:00",
+      "target_trades": 30,
+      "freeze_periods": true,
+      "pnl_source": "shadow_pnl_usd",
+      "last_closed_at": "2026-10-02T12:30:13+00:00",
+      "periods": {
+        "daily": {
+          "trades": 7,
+          "wins": 7,
+          "losses": 0,
+          "win_rate_pct": 100.0,
+          "pnl_usd": 8.25,
+          "profit_factor": 8.25,
+          "avg_pnl_usd": 1.18,
+          "label": "Hoje",
+          "since": "2026-10-02T02:53:35+00:00",
+          "tz": "America/Sao_Paulo"
+        },
+        "weekly": {
+          "trades": 7,
+          "wins": 7,
+          "losses": 0,
+          "win_rate_pct": 100.0,
+          "pnl_usd": 8.25,
+          "profit_factor": 8.25,
+          "avg_pnl_usd": 1.18,
+          "label": "Semana (seg—hoje)",
+          "since": "2026-10-02T02:53:35+00:00",
+          "tz": "America/Sao_Paulo"
+        },
+        "monthly": {
+          "trades": 7,
+          "wins": 7,
+          "losses": 0,
+          "win_rate_pct": 100.0,
+          "pnl_usd": 8.25,
+          "profit_factor": 8.25,
+          "avg_pnl_usd": 1.18,
+          "label": "Mês atual",
+          "since": "2026-10-02T02:53:35+00:00",
+          "tz": "America/Sao_Paulo"
+        },
+        "annual": {
+          "trades": 7,
+          "wins": 7,
+          "losses": 0,
+          "win_rate_pct": 100.0,
+          "pnl_usd": 8.25,
+          "profit_factor": 8.25,
+          "avg_pnl_usd": 1.18,
+          "label": "Anual",
+          "since": "2026-10-02T02:53:35+00:00",
+          "tz": "America/Sao_Paulo"
+        }
+      },
+      "recent_trades": [
+        {
+          "closed_at": "2026-10-02T12:30:13+00:00",
+          "opened_at": "2026-10-02T12:07:45",
+          "side": "LONG",
+          "exit_reason": "profit_lock",
+          "exit_tag": "PROFIT_LOCK",
+          "pnl_usd": 0.98,
+          "pnl_pct": 0.326,
+          "entry_price": 86431.6562,
+          "exit_price": 86712.95,
+          "quantity": 0.003471,
+          "duration_min": 22.5,
+          "symbol": "BTC-USD",
+          "entry_score": 55.2,
+          "position_id": 70,
+          "portfolio_id": "BOT_L_PREPROD",
+          "timeframe": "5m"
+        },
+        {
+          "closed_at": "2026-10-02T11:52:34+00:00",
+          "opened_at": "2026-10-02T10:53:36",
+          "side": "LONG",
+          "exit_reason": "profit_lock",
+          "exit_tag": "PROFIT_LOCK",
+          "pnl_usd": 0.93,
+          "pnl_pct": 0.309,
+          "entry_price": 86280.7812,
+          "exit_price": 86547.47,
+          "quantity": 0.003477,
+          "duration_min": 59.0,
+          "symbol": "BTC-USD",
+          "entry_score": 55.2,
+          "position_id": 69,
+          "portfolio_id": "BOT_L_PREPROD",
+          "timeframe": "5m"
+        },
+        {
+          "closed_at": "2026-10-02T10:38:26+00:00",
+          "opened_at": "2026-10-02T09:08:03",
+          "side": "LONG",
+          "exit_reason": "time_exit",
+          "exit_tag": "TIME_EXIT",
+          "pnl_usd": 0.61,
+          "pnl_pct": 0.202,
+          "entry_price": 86199.1562,
+          "exit_price": 86373.67,
+          "quantity": 0.00348,
+          "duration_min": 90.4,
+          "symbol": "BTC-USD",
+          "entry_score": 49.4,
+          "position_id": 68,
+          "portfolio_id": "BOT_L_PREPROD",
+          "timeframe": "5m"
+        },
+        {
+          "closed_at": "2026-10-02T07:11:57+00:00",
+          "opened_at": "2026-10-02T05:41:32",
+          "side": "LONG",
+          "exit_reason": "time_exit",
+          "exit_tag": "TIME_EXIT",
+          "pnl_usd": 0.07,
+          "pnl_pct": 0.022,
+          "entry_price": 86000.0,
+          "exit_price": 86018.76,
+          "quantity": 0.003488,
+          "duration_min": 90.4,
+          "symbol": "BTC-USD",
+          "entry_score": 50.2,
+          "position_id": 67,
+          "portfolio_id": "BOT_L_PREPROD",
+          "timeframe": "5m"
+        },
+        {
+          "closed_at": "2026-10-02T03:56:00+00:00",
+          "opened_at": "2026-10-02T03:07:11",
+          "side": "LONG",
+          "exit_reason": "profit_lock",
+          "exit_tag": "PROFIT_LOCK",
+          "pnl_usd": 1.0,
+          "pnl_pct": 0.332,
+          "entry_price": 85254.8516,
+          "exit_price": 85538.31,
+          "quantity": 0.003519,
+          "duration_min": 48.8,
+          "symbol": "BTC-USD",
+          "entry_score": 51.0,
+          "position_id": 66,
+          "portfolio_id": "BOT_L_PREPROD",
+          "timeframe": "5m"
+        },
+        {
+          "closed_at": "2026-10-02T03:02:00+00:00",
+          "opened_at": "2026-10-02T02:53:47",
+          "side": "LONG",
+          "exit_reason": "profit_lock",
+          "exit_tag": "PROFIT_LOCK",
+          "pnl_usd": 1.44,
+          "pnl_pct": 0.481,
+          "entry_price": 85023.0938,
+          "exit_price": 85432.38,
+          "quantity": 0.003528,
+          "duration_min": 8.2,
+          "symbol": "BTC-USD",
+          "entry_score": 54.0,
+          "position_id": 65,
+          "portfolio_id": "BOT_L_PREPROD",
+          "timeframe": "5m"
+        },
+        {
+          "closed_at": "2026-10-02T02:53:39+00:00",
+          "opened_at": "2026-10-01T14:35:34",
+          "side": "LONG",
+          "exit_reason": "profit_lock",
+          "exit_tag": "PROFIT_LOCK",
+          "pnl_usd": 3.22,
+          "pnl_pct": 1.073,
+          "entry_price": 84163.7031,
+          "exit_price": 85066.89,
+          "quantity": 0.003564,
+          "duration_min": 738.1,
+          "symbol": "BTC-USD",
+          "entry_score": 54.0,
+          "position_id": 64,
+          "portfolio_id": "BOT_L_PREPROD",
+          "timeframe": "5m"
+        }
+      ]
+    },
+    "BOT_L_1H": {
+      "portfolio_id": "BOT_L_1H_PREPROD",
+      "patch_id": null,
+      "patch_label": "",
+      "measurement_since": null,
+      "target_trades": 30,
+      "freeze_periods": true,
+      "pnl_source": "shadow_pnl_usd",
+      "last_closed_at": null,
+      "periods": {
+        "daily": {
+          "trades": 0,
+          "wins": 0,
+          "losses": 0,
+          "win_rate_pct": 0.0,
+          "pnl_usd": 0.0,
+          "profit_factor": 0.0,
+          "avg_pnl_usd": 0.0,
+          "label": "Hoje",
+          "since": null,
+          "tz": "America/Sao_Paulo"
+        },
+        "weekly": {
+          "trades": 0,
+          "wins": 0,
+          "losses": 0,
+          "win_rate_pct": 0.0,
+          "pnl_usd": 0.0,
+          "profit_factor": 0.0,
+          "avg_pnl_usd": 0.0,
+          "label": "Semana (seg—hoje)",
+          "since": null,
+          "tz": "America/Sao_Paulo"
+        },
+        "monthly": {
+          "trades": 0,
+          "wins": 0,
+          "losses": 0,
+          "win_rate_pct": 0.0,
+          "pnl_usd": 0.0,
+          "profit_factor": 0.0,
+          "avg_pnl_usd": 0.0,
+          "label": "Mês atual",
+          "since": null,
+          "tz": "America/Sao_Paulo"
+        },
+        "annual": {
+          "trades": 0,
+          "wins": 0,
+          "losses": 0,
+          "win_rate_pct": 0.0,
+          "pnl_usd": 0.0,
+          "profit_factor": 0.0,
+          "avg_pnl_usd": 0.0,
+          "label": "Anual",
+          "since": null,
+          "tz": "America/Sao_Paulo"
+        }
+      },
+      "recent_trades": []
     }
   }
 }
