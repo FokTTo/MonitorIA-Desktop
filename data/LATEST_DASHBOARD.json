@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-10-02T13:59:53-03:00",
+  "generated_at": "2026-10-02T14:04:53-03:00",
   "timezone": "America/Sao_Paulo",
-  "git_sha": "8949696",
+  "git_sha": "e6d3fbf",
   "source": "VPS",
   "read_only": true,
   "primary": {
@@ -7866,7 +7866,7 @@
       }
     ],
     "policy": "Sugere veredito — NÃO aplica patch / dormant / primário",
-    "generated_at": "2026-10-02T16:59:55"
+    "generated_at": "2026-10-02T17:04:55"
   },
   "shadows": [
     {
@@ -8654,8 +8654,10 @@
     "source": "live_ledger",
     "list_title": "Trades testnet · BOT_L",
     "capital_note": "Capital desta vista é Spot Testnet, não a conta real.",
+    "empty_text": "Sem trades fechados na testnet.",
     "has_sent_fills": true,
     "open_quantity": 0.0,
+    "open_position": null,
     "last_closed_at": "2026-10-02T14:28:46.212138+00:00",
     "periods": {
       "daily": {
@@ -8749,5 +8751,85 @@
         "venue": "testnet"
       }
     ]
+  },
+  "mainnet_book": {
+    "portfolio_id": "BOT_L",
+    "venue": "mainnet",
+    "source": "live_ledger",
+    "list_title": "Trades live · BOT_L",
+    "capital_note": "Spot real Binance · ciclos mainnet do BOT_L.",
+    "empty_text": "A primeira ordem sai no próximo sinal.",
+    "has_sent_fills": false,
+    "open_quantity": 0.0,
+    "open_position": null,
+    "last_closed_at": null,
+    "periods": {
+      "daily": {
+        "trades": 0,
+        "wins": 0,
+        "losses": 0,
+        "win_rate_pct": 0.0,
+        "pnl_usd": 0,
+        "profit_factor": 0.0,
+        "avg_pnl_usd": 0.0,
+        "label": "Hoje",
+        "since": "2026-10-02T03:00:00",
+        "tz": "America/Sao_Paulo"
+      },
+      "weekly": {
+        "trades": 0,
+        "wins": 0,
+        "losses": 0,
+        "win_rate_pct": 0.0,
+        "pnl_usd": 0,
+        "profit_factor": 0.0,
+        "avg_pnl_usd": 0.0,
+        "label": "Semana (seg—hoje)",
+        "since": "2026-09-28T03:00:00",
+        "tz": "America/Sao_Paulo"
+      },
+      "monthly": {
+        "trades": 0,
+        "wins": 0,
+        "losses": 0,
+        "win_rate_pct": 0.0,
+        "pnl_usd": 0,
+        "profit_factor": 0.0,
+        "avg_pnl_usd": 0.0,
+        "label": "Mês atual",
+        "since": "2026-10-01T03:00:00",
+        "tz": "America/Sao_Paulo"
+      },
+      "annual": {
+        "trades": 0,
+        "wins": 0,
+        "losses": 0,
+        "win_rate_pct": 0.0,
+        "pnl_usd": 0,
+        "profit_factor": 0.0,
+        "avg_pnl_usd": 0.0,
+        "label": "Anual",
+        "since": "2026-05-22T03:00:00",
+        "tz": "America/Sao_Paulo"
+      }
+    },
+    "recent_trades": []
+  },
+  "spot_wallet": {
+    "ok": true,
+    "venue": "mainnet",
+    "source": "binance_spot_account",
+    "balances": [
+      {
+        "asset": "USDT",
+        "free": "101.50105708",
+        "locked": "0",
+        "quantity": "101.50105708",
+        "quantity_text": "101.50105708",
+        "usd": 101.5
+      }
+    ],
+    "estimated_total_usd": 101.5,
+    "error": null
   }
 }
