@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-10-02T17:21:53-03:00",
+  "generated_at": "2026-10-02T17:27:03-03:00",
   "timezone": "America/Sao_Paulo",
-  "git_sha": "5975efe",
+  "git_sha": "ae21b03",
   "source": "VPS",
   "read_only": true,
   "primary": {
@@ -7866,7 +7866,7 @@
       }
     ],
     "policy": "Sugere veredito — NÃO aplica patch / dormant / primário",
-    "generated_at": "2026-10-02T20:21:55"
+    "generated_at": "2026-10-02T20:27:05"
   },
   "shadows": [
     {
@@ -8759,9 +8759,18 @@
     "list_title": "Trades live · BOT_L",
     "capital_note": "Spot real Binance · ciclos mainnet do BOT_L.",
     "empty_text": "A primeira ordem sai no próximo sinal.",
-    "has_sent_fills": false,
-    "open_quantity": 0.0,
-    "open_position": null,
+    "has_sent_fills": true,
+    "open_quantity": 0.00118,
+    "open_position": {
+      "symbol": "BTC-USD",
+      "quantity": 0.00118,
+      "entry_price": 84500.0625,
+      "opened_at": "2026-10-02T20:26:15.983845+00:00",
+      "side": "LONG",
+      "status": "open",
+      "portfolio_id": "BOT_L",
+      "venue": "mainnet"
+    },
     "last_closed_at": null,
     "periods": {
       "daily": {
@@ -8822,14 +8831,22 @@
     "balances": [
       {
         "asset": "USDT",
-        "free": "101.50105708",
+        "free": "1.76272528",
         "locked": "0",
-        "quantity": "101.50105708",
-        "quantity_text": "101.50105708",
-        "usd": 101.5
+        "quantity": "1.76272528",
+        "quantity_text": "1.76272528",
+        "usd": 1.76
+      },
+      {
+        "asset": "BTC",
+        "free": "0.00117882",
+        "locked": "0",
+        "quantity": "0.00117882",
+        "quantity_text": "0.00117882",
+        "usd": 99.61
       }
     ],
-    "estimated_total_usd": 101.5,
+    "estimated_total_usd": 101.38,
     "error": null
   }
 }
