@@ -1,15 +1,15 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-10-03T12:38:53-03:00",
+  "generated_at": "2026-10-03T12:43:54-03:00",
   "timezone": "America/Sao_Paulo",
-  "git_sha": "e808545",
+  "git_sha": "bdcef6b",
   "source": "VPS",
   "read_only": true,
   "primary": {
     "portfolio_id": "BOT_L",
     "ex_op": true,
     "excluded_ops_total": 21,
-    "last_closed_at": "2026-10-02T03:54:15",
+    "last_closed_at": "2026-10-03T15:26:25.955416+00:00",
     "capital_model": {
       "initial_usd": 500.0,
       "position_fraction": 0.33,
@@ -22,12 +22,12 @@
       "daily": {
         "label": "Hoje",
         "since": "2026-10-03T03:00:00",
-        "trades": 0,
-        "wins": 0,
-        "losses": 0,
-        "win_rate_pct": 0.0,
-        "pnl_usd": 0.0,
-        "profit_factor": 0.0,
+        "trades": 5,
+        "wins": 1,
+        "losses": 4,
+        "win_rate_pct": 20.0,
+        "pnl_usd": -0.32,
+        "profit_factor": 0.4,
         "avg_pnl_usd": 0.0,
         "expectancy_pct": 0.0
       },
@@ -63,7 +63,7 @@
         "losses": 659,
         "win_rate_pct": 52.6,
         "pnl_usd": 91.62,
-        "profit_factor": 1.24,
+        "profit_factor": 0.33,
         "avg_pnl_usd": 0.07,
         "expectancy_pct": 0.037
       }
@@ -9659,9 +9659,9 @@
       "source": "bot_runner_state"
     },
     "position": {
-      "open": false,
-      "side": null,
-      "ticker": null
+      "open": true,
+      "side": "LONG",
+      "ticker": "BTC-USD"
     },
     "gate_n": null,
     "gate_pf": 1.26
@@ -10132,7 +10132,7 @@
       }
     ],
     "policy": "Sugere veredito — NÃO aplica patch / dormant / primário",
-    "generated_at": "2026-10-03T15:38:55"
+    "generated_at": "2026-10-03T15:43:55"
   },
   "shadows": [
     {
@@ -11448,10 +11448,10 @@
         "locked": "0",
         "quantity": "0.00117177",
         "quantity_text": "0.00117177",
-        "usd": 99.39
+        "usd": 99.41
       }
     ],
-    "estimated_total_usd": 100.45,
+    "estimated_total_usd": 100.47,
     "error": null
   }
 }
