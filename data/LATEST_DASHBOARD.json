@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-10-08T03:58:29-03:00",
+  "generated_at": "2026-10-08T04:03:31-03:00",
   "timezone": "America/Sao_Paulo",
   "git_sha": "474262c",
   "source": "VPS",
@@ -2161,60 +2161,86 @@
     "capital_model": {
       "initial_usd": 500.0,
       "position_fraction": 0.33,
-      "final_usd": 588.61,
-      "profit_usd": 88.61
+      "final_usd": 588.28,
+      "profit_usd": 88.28
     },
     "periods": {
       "daily": {
         "label": "Hoje",
         "since": "2026-10-08T03:00:00",
-        "trades": 2,
+        "trades": 3,
         "wins": 0,
-        "losses": 2,
+        "losses": 3,
         "win_rate_pct": 0.0,
-        "pnl_usd": -0.74,
+        "pnl_usd": -1.07,
         "profit_factor": 0.0,
-        "avg_pnl_usd": -0.37,
-        "expectancy_pct": -0.189
+        "avg_pnl_usd": -0.36,
+        "expectancy_pct": -0.184
       },
       "weekly": {
         "label": "Semana (dom—hoje)",
         "since": "2026-10-04T03:00:00",
-        "trades": 105,
+        "trades": 106,
         "wins": 38,
-        "losses": 67,
-        "win_rate_pct": 36.2,
-        "pnl_usd": -2.03,
-        "profit_factor": 0.9,
+        "losses": 68,
+        "win_rate_pct": 35.8,
+        "pnl_usd": -2.36,
+        "profit_factor": 0.89,
         "avg_pnl_usd": -0.02,
-        "expectancy_pct": -0.01
+        "expectancy_pct": -0.011
       },
       "monthly": {
         "label": "Mês atual",
         "since": "2026-10-01T03:00:00",
-        "trades": 140,
+        "trades": 141,
         "wins": 58,
-        "losses": 82,
-        "win_rate_pct": 41.4,
-        "pnl_usd": 1.38,
-        "profit_factor": 1.05,
+        "losses": 83,
+        "win_rate_pct": 41.1,
+        "pnl_usd": 1.04,
+        "profit_factor": 1.04,
         "avg_pnl_usd": 0.01,
-        "expectancy_pct": 0.005
+        "expectancy_pct": 0.004
       },
       "annual": {
         "label": "Anual (2026 · desde 22/mai fee-era)",
         "since": "2026-05-22T03:00:00",
-        "trades": 1513,
+        "trades": 1514,
         "wins": 777,
-        "losses": 736,
-        "win_rate_pct": 51.4,
-        "pnl_usd": 88.61,
+        "losses": 737,
+        "win_rate_pct": 51.3,
+        "pnl_usd": 88.28,
         "profit_factor": 1.22,
         "avg_pnl_usd": 0.06,
         "expectancy_pct": 0.033
       }
     },
     "recent_trades": [
+      {
+        "closed_at": "2026-10-08T07:03:30",
+        "opened_at": "2026-10-08T06:59:26",
+        "side": "LONG",
+        "exit_reason": "STOP_CLOSE | Stop atingido short_return=-0.17%",
+        "exit_tag": "STOP",
+        "entry_reason": "—",
+        "pnl_usd": -0.33,
+        "pnl_pct": -0.172,
+        "notional_usd": 194.24,
+        "entry_price": 82878.840586,
+        "exit_price": 82736.12,
+        "quantity": 0.000543,
+        "fee_usd": null,
+        "symbol": "BTC-USD",
+        "duration_min": 4.06689,
+        "mfe_usd": -0.030202,
+        "mae_usd": -0.077497,
+        "peak_return_pct": 0.0,
+        "peak_price": null,
+        "trough_price": 82736.1205,
+        "entry_score": 52.6,
+        "position_id": 2824,
+        "portfolio_id": "BOT_L_5M_CLONE",
+        "timeframe": "5m"
+      },
       {
         "closed_at": "2026-10-08T05:58:18",
         "opened_at": "2026-10-08T05:21:09",
@@ -4266,32 +4292,6 @@
         "trough_price": 85679.8095,
         "entry_score": 35.4,
         "position_id": 2731,
-        "portfolio_id": "BOT_L_5M_CLONE",
-        "timeframe": "5m"
-      },
-      {
-        "closed_at": "2026-10-05T03:57:30",
-        "opened_at": "2026-10-05T03:40:16",
-        "side": "LONG",
-        "exit_reason": "STOP_CLOSE | Stop atingido short_return=-0.16%",
-        "exit_tag": "STOP",
-        "entry_reason": "—",
-        "pnl_usd": -0.31,
-        "pnl_pct": -0.161,
-        "notional_usd": 195.34,
-        "entry_price": 86368.77218,
-        "exit_price": 86230.0,
-        "quantity": 0.001737,
-        "fee_usd": null,
-        "symbol": "BTC-USD",
-        "duration_min": 17.23546,
-        "mfe_usd": -0.083241,
-        "mae_usd": -0.241047,
-        "peak_return_pct": 0.0,
-        "peak_price": null,
-        "trough_price": 86230.0002,
-        "entry_score": 39.4,
-        "position_id": 2730,
         "portfolio_id": "BOT_L_5M_CLONE",
         "timeframe": "5m"
       }
@@ -10720,7 +10720,7 @@
     "available": true,
     "heartbeat": {
       "ok": null,
-      "idle_min": 0.9,
+      "idle_min": 0.2,
       "source": "bot_runner_state"
     },
     "position": {
@@ -11177,7 +11177,7 @@
       }
     ],
     "policy": "Sugere veredito — NÃO aplica patch / dormant / primário",
-    "generated_at": "2026-10-08T06:58:32"
+    "generated_at": "2026-10-08T07:03:33"
   },
   "shadows": [
     {
@@ -15638,14 +15638,14 @@
     ]
   },
   "lanes_observability": {
-    "generated_at": "2026-10-07T07:15:05",
+    "generated_at": "2026-10-08T07:00:10",
     "lanes": [
       {
         "lane_id": "BOT_L_5M",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:10:49.869184",
-          "idle_minutes": 4.3
+          "last_at": "2026-10-08T07:00:08.995556",
+          "idle_minutes": 0.0
         }
       },
       {
@@ -15653,23 +15653,23 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:52:33.227510",
-          "idle_minutes": 14422.6
+          "idle_minutes": 15847.6
         }
       },
       {
         "lane_id": "BOT_L_1H",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:14:10.409977",
-          "idle_minutes": 0.9
+          "last_at": "2026-10-08T06:55:55.440663",
+          "idle_minutes": 4.3
         }
       },
       {
         "lane_id": "BOT_L_5M_CLONE",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:14:57.806093",
-          "idle_minutes": 0.1
+          "last_at": "2026-10-08T06:59:26.482346",
+          "idle_minutes": 0.8
         }
       },
       {
@@ -15677,23 +15677,23 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:23:54.300692",
-          "idle_minutes": 14451.2
+          "idle_minutes": 15876.3
         }
       },
       {
         "lane_id": "BOT_L_1D",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T06:36:50.242769",
-          "idle_minutes": 38.3
+          "last_at": "2026-10-08T06:54:42.370156",
+          "idle_minutes": 5.5
         }
       },
       {
         "lane_id": "BOT_L_1W",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T04:06:51.548990",
-          "idle_minutes": 188.3
+          "last_at": "2026-10-08T03:54:34.814373",
+          "idle_minutes": 185.6
         }
       },
       {
@@ -15701,7 +15701,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-30T04:24:14.937029",
-          "idle_minutes": 10250.9
+          "idle_minutes": 11676.0
         }
       },
       {
@@ -15709,7 +15709,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-30T04:15:44.657404",
-          "idle_minutes": 10259.4
+          "idle_minutes": 11684.5
         }
       },
       {
@@ -15717,7 +15717,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:57:42.761232",
-          "idle_minutes": 14417.4
+          "idle_minutes": 15842.5
         }
       },
       {
@@ -15725,7 +15725,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-30T03:29:29.738529",
-          "idle_minutes": 10305.6
+          "idle_minutes": 11730.7
         }
       },
       {
@@ -15733,7 +15733,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-30T03:30:39.824226",
-          "idle_minutes": 10304.5
+          "idle_minutes": 11729.5
         }
       },
       {
@@ -15741,7 +15741,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-30T02:30:13.830671",
-          "idle_minutes": 10364.9
+          "idle_minutes": 11790.0
         }
       },
       {
@@ -15749,7 +15749,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:56:34.444494",
-          "idle_minutes": 14418.5
+          "idle_minutes": 15843.6
         }
       },
       {
@@ -15757,7 +15757,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:46:37.015562",
-          "idle_minutes": 14428.5
+          "idle_minutes": 15853.6
         }
       },
       {
@@ -15765,7 +15765,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:32:08.696289",
-          "idle_minutes": 14443.0
+          "idle_minutes": 15868.1
         }
       },
       {
@@ -15773,7 +15773,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:32:54.000312",
-          "idle_minutes": 14442.2
+          "idle_minutes": 15867.3
         }
       },
       {
@@ -15781,7 +15781,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:33:45.460937",
-          "idle_minutes": 14441.4
+          "idle_minutes": 15866.5
         }
       },
       {
@@ -15789,7 +15789,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:34:24.192392",
-          "idle_minutes": 14440.7
+          "idle_minutes": 15865.8
         }
       },
       {
@@ -15797,7 +15797,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:55:12.758055",
-          "idle_minutes": 14419.9
+          "idle_minutes": 15845.0
         }
       },
       {
@@ -15805,7 +15805,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:50:54.405521",
-          "idle_minutes": 14424.2
+          "idle_minutes": 15849.3
         }
       },
       {
@@ -15813,7 +15813,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:36:38.996989",
-          "idle_minutes": 14438.5
+          "idle_minutes": 15863.6
         }
       },
       {
@@ -15821,7 +15821,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:37:23.880898",
-          "idle_minutes": 14437.7
+          "idle_minutes": 15862.8
         }
       },
       {
@@ -15829,7 +15829,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:38:09.007806",
-          "idle_minutes": 14437.0
+          "idle_minutes": 15862.1
         }
       },
       {
@@ -15837,7 +15837,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:38:53.887192",
-          "idle_minutes": 14436.2
+          "idle_minutes": 15861.3
         }
       },
       {
@@ -15845,7 +15845,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T07:00:09.549381",
-          "idle_minutes": 14415.0
+          "idle_minutes": 15840.1
         }
       },
       {
@@ -15853,7 +15853,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:55:47.222413",
-          "idle_minutes": 14419.3
+          "idle_minutes": 15844.4
         }
       },
       {
@@ -15861,23 +15861,23 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:56:38.774712",
-          "idle_minutes": 14418.5
+          "idle_minutes": 15843.6
         }
       },
       {
         "lane_id": "BOT_L_5M_E3",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:14:26.094133",
-          "idle_minutes": 0.7
+          "last_at": "2026-10-08T06:59:20.592226",
+          "idle_minutes": 0.9
         }
       },
       {
         "lane_id": "BOT_L_5M_X2",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:11:11.822511",
-          "idle_minutes": 3.9
+          "last_at": "2026-10-08T06:59:30.364505",
+          "idle_minutes": 0.7
         }
       },
       {
@@ -15885,7 +15885,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:58:53.164277",
-          "idle_minutes": 14416.2
+          "idle_minutes": 15841.4
         }
       },
       {
@@ -15893,23 +15893,23 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:59:38.195271",
-          "idle_minutes": 14415.5
+          "idle_minutes": 15840.6
         }
       },
       {
         "lane_id": "BOT_L_5M_P6",
         "heartbeat": {
-          "ok": false,
-          "last_at": "2026-09-30T04:04:25.756291",
-          "idle_minutes": 10270.7
+          "ok": true,
+          "last_at": "2026-10-08T07:00:12.973392",
+          "idle_minutes": 0.0
         }
       },
       {
         "lane_id": "BOT_L_5M_P7",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:14:18.791875",
-          "idle_minutes": 0.8
+          "last_at": "2026-10-08T06:59:18.156686",
+          "idle_minutes": 1.0
         }
       },
       {
@@ -15917,7 +15917,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:56:45.620417",
-          "idle_minutes": 14418.4
+          "idle_minutes": 15843.5
         }
       },
       {
@@ -15925,7 +15925,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:57:31.316792",
-          "idle_minutes": 14417.6
+          "idle_minutes": 15842.7
         }
       },
       {
@@ -15933,7 +15933,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:58:15.239307",
-          "idle_minutes": 14416.9
+          "idle_minutes": 15842.0
         }
       },
       {
@@ -15941,7 +15941,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:59:01.435549",
-          "idle_minutes": 14416.1
+          "idle_minutes": 15841.2
         }
       },
       {
@@ -15949,7 +15949,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:59:46.023447",
-          "idle_minutes": 14415.4
+          "idle_minutes": 15840.5
         }
       },
       {
@@ -15957,7 +15957,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:55:23.353540",
-          "idle_minutes": 14419.7
+          "idle_minutes": 15844.9
         }
       },
       {
@@ -15965,7 +15965,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:56:08.312011",
-          "idle_minutes": 14419.0
+          "idle_minutes": 15844.1
         }
       },
       {
@@ -15973,7 +15973,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:51:45.779811",
-          "idle_minutes": 14423.4
+          "idle_minutes": 15848.5
         }
       },
       {
@@ -15981,23 +15981,23 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:52:32.386112",
-          "idle_minutes": 14422.6
+          "idle_minutes": 15847.7
         }
       },
       {
         "lane_id": "BOT_L_1H_H1E03",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:14:54.833299",
-          "idle_minutes": 0.2
+          "last_at": "2026-10-08T06:35:06.727689",
+          "idle_minutes": 25.1
         }
       },
       {
         "lane_id": "BOT_L_1H_H1E06",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:13:03.874403",
-          "idle_minutes": 2.1
+          "last_at": "2026-10-08T06:47:11.003648",
+          "idle_minutes": 13.1
         }
       },
       {
@@ -16005,7 +16005,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-29T05:01:12.910633",
-          "idle_minutes": 11653.9
+          "idle_minutes": 13079.0
         }
       },
       {
@@ -16013,7 +16013,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:55:30.411923",
-          "idle_minutes": 14419.6
+          "idle_minutes": 15844.8
         }
       },
       {
@@ -16021,7 +16021,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:56:15.665023",
-          "idle_minutes": 14418.9
+          "idle_minutes": 15844.0
         }
       },
       {
@@ -16029,15 +16029,15 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:57:01.845229",
-          "idle_minutes": 14418.1
+          "idle_minutes": 15843.2
         }
       },
       {
         "lane_id": "BOT_L_1H_H1E09",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:13:03.058029",
-          "idle_minutes": 2.1
+          "last_at": "2026-10-08T06:55:31.491159",
+          "idle_minutes": 4.7
         }
       },
       {
@@ -16045,7 +16045,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:59:25.071028",
-          "idle_minutes": 14415.7
+          "idle_minutes": 15840.8
         }
       },
       {
@@ -16053,31 +16053,31 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:59:08.182228",
-          "idle_minutes": 14416.0
+          "idle_minutes": 15841.1
         }
       },
       {
         "lane_id": "BOT_L_1H_A82E001",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:02:32.502808",
-          "idle_minutes": 12.6
+          "last_at": "2026-10-08T06:37:52.918255",
+          "idle_minutes": 22.4
         }
       },
       {
         "lane_id": "BOT_L_1H_A82E002",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:14:24.204254",
-          "idle_minutes": 0.7
+          "last_at": "2026-10-08T07:00:15.362863",
+          "idle_minutes": 0.0
         }
       },
       {
         "lane_id": "BOT_L_1H_A82E003",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T06:54:49.695273",
-          "idle_minutes": 20.3
+          "last_at": "2026-10-08T06:59:30.294726",
+          "idle_minutes": 0.8
         }
       },
       {
@@ -16085,31 +16085,31 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-05T17:33:42.646594",
-          "idle_minutes": 2261.4
+          "idle_minutes": 3686.6
         }
       },
       {
         "lane_id": "BOT_L_1H_A82E005",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:11:25.183093",
-          "idle_minutes": 3.7
+          "last_at": "2026-10-08T06:46:51.148870",
+          "idle_minutes": 13.4
         }
       },
       {
         "lane_id": "BOT_L_1H_A82E006",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:11:46.207917",
-          "idle_minutes": 3.4
+          "last_at": "2026-10-08T06:47:02.519879",
+          "idle_minutes": 13.2
         }
       },
       {
         "lane_id": "BOT_L_1H_A82E007",
         "heartbeat": {
-          "ok": true,
-          "last_at": "2026-10-07T06:56:11.855931",
-          "idle_minutes": 18.9
+          "ok": false,
+          "last_at": "2026-10-07T23:29:24.442689",
+          "idle_minutes": 450.9
         }
       },
       {
@@ -16117,23 +16117,23 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-07T02:05:50.813872",
-          "idle_minutes": 309.3
+          "idle_minutes": 1734.4
         }
       },
       {
         "lane_id": "BOT_L_1H_A82E009",
         "heartbeat": {
-          "ok": true,
-          "last_at": "2026-10-07T07:03:06.395889",
-          "idle_minutes": 12.0
+          "ok": false,
+          "last_at": "2026-10-07T23:06:17.392641",
+          "idle_minutes": 474.0
         }
       },
       {
         "lane_id": "BOT_L_1H_A82E010",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:13:43.110231",
-          "idle_minutes": 1.4
+          "last_at": "2026-10-08T06:48:51.155546",
+          "idle_minutes": 11.4
         }
       },
       {
@@ -16141,7 +16141,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-29T01:34:10.048490",
-          "idle_minutes": 11861.0
+          "idle_minutes": 13286.1
         }
       },
       {
@@ -16149,7 +16149,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-29T14:24:57.366184",
-          "idle_minutes": 11090.2
+          "idle_minutes": 12515.3
         }
       },
       {
@@ -16157,7 +16157,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-29T14:24:57.390185",
-          "idle_minutes": 11090.2
+          "idle_minutes": 12515.3
         }
       },
       {
@@ -16165,7 +16165,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-29T14:24:57.416186",
-          "idle_minutes": 11090.2
+          "idle_minutes": 12515.3
         }
       },
       {
@@ -16173,15 +16173,15 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-29T01:32:55.591713",
-          "idle_minutes": 11862.2
+          "idle_minutes": 13287.3
         }
       },
       {
         "lane_id": "BOT_L_PREPROD",
         "heartbeat": {
-          "ok": true,
-          "last_at": "2026-10-07T07:13:03.341089",
-          "idle_minutes": 2.1
+          "ok": false,
+          "last_at": "2026-10-07T19:09:47.001403",
+          "idle_minutes": 710.5
         }
       },
       {
@@ -16197,7 +16197,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-01T17:23:57.615941",
-          "idle_minutes": 8031.2
+          "idle_minutes": 9456.3
         }
       },
       {
@@ -16205,7 +16205,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-01T17:23:57.641942",
-          "idle_minutes": 8031.2
+          "idle_minutes": 9456.3
         }
       },
       {
@@ -16213,7 +16213,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-05T17:33:44.367938",
-          "idle_minutes": 2261.4
+          "idle_minutes": 3686.5
         }
       },
       {
@@ -16221,7 +16221,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-01T11:45:57.222578",
-          "idle_minutes": 8369.2
+          "idle_minutes": 9794.3
         }
       },
       {
@@ -16229,15 +16229,15 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-01T11:45:57.258579",
-          "idle_minutes": 8369.2
+          "idle_minutes": 9794.3
         }
       },
       {
         "lane_id": "BOT_L_5M_A8WX01",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:15:07.473677",
-          "idle_minutes": 0.0
+          "last_at": "2026-10-08T06:59:22.941525",
+          "idle_minutes": 0.9
         }
       },
       {
@@ -16245,7 +16245,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-01T11:45:57.299580",
-          "idle_minutes": 8369.2
+          "idle_minutes": 9794.3
         }
       },
       {
@@ -16253,7 +16253,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-01T11:45:57.343582",
-          "idle_minutes": 8369.2
+          "idle_minutes": 9794.3
         }
       },
       {
@@ -16261,167 +16261,167 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-01T11:45:57.382583",
-          "idle_minutes": 8369.2
+          "idle_minutes": 9794.3
         }
       },
       {
         "lane_id": "BOT_L_5M_A8X016",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:10:36.281450",
-          "idle_minutes": 4.5
+          "last_at": "2026-10-08T06:59:37.212447",
+          "idle_minutes": 0.7
         }
       },
       {
         "lane_id": "BOT_L_5M_A8X017",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:10:26.556156",
-          "idle_minutes": 4.7
+          "last_at": "2026-10-08T06:59:42.911440",
+          "idle_minutes": 0.6
         }
       },
       {
         "lane_id": "BOT_L_5M_A8X003",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:14:59.430005",
-          "idle_minutes": 0.2
+          "last_at": "2026-10-08T06:59:21.604229",
+          "idle_minutes": 0.9
         }
       },
       {
         "lane_id": "BOT_L_1H_A82X008",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:15:04.538848",
-          "idle_minutes": 0.1
+          "last_at": "2026-10-08T06:31:40.477445",
+          "idle_minutes": 28.6
         }
       },
       {
         "lane_id": "BOT_L_1H_A82X003",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:06:16.770502",
-          "idle_minutes": 8.9
+          "last_at": "2026-10-08T06:56:37.495159",
+          "idle_minutes": 3.7
         }
       },
       {
         "lane_id": "BOT_L_1H_A82X002",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T06:55:05.244308",
-          "idle_minutes": 20.1
+          "last_at": "2026-10-08T06:31:04.496035",
+          "idle_minutes": 29.2
         }
       },
       {
         "lane_id": "BOT_L_1H_A82X001",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T06:48:53.201795",
-          "idle_minutes": 26.3
+          "last_at": "2026-10-08T07:00:08.966663",
+          "idle_minutes": 0.1
         }
       },
       {
         "lane_id": "BOT_L_5M_A8X002",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:14:18.962525",
-          "idle_minutes": 0.8
+          "last_at": "2026-10-08T06:59:25.795632",
+          "idle_minutes": 0.9
         }
       },
       {
         "lane_id": "BOT_L_5M_A8X010",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:14:53.152955",
-          "idle_minutes": 0.3
+          "last_at": "2026-10-08T06:59:46.949581",
+          "idle_minutes": 0.5
         }
       },
       {
         "lane_id": "BOT_L_5M_A8X001",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:14:13.792068",
-          "idle_minutes": 0.9
+          "last_at": "2026-10-08T06:59:46.593321",
+          "idle_minutes": 0.5
         }
       },
       {
         "lane_id": "BOT_L_1H_A82X009",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:14:44.962310",
-          "idle_minutes": 0.4
+          "last_at": "2026-10-08T06:31:40.964028",
+          "idle_minutes": 28.6
         }
       },
       {
         "lane_id": "BOT_L_1H_A82X010",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:14:57.612956",
-          "idle_minutes": 0.2
+          "last_at": "2026-10-08T06:31:15.166833",
+          "idle_minutes": 29.0
         }
       },
       {
         "lane_id": "BOT_L_5M_A8X018",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:10:23.254800",
-          "idle_minutes": 4.8
+          "last_at": "2026-10-08T06:59:31.574288",
+          "idle_minutes": 0.8
         }
       },
       {
         "lane_id": "BOT_L_5M_A8X019",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:10:36.036896",
-          "idle_minutes": 4.5
+          "last_at": "2026-10-08T07:00:03.322931",
+          "idle_minutes": 0.2
         }
       },
       {
         "lane_id": "BOT_L_5M_A8X011",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:14:36.044651",
-          "idle_minutes": 0.5
+          "last_at": "2026-10-08T06:59:59.195532",
+          "idle_minutes": 0.3
         }
       },
       {
         "lane_id": "BOT_L_1H_A82X011",
         "heartbeat": {
-          "ok": true,
-          "last_at": "2026-10-07T07:14:44.447214",
-          "idle_minutes": 0.4
+          "ok": false,
+          "last_at": "2026-10-07T08:15:13.084889",
+          "idle_minutes": 1365.1
         }
       },
       {
         "lane_id": "BOT_L_5M_A8X012",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:14:56.241454",
-          "idle_minutes": 0.2
+          "last_at": "2026-10-08T06:59:43.463374",
+          "idle_minutes": 0.6
         }
       },
       {
         "lane_id": "BOT_L_1H_A82X012",
         "heartbeat": {
-          "ok": true,
-          "last_at": "2026-10-07T07:14:59.695782",
-          "idle_minutes": 0.2
+          "ok": false,
+          "last_at": "2026-10-07T18:15:50.220577",
+          "idle_minutes": 764.5
         }
       },
       {
         "lane_id": "BOT_L_1H_A82X043",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:14:13.112815",
-          "idle_minutes": 0.9
+          "last_at": "2026-10-08T06:31:16.187286",
+          "idle_minutes": 29.0
         }
       },
       {
         "lane_id": "BOT_L_1H_A82E011",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:02:41.593446",
-          "idle_minutes": 12.5
+          "last_at": "2026-10-08T07:00:16.768907",
+          "idle_minutes": 0.0
         }
       },
       {
@@ -16429,15 +16429,15 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-05T15:27:04.608002",
-          "idle_minutes": 2388.1
+          "idle_minutes": 3813.2
         }
       },
       {
         "lane_id": "BOT_L_1H_A82E013",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-07T07:02:10.614555",
-          "idle_minutes": 13.0
+          "last_at": "2026-10-08T06:34:59.335581",
+          "idle_minutes": 25.3
         }
       },
       {
@@ -16445,7 +16445,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-05T13:07:31.697570",
-          "idle_minutes": 2527.6
+          "idle_minutes": 3952.8
         }
       },
       {
@@ -16453,7 +16453,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-05T15:06:48.089407",
-          "idle_minutes": 2408.3
+          "idle_minutes": 3833.5
         }
       },
       {
@@ -16461,7 +16461,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T15:58:26.956509",
-          "idle_minutes": 5236.7
+          "idle_minutes": 6661.8
         }
       },
       {
@@ -16469,7 +16469,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T15:54:22.677823",
-          "idle_minutes": 5240.8
+          "idle_minutes": 6665.9
         }
       },
       {
@@ -16477,7 +16477,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T15:54:23.870663",
-          "idle_minutes": 5240.8
+          "idle_minutes": 6665.9
         }
       },
       {
@@ -16485,7 +16485,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-04T22:46:14.248726",
-          "idle_minutes": 3388.9
+          "idle_minutes": 4814.1
         }
       },
       {
@@ -16493,7 +16493,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T15:54:23.776464",
-          "idle_minutes": 5240.8
+          "idle_minutes": 6665.9
         }
       },
       {
@@ -16501,7 +16501,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T16:07:47.792714",
-          "idle_minutes": 5227.4
+          "idle_minutes": 6652.5
         }
       },
       {
@@ -16509,7 +16509,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T11:50:55.967905",
-          "idle_minutes": 5484.2
+          "idle_minutes": 6909.4
         }
       },
       {
@@ -16517,7 +16517,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T11:50:56.149910",
-          "idle_minutes": 5484.2
+          "idle_minutes": 6909.4
         }
       },
       {
@@ -16525,7 +16525,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T11:50:56.313915",
-          "idle_minutes": 5484.2
+          "idle_minutes": 6909.4
         }
       },
       {
@@ -16533,7 +16533,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T11:50:56.517920",
-          "idle_minutes": 5484.2
+          "idle_minutes": 6909.4
         }
       },
       {
@@ -16541,7 +16541,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T11:50:56.836929",
-          "idle_minutes": 5484.2
+          "idle_minutes": 6909.3
         }
       },
       {
@@ -16549,7 +16549,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T11:50:57.162938",
-          "idle_minutes": 5484.2
+          "idle_minutes": 6909.3
         }
       },
       {
@@ -16557,7 +16557,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T11:50:57.296942",
-          "idle_minutes": 5484.2
+          "idle_minutes": 6909.3
         }
       },
       {
@@ -16565,7 +16565,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T11:50:57.383944",
-          "idle_minutes": 5484.2
+          "idle_minutes": 6909.3
         }
       },
       {
@@ -16573,7 +16573,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T11:50:57.613950",
-          "idle_minutes": 5484.2
+          "idle_minutes": 6909.3
         }
       },
       {
@@ -16581,7 +16581,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T11:50:57.833957",
-          "idle_minutes": 5484.2
+          "idle_minutes": 6909.3
         }
       },
       {
@@ -16589,7 +16589,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T11:50:58.277969",
-          "idle_minutes": 5484.2
+          "idle_minutes": 6909.3
         }
       },
       {
@@ -16597,7 +16597,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T11:50:58.805984",
-          "idle_minutes": 5484.2
+          "idle_minutes": 6909.3
         }
       },
       {
@@ -16605,7 +16605,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T11:50:59.131993",
-          "idle_minutes": 5484.2
+          "idle_minutes": 6909.3
         }
       },
       {
@@ -16613,7 +16613,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T11:50:59.520003",
-          "idle_minutes": 5484.2
+          "idle_minutes": 6909.3
         }
       },
       {
@@ -16621,7 +16621,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T11:50:59.769010",
-          "idle_minutes": 5484.2
+          "idle_minutes": 6909.3
         }
       },
       {
@@ -16629,7 +16629,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T11:51:00.160021",
-          "idle_minutes": 5484.2
+          "idle_minutes": 6909.3
         }
       },
       {
@@ -16637,7 +16637,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T11:51:00.539032",
-          "idle_minutes": 5484.1
+          "idle_minutes": 6909.3
         }
       },
       {
@@ -16645,7 +16645,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T11:51:00.868041",
-          "idle_minutes": 5484.1
+          "idle_minutes": 6909.3
         }
       },
       {
@@ -16653,7 +16653,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T11:51:01.255051",
-          "idle_minutes": 5484.1
+          "idle_minutes": 6909.3
         }
       },
       {
@@ -16661,7 +16661,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T11:51:01.671063",
-          "idle_minutes": 5484.1
+          "idle_minutes": 6909.3
         }
       },
       {
@@ -16669,7 +16669,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T11:51:02.059073",
-          "idle_minutes": 5484.1
+          "idle_minutes": 6909.3
         }
       },
       {
@@ -16677,7 +16677,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T11:51:02.490085",
-          "idle_minutes": 5484.1
+          "idle_minutes": 6909.3
         }
       },
       {
@@ -16685,7 +16685,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T12:12:13.631844",
-          "idle_minutes": 5462.9
+          "idle_minutes": 6888.1
         }
       },
       {
@@ -16693,7 +16693,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-03T12:12:15.713908",
-          "idle_minutes": 5462.9
+          "idle_minutes": 6888.0
         }
       },
       {
@@ -16701,7 +16701,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-04T21:14:09.128053",
-          "idle_minutes": 3481.0
+          "idle_minutes": 4906.2
         }
       },
       {
@@ -16709,7 +16709,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-05T06:14:27.355430",
-          "idle_minutes": 2940.7
+          "idle_minutes": 4365.8
         }
       },
       {
@@ -16717,7 +16717,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-05T13:14:41.840077",
-          "idle_minutes": 2520.5
+          "idle_minutes": 3945.6
         }
       }
     ],
@@ -18517,10 +18517,10 @@
         "locked": "0",
         "quantity": "0.00106339",
         "quantity_text": "0.00106339",
-        "usd": 88.18
+        "usd": 87.96
       }
     ],
-    "estimated_total_usd": 89.39,
+    "estimated_total_usd": 89.18,
     "error": null
   }
 }
