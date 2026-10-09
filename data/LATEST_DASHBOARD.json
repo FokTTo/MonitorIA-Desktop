@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-10-09T14:15:03-03:00",
+  "generated_at": "2026-10-09T14:20:05-03:00",
   "timezone": "America/Sao_Paulo",
   "git_sha": "91516f8",
   "source": "VPS",
@@ -10724,9 +10724,9 @@
       "source": "bot_runner_state"
     },
     "position": {
-      "open": false,
-      "side": null,
-      "ticker": null
+      "open": true,
+      "side": "LONG",
+      "ticker": "BTC-USD"
     },
     "gate_n": null,
     "gate_pf": 1.26
@@ -10772,16 +10772,6 @@
         "pf_fee": 0.047,
         "pnl_usd_fee": -13.4922,
         "alert_ready": false
-      },
-      {
-        "patch": "A.8.2E005",
-        "lane_id": "BOT_L_1H_A82E005",
-        "progress": "20/40",
-        "n": 20,
-        "verdict": "READY_REVERTER",
-        "pf_fee": 0.0216,
-        "pnl_usd_fee": -16.3191,
-        "alert_ready": true
       },
       {
         "patch": "A.8.2E006",
@@ -11147,7 +11137,7 @@
       }
     ],
     "policy": "Sugere veredito — NÃO aplica patch / dormant / primário",
-    "generated_at": "2026-10-09T17:15:05"
+    "generated_at": "2026-10-09T17:20:07"
   },
   "shadows": [
     {
@@ -11189,16 +11179,6 @@
       "pf_fee": 0.047,
       "pnl_usd_fee": -13.4922,
       "alert_ready": false
-    },
-    {
-      "patch": "A.8.2E005",
-      "lane_id": "BOT_L_1H_A82E005",
-      "progress": "20/40",
-      "n": 20,
-      "verdict": "READY_REVERTER",
-      "pf_fee": 0.0216,
-      "pnl_usd_fee": -16.3191,
-      "alert_ready": true
     },
     {
       "patch": "A.8.2E006",
@@ -11609,7 +11589,7 @@
         "patch_id": "A.8.2E005",
         "target": "BOT_L_1H",
         "kind": "entry",
-        "status": "MEASURING",
+        "status": "REVERTER",
         "title": "1H allow-only hours [16, 17, 19]",
         "rank_score": 91.495,
         "rank": 5,
@@ -16943,8 +16923,19 @@
     "capital_note": "",
     "empty_text": "A primeira ordem sai no próximo sinal.",
     "has_sent_fills": true,
-    "open_quantity": 0.0,
-    "open_position": null,
+    "open_quantity": 0.00101,
+    "open_position": {
+      "symbol": "BTC-USD",
+      "quantity": 0.00101,
+      "entry_price": 82657.15999999999,
+      "opened_at": "2026-10-09T17:19:10.880301+00:00",
+      "side": "LONG",
+      "status": "open",
+      "portfolio_id": "BOT_L",
+      "venue": "mainnet",
+      "quote_usd": 83.4837316,
+      "fill_price": 82657.15999999999
+    },
     "last_closed_at": "2026-10-09T17:08:36.668261+00:00",
     "periods": {
       "daily": {
@@ -18833,22 +18824,22 @@
     "balances": [
       {
         "asset": "USDT",
-        "free": "84.98601037",
+        "free": "1.50227877",
         "locked": "0",
-        "quantity": "84.98601037",
-        "quantity_text": "84.98601037",
-        "usd": 84.99
+        "quantity": "1.50227877",
+        "quantity_text": "1.50227877",
+        "usd": 1.5
       },
       {
         "asset": "BTC",
-        "free": "0.00000474",
+        "free": "0.00101373",
         "locked": "0",
-        "quantity": "0.00000474",
-        "quantity_text": "0.00000474",
-        "usd": 0.39
+        "quantity": "0.00101373",
+        "quantity_text": "0.00101373",
+        "usd": 83.78
       }
     ],
-    "estimated_total_usd": 85.38,
+    "estimated_total_usd": 85.29,
     "error": null
   }
 }
