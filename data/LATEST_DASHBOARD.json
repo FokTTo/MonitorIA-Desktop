@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-10-10T04:59:26-03:00",
+  "generated_at": "2026-10-10T05:04:27-03:00",
   "timezone": "America/Sao_Paulo",
   "git_sha": "91516f8",
   "source": "VPS",
@@ -10724,9 +10724,9 @@
       "source": "bot_runner_state"
     },
     "position": {
-      "open": false,
-      "side": null,
-      "ticker": null
+      "open": true,
+      "side": "LONG",
+      "ticker": "BTC-USD"
     },
     "gate_n": null,
     "gate_pf": 1.26
@@ -11127,7 +11127,7 @@
       }
     ],
     "policy": "Sugere veredito — NÃO aplica patch / dormant / primário",
-    "generated_at": "2026-10-10T07:59:28"
+    "generated_at": "2026-10-10T08:04:29"
   },
   "shadows": [
     {
@@ -16903,8 +16903,19 @@
     "capital_note": "",
     "empty_text": "A primeira ordem sai no próximo sinal.",
     "has_sent_fills": true,
-    "open_quantity": 0.0,
-    "open_position": null,
+    "open_quantity": 0.001,
+    "open_position": {
+      "symbol": "BTC-USD",
+      "quantity": 0.001,
+      "entry_price": 82806.01,
+      "opened_at": "2026-10-10T08:01:08.342338+00:00",
+      "side": "LONG",
+      "status": "open",
+      "portfolio_id": "BOT_L",
+      "venue": "mainnet",
+      "quote_usd": 82.80601,
+      "fill_price": 82806.01
+    },
     "last_closed_at": "2026-10-10T07:14:58.541695+00:00",
     "periods": {
       "daily": {
@@ -18856,22 +18867,22 @@
     "balances": [
       {
         "asset": "USDT",
-        "free": "84.3419065",
+        "free": "1.5358965",
         "locked": "0",
-        "quantity": "84.3419065",
-        "quantity_text": "84.3419065",
-        "usd": 84.34
+        "quantity": "1.5358965",
+        "quantity_text": "1.5358965",
+        "usd": 1.54
       },
       {
         "asset": "BTC",
-        "free": "0.00000171",
+        "free": "0.00100071",
         "locked": "0",
-        "quantity": "0.00000171",
-        "quantity_text": "0.00000171",
-        "usd": 0.14
+        "quantity": "0.00100071",
+        "quantity_text": "0.00100071",
+        "usd": 82.89
       }
     ],
-    "estimated_total_usd": 84.48,
+    "estimated_total_usd": 84.43,
     "error": null
   }
 }
