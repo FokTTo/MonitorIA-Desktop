@@ -4,7 +4,7 @@
   "title": "Monitor IA",
   "subtitle": "O que é o Monitor IA? — evidência paper com fees + caminho até capital real",
   "locale": "pt-BR",
-  "as_of": "2026-10-10",
+  "as_of": "2026-10-12",
   "snapshot_source": "VPS · cartão 5m = v_bot_l_trades_com_fees + fechos novos v_bot_l_5m_clone_trades_com_fees (dedup id/tempo, sem live) / v_bot_l_1h_fee_gate",
   "disclaimer_short": "Resultados passados em PAPER (simulação com custos de corretagem). Não são garantia de retorno futuro. Risco de perda total do capital. A curva composta por trade NÃO é o saldo da conta. Senhas do app Desktop são criptografadas (bcrypt) — a operação não tem acesso à senha em texto claro.",
   "brand": {
@@ -55,7 +55,7 @@
     },
     {
       "term": "Expectancy (expectativa por trade)",
-      "meaning": "Resultado médio de um trade, em % do valor operado (notional). Ex.: +0.0351% por operação. Não é a rentabilidade mensal da conta inteira."
+      "meaning": "Resultado médio de um trade, em % do valor operado (notional). Ex.: +0.0352% por operação. Não é a rentabilidade mensal da conta inteira."
     },
     {
       "term": "Taxa de acerto (win rate)",
@@ -127,138 +127,138 @@
       "role": "Robô principal — candidato a operar com capital real (depois dos testes)",
       "status": "Em paper (simulação na corretora de teste / conta paper)",
       "period_start": "2026-05-22",
-      "period_end": "2026-10-10",
-      "trades": 1570,
+      "period_end": "2026-10-11",
+      "trades": 1579,
       "trades_strategy_view": 1374,
-      "trades_30d": 399,
-      "trades_90d": 968,
+      "trades_30d": 392,
+      "trades_90d": 965,
       "profit_factor": 1.26,
-      "win_rate_pct": 51.46,
-      "expectancy_pct_per_trade": 0.0351,
-      "avg_win_pct": 0.3446,
-      "avg_loss_pct": -0.2931,
+      "win_rate_pct": 51.61,
+      "expectancy_pct_per_trade": 0.0352,
+      "avg_win_pct": 0.3426,
+      "avg_loss_pct": -0.2927,
       "worst_trade_pct": -1.3473,
       "best_trade_pct": 2.4548,
       "max_drawdown_pct": 10.73,
-      "cumulative_compound_return_pct": 71.61,
+      "cumulative_compound_return_pct": 72.5,
       "cumulative_note": "Índice composto reinvestindo o retorno de cada trade no notional — NÃO é o lucro da conta com capital parado.",
       "windows": {
         "rolling_30d": {
-          "trades": 399,
-          "profit_factor": 1.12,
-          "win_rate_pct": 43.36,
-          "expectancy_pct_per_trade": -0.003,
+          "trades": 392,
+          "profit_factor": 1.21,
+          "win_rate_pct": 44.64,
+          "expectancy_pct_per_trade": 0.006,
           "max_drawdown_pct": 7.52,
-          "period_start": "2026-09-11",
-          "period_end": "2026-10-10",
-          "cumulative_compound_return_pct": -1.32,
+          "period_start": "2026-09-12",
+          "period_end": "2026-10-11",
+          "cumulative_compound_return_pct": 2.24,
           "monthly": [
             {
               "month": "2026-09",
-              "trades": 204,
-              "profit_factor": 1.05,
-              "win_rate_pct": 43.14,
-              "expectancy_pct_per_trade": -0.0224
+              "trades": 188,
+              "profit_factor": 1.16,
+              "win_rate_pct": 44.15,
+              "expectancy_pct_per_trade": -0.0083
             },
             {
               "month": "2026-10",
-              "trades": 195,
-              "profit_factor": 1.28,
-              "win_rate_pct": 43.59,
-              "expectancy_pct_per_trade": 0.0174
+              "trades": 204,
+              "profit_factor": 1.3,
+              "win_rate_pct": 45.1,
+              "expectancy_pct_per_trade": 0.0192
             }
           ],
           "equity_curve_sample": [
             {
               "i": 1,
-              "equity": 0.9966,
-              "profit_factor": 0.0,
-              "date": "2026-09-11"
+              "equity": 1.0006,
+              "profit_factor": 0.01,
+              "date": "2026-09-12"
             },
             {
               "i": 37,
-              "equity": 0.9757,
-              "profit_factor": 0.69,
-              "date": "2026-09-14"
+              "equity": 0.9949,
+              "profit_factor": 1.24,
+              "date": "2026-09-17"
             },
             {
-              "i": 73,
-              "equity": 0.9955,
-              "profit_factor": 1.21,
-              "date": "2026-09-19"
+              "i": 72,
+              "equity": 1.0282,
+              "profit_factor": 1.52,
+              "date": "2026-09-20"
             },
             {
-              "i": 110,
-              "equity": 1.0093,
-              "profit_factor": 1.23,
-              "date": "2026-09-22"
+              "i": 108,
+              "equity": 1.0468,
+              "profit_factor": 1.49,
+              "date": "2026-09-23"
             },
             {
-              "i": 146,
-              "equity": 0.9773,
-              "profit_factor": 1.1,
-              "date": "2026-09-25"
+              "i": 143,
+              "equity": 1.0014,
+              "profit_factor": 1.3,
+              "date": "2026-09-27"
             },
             {
-              "i": 182,
-              "equity": 0.975,
-              "profit_factor": 1.11,
-              "date": "2026-09-29"
+              "i": 179,
+              "equity": 0.9978,
+              "profit_factor": 1.17,
+              "date": "2026-09-30"
             },
             {
-              "i": 218,
-              "equity": 0.967,
-              "profit_factor": 1.1,
-              "date": "2026-10-02"
+              "i": 214,
+              "equity": 1.0044,
+              "profit_factor": 1.24,
+              "date": "2026-10-03"
             },
             {
-              "i": 254,
-              "equity": 0.9759,
-              "profit_factor": 1.13,
-              "date": "2026-10-04"
-            },
-            {
-              "i": 290,
-              "equity": 0.9781,
-              "profit_factor": 1.1,
+              "i": 250,
+              "equity": 1.0044,
+              "profit_factor": 1.22,
               "date": "2026-10-05"
             },
             {
-              "i": 327,
-              "equity": 0.9675,
-              "profit_factor": 1.07,
+              "i": 285,
+              "equity": 1.0001,
+              "profit_factor": 1.16,
+              "date": "2026-10-06"
+            },
+            {
+              "i": 321,
+              "equity": 0.9971,
+              "profit_factor": 1.14,
               "date": "2026-10-07"
             },
             {
-              "i": 363,
-              "equity": 0.9676,
-              "profit_factor": 1.07,
+              "i": 356,
+              "equity": 1.0105,
+              "profit_factor": 1.17,
               "date": "2026-10-09"
             },
             {
-              "i": 399,
-              "equity": 0.9868,
-              "profit_factor": 1.12,
-              "date": "2026-10-10"
+              "i": 392,
+              "equity": 1.0224,
+              "profit_factor": 1.21,
+              "date": "2026-10-11"
             }
           ]
         },
         "rolling_90d": {
-          "trades": 968,
+          "trades": 965,
           "profit_factor": 1.29,
-          "win_rate_pct": 49.79,
+          "win_rate_pct": 49.95,
           "expectancy_pct_per_trade": 0.0259,
           "max_drawdown_pct": 10.73,
-          "period_start": "2026-07-13",
-          "period_end": "2026-10-10",
-          "cumulative_compound_return_pct": 27.92,
+          "period_start": "2026-07-14",
+          "period_end": "2026-10-11",
+          "cumulative_compound_return_pct": 27.87,
           "monthly": [
             {
               "month": "2026-07",
-              "trades": 191,
-              "profit_factor": 1.45,
-              "win_rate_pct": 56.02,
-              "expectancy_pct_per_trade": 0.0541
+              "trades": 179,
+              "profit_factor": 1.48,
+              "win_rate_pct": 55.87,
+              "expectancy_pct_per_trade": 0.0546
             },
             {
               "month": "2026-08",
@@ -276,270 +276,270 @@
             },
             {
               "month": "2026-10",
-              "trades": 195,
-              "profit_factor": 1.28,
-              "win_rate_pct": 43.59,
-              "expectancy_pct_per_trade": 0.0174
+              "trades": 204,
+              "profit_factor": 1.3,
+              "win_rate_pct": 45.1,
+              "expectancy_pct_per_trade": 0.0192
             }
           ],
           "equity_curve_sample": [
             {
               "i": 1,
-              "equity": 1.0038,
-              "profit_factor": 0.08,
-              "date": "2026-07-13"
+              "equity": 1.0031,
+              "profit_factor": 0.49,
+              "date": "2026-07-14"
             },
             {
               "i": 89,
-              "equity": 1.0674,
-              "profit_factor": 1.59,
-              "date": "2026-07-20"
+              "equity": 1.0772,
+              "profit_factor": 1.87,
+              "date": "2026-07-21"
             },
             {
-              "i": 177,
-              "equity": 1.1031,
-              "profit_factor": 1.48,
-              "date": "2026-07-30"
+              "i": 176,
+              "equity": 1.104,
+              "profit_factor": 1.5,
+              "date": "2026-07-31"
             },
             {
-              "i": 265,
-              "equity": 1.1845,
-              "profit_factor": 1.58,
+              "i": 264,
+              "equity": 1.2078,
+              "profit_factor": 1.71,
               "date": "2026-08-07"
             },
             {
-              "i": 353,
-              "equity": 1.2703,
-              "profit_factor": 1.66,
-              "date": "2026-08-16"
+              "i": 352,
+              "equity": 1.2864,
+              "profit_factor": 1.74,
+              "date": "2026-08-17"
             },
             {
-              "i": 441,
-              "equity": 1.3628,
-              "profit_factor": 1.65,
-              "date": "2026-08-22"
+              "i": 439,
+              "equity": 1.365,
+              "profit_factor": 1.67,
+              "date": "2026-08-23"
             },
             {
-              "i": 528,
-              "equity": 1.3281,
-              "profit_factor": 1.48,
-              "date": "2026-09-07"
+              "i": 527,
+              "equity": 1.3165,
+              "profit_factor": 1.47,
+              "date": "2026-09-08"
             },
             {
-              "i": 616,
-              "equity": 1.2731,
-              "profit_factor": 1.33,
-              "date": "2026-09-15"
-            },
-            {
-              "i": 704,
-              "equity": 1.2868,
+              "i": 614,
+              "equity": 1.2538,
               "profit_factor": 1.34,
-              "date": "2026-09-24"
+              "date": "2026-09-18"
             },
             {
-              "i": 792,
-              "equity": 1.263,
+              "i": 702,
+              "equity": 1.2638,
+              "profit_factor": 1.33,
+              "date": "2026-09-25"
+            },
+            {
+              "i": 790,
+              "equity": 1.257,
               "profit_factor": 1.31,
               "date": "2026-10-03"
             },
             {
-              "i": 880,
-              "equity": 1.2666,
+              "i": 877,
+              "equity": 1.2573,
               "profit_factor": 1.28,
               "date": "2026-10-06"
             },
             {
-              "i": 968,
-              "equity": 1.2792,
+              "i": 965,
+              "equity": 1.2787,
               "profit_factor": 1.29,
-              "date": "2026-10-10"
+              "date": "2026-10-11"
             }
           ]
         },
         "last_30_trades": {
           "trades": 30,
-          "profit_factor": 2.62,
-          "win_rate_pct": 56.67,
-          "expectancy_pct_per_trade": 0.053,
+          "profit_factor": 1.83,
+          "win_rate_pct": 60.0,
+          "expectancy_pct_per_trade": 0.023,
           "max_drawdown_pct": 0.93,
           "period_start": "2026-10-09",
-          "period_end": "2026-10-10",
-          "cumulative_compound_return_pct": 1.6,
+          "period_end": "2026-10-11",
+          "cumulative_compound_return_pct": 0.69,
           "monthly": [
             {
               "month": "2026-10",
               "trades": 30,
-              "profit_factor": 2.62,
-              "win_rate_pct": 56.67,
-              "expectancy_pct_per_trade": 0.053
+              "profit_factor": 1.83,
+              "win_rate_pct": 60.0,
+              "expectancy_pct_per_trade": 0.023
             }
           ],
           "equity_curve_sample": [
             {
               "i": 1,
-              "equity": 1.003,
-              "profit_factor": 0.46,
+              "equity": 0.9984,
+              "profit_factor": 0.0,
               "date": "2026-10-09"
             },
             {
               "i": 4,
-              "equity": 1.0132,
-              "profit_factor": 2.27,
+              "equity": 0.9946,
+              "profit_factor": 0.0,
               "date": "2026-10-09"
             },
             {
               "i": 6,
-              "equity": 1.0095,
-              "profit_factor": 4.18,
+              "equity": 0.9907,
+              "profit_factor": 0.0,
               "date": "2026-10-09"
             },
             {
               "i": 9,
-              "equity": 1.0142,
-              "profit_factor": 5.55,
-              "date": "2026-10-09"
+              "equity": 0.9946,
+              "profit_factor": 0.49,
+              "date": "2026-10-10"
             },
             {
               "i": 12,
-              "equity": 1.011,
-              "profit_factor": 2.66,
-              "date": "2026-10-09"
+              "equity": 0.9973,
+              "profit_factor": 0.84,
+              "date": "2026-10-10"
             },
             {
               "i": 14,
-              "equity": 1.0065,
-              "profit_factor": 2.04,
-              "date": "2026-10-09"
+              "equity": 0.998,
+              "profit_factor": 0.95,
+              "date": "2026-10-10"
             },
             {
               "i": 17,
-              "equity": 1.0084,
-              "profit_factor": 2.22,
-              "date": "2026-10-09"
+              "equity": 0.998,
+              "profit_factor": 0.96,
+              "date": "2026-10-10"
             },
             {
               "i": 19,
-              "equity": 1.0088,
-              "profit_factor": 2.28,
+              "equity": 1.0011,
+              "profit_factor": 1.56,
               "date": "2026-10-10"
             },
             {
               "i": 22,
-              "equity": 1.0102,
-              "profit_factor": 2.24,
-              "date": "2026-10-10"
+              "equity": 1.0,
+              "profit_factor": 1.35,
+              "date": "2026-10-11"
             },
             {
               "i": 25,
-              "equity": 1.0124,
-              "profit_factor": 2.38,
-              "date": "2026-10-10"
+              "equity": 1.0029,
+              "profit_factor": 1.56,
+              "date": "2026-10-11"
             },
             {
               "i": 27,
-              "equity": 1.0153,
-              "profit_factor": 2.77,
-              "date": "2026-10-10"
+              "equity": 1.0036,
+              "profit_factor": 1.62,
+              "date": "2026-10-11"
             },
             {
               "i": 30,
-              "equity": 1.016,
-              "profit_factor": 2.62,
-              "date": "2026-10-10"
+              "equity": 1.0069,
+              "profit_factor": 1.83,
+              "date": "2026-10-11"
             }
           ]
         },
         "last_90_trades": {
           "trades": 90,
-          "profit_factor": 1.38,
-          "win_rate_pct": 41.11,
-          "expectancy_pct_per_trade": 0.0125,
-          "max_drawdown_pct": 3.03,
+          "profit_factor": 1.5,
+          "win_rate_pct": 44.44,
+          "expectancy_pct_per_trade": 0.015,
+          "max_drawdown_pct": 2.63,
           "period_start": "2026-10-06",
-          "period_end": "2026-10-10",
-          "cumulative_compound_return_pct": 1.12,
+          "period_end": "2026-10-11",
+          "cumulative_compound_return_pct": 1.34,
           "monthly": [
             {
               "month": "2026-10",
               "trades": 90,
-              "profit_factor": 1.38,
-              "win_rate_pct": 41.11,
-              "expectancy_pct_per_trade": 0.0125
+              "profit_factor": 1.5,
+              "win_rate_pct": 44.44,
+              "expectancy_pct_per_trade": 0.015
             }
           ],
           "equity_curve_sample": [
             {
               "i": 1,
-              "equity": 0.998,
+              "equity": 0.9983,
               "profit_factor": 0.0,
               "date": "2026-10-06"
             },
             {
               "i": 9,
-              "equity": 1.003,
-              "profit_factor": 1.18,
-              "date": "2026-10-06"
+              "equity": 0.9885,
+              "profit_factor": 0.0,
+              "date": "2026-10-07"
             },
             {
               "i": 17,
-              "equity": 0.9933,
-              "profit_factor": 0.84,
+              "equity": 0.9876,
+              "profit_factor": 0.45,
               "date": "2026-10-07"
             },
             {
               "i": 25,
-              "equity": 0.9895,
-              "profit_factor": 0.73,
-              "date": "2026-10-07"
+              "equity": 0.9839,
+              "profit_factor": 0.47,
+              "date": "2026-10-08"
             },
             {
               "i": 33,
-              "equity": 0.9886,
-              "profit_factor": 0.73,
+              "equity": 0.9747,
+              "profit_factor": 0.44,
               "date": "2026-10-08"
             },
             {
               "i": 41,
-              "equity": 0.9796,
-              "profit_factor": 0.67,
-              "date": "2026-10-08"
+              "equity": 0.9828,
+              "profit_factor": 0.71,
+              "date": "2026-10-09"
             },
             {
               "i": 50,
-              "equity": 0.9857,
-              "profit_factor": 0.83,
+              "equity": 0.994,
+              "profit_factor": 1.02,
               "date": "2026-10-09"
             },
             {
               "i": 58,
-              "equity": 0.997,
-              "profit_factor": 1.06,
+              "equity": 1.0,
+              "profit_factor": 1.19,
               "date": "2026-10-09"
             },
             {
               "i": 66,
-              "equity": 1.0047,
-              "profit_factor": 1.21,
+              "equity": 0.9971,
+              "profit_factor": 1.19,
               "date": "2026-10-09"
             },
             {
               "i": 74,
-              "equity": 1.0018,
-              "profit_factor": 1.2,
-              "date": "2026-10-09"
+              "equity": 1.0044,
+              "profit_factor": 1.32,
+              "date": "2026-10-10"
             },
             {
               "i": 82,
-              "equity": 1.0055,
-              "profit_factor": 1.26,
-              "date": "2026-10-10"
+              "equity": 1.0065,
+              "profit_factor": 1.39,
+              "date": "2026-10-11"
             },
             {
               "i": 90,
-              "equity": 1.0112,
-              "profit_factor": 1.38,
-              "date": "2026-10-10"
+              "equity": 1.0134,
+              "profit_factor": 1.5,
+              "date": "2026-10-11"
             }
           ]
         }
@@ -582,16 +582,16 @@
         },
         {
           "month": "2026-10",
-          "trades": 195,
-          "profit_factor": 1.28,
-          "win_rate_pct": 43.59,
-          "expectancy_pct_per_trade": 0.0174
+          "trades": 204,
+          "profit_factor": 1.3,
+          "win_rate_pct": 45.1,
+          "expectancy_pct_per_trade": 0.0192
         }
       ],
       "buy_hold_btc": {
         "price_start": 75355.65,
-        "price_end": 83000.0,
-        "return_pct": 10.14,
+        "price_end": 83135.33,
+        "return_pct": 10.32,
         "note": "Proxy buy&hold no mesmo período (1.º preço de entrada → último preço de saída da amostra do cartão)."
       },
       "equity_curve_sample": [
@@ -608,74 +608,74 @@
           "date": "2026-06-09"
         },
         {
-          "i": 286,
-          "equity": 1.0823,
+          "i": 288,
+          "equity": 1.0842,
           "profit_factor": 1.11,
-          "date": "2026-06-20"
+          "date": "2026-06-21"
         },
         {
-          "i": 429,
-          "equity": 1.1733,
+          "i": 431,
+          "equity": 1.1777,
           "profit_factor": 1.17,
           "date": "2026-07-01"
         },
         {
-          "i": 572,
-          "equity": 1.3505,
-          "profit_factor": 1.24,
+          "i": 575,
+          "equity": 1.3595,
+          "profit_factor": 1.25,
           "date": "2026-07-10"
         },
         {
-          "i": 714,
-          "equity": 1.4375,
-          "profit_factor": 1.25,
+          "i": 718,
+          "equity": 1.4281,
+          "profit_factor": 1.24,
           "date": "2026-07-22"
         },
         {
-          "i": 857,
-          "equity": 1.5954,
+          "i": 862,
+          "equity": 1.5992,
           "profit_factor": 1.31,
-          "date": "2026-08-05"
+          "date": "2026-08-06"
         },
         {
-          "i": 999,
-          "equity": 1.7881,
-          "profit_factor": 1.37,
+          "i": 1005,
+          "equity": 1.8151,
+          "profit_factor": 1.38,
           "date": "2026-08-20"
         },
         {
-          "i": 1142,
-          "equity": 1.7706,
+          "i": 1149,
+          "equity": 1.7805,
           "profit_factor": 1.31,
-          "date": "2026-09-08"
+          "date": "2026-09-09"
         },
         {
-          "i": 1285,
-          "equity": 1.7558,
-          "profit_factor": 1.28,
-          "date": "2026-09-22"
+          "i": 1292,
+          "equity": 1.7733,
+          "profit_factor": 1.29,
+          "date": "2026-09-23"
         },
         {
-          "i": 1427,
-          "equity": 1.6996,
+          "i": 1436,
+          "equity": 1.6974,
           "profit_factor": 1.26,
-          "date": "2026-10-04"
+          "date": "2026-10-05"
         },
         {
-          "i": 1570,
-          "equity": 1.7161,
+          "i": 1579,
+          "equity": 1.725,
           "profit_factor": 1.26,
-          "date": "2026-10-10"
+          "date": "2026-10-11"
         }
       ],
       "notes": [
         "Todos os números com fees. Vista strategy (exclusões): 1374 trades · PF 1.25 · exp +0.0379%.",
-        "Últimos 30 trades: PF 2.62 · exp +0.0530%. Calendário 30d: PF 1.12.",
+        "Últimos 30 trades: PF 1.83 · exp +0.0230%. Calendário 30d: PF 1.21.",
         "Max drawdown do índice composto ≈ 10.7% — meses positivos não eliminam buracos no caminho.",
-        "Amostra do cartão: fee-gate BOT_L mais 177 fechos novos de BOT_L_5M_CLONE (pré-produção), sem repetir id ou segundo de fecho. Sem trades live/mainnet."
+        "Amostra do cartão: fee-gate BOT_L mais 186 fechos novos de BOT_L_5M_CLONE (pré-produção), sem repetir id ou segundo de fecho. Sem trades live/mainnet."
       ],
       "profit_factor_strategy": 1.25,
-      "sample_clone_closes_added": 177,
+      "sample_clone_closes_added": 186,
       "sample_fee_gate_trades": 1393
     },
     {
@@ -684,138 +684,138 @@
       "role": "Segundo robô em paper (1 hora) — NÃO opera live no mesmo mês que o BOT_L",
       "status": "Paper — mantido para diversificar horizonte temporal",
       "period_start": "2026-07-13",
-      "period_end": "2026-10-10",
-      "trades": 643,
+      "period_end": "2026-10-12",
+      "trades": 655,
       "trades_strategy_view": null,
-      "trades_30d": 196,
-      "trades_90d": 643,
-      "profit_factor": 1.23,
-      "win_rate_pct": 53.19,
-      "expectancy_pct_per_trade": 0.0155,
-      "avg_win_pct": 0.2716,
-      "avg_loss_pct": -0.2754,
+      "trades_30d": 202,
+      "trades_90d": 650,
+      "profit_factor": 1.26,
+      "win_rate_pct": 53.44,
+      "expectancy_pct_per_trade": 0.0175,
+      "avg_win_pct": 0.2708,
+      "avg_loss_pct": -0.2733,
       "worst_trade_pct": -0.769,
       "best_trade_pct": 0.6753,
       "max_drawdown_pct": 10.85,
-      "cumulative_compound_return_pct": 10.18,
+      "cumulative_compound_return_pct": 11.8,
       "cumulative_note": "Índice composto por trade (notional) — não é saldo da conta.",
       "windows": {
         "rolling_30d": {
-          "trades": 196,
-          "profit_factor": 1.23,
-          "win_rate_pct": 56.12,
-          "expectancy_pct_per_trade": 0.0318,
+          "trades": 202,
+          "profit_factor": 1.35,
+          "win_rate_pct": 57.43,
+          "expectancy_pct_per_trade": 0.0412,
           "max_drawdown_pct": 1.91,
-          "period_start": "2026-09-11",
-          "period_end": "2026-10-10",
-          "cumulative_compound_return_pct": 6.34,
+          "period_start": "2026-09-12",
+          "period_end": "2026-10-12",
+          "cumulative_compound_return_pct": 8.6,
           "monthly": [
             {
               "month": "2026-09",
-              "trades": 133,
-              "profit_factor": 1.08,
-              "win_rate_pct": 52.63,
-              "expectancy_pct_per_trade": 0.0212
+              "trades": 127,
+              "profit_factor": 1.12,
+              "win_rate_pct": 53.54,
+              "expectancy_pct_per_trade": 0.0273
             },
             {
               "month": "2026-10",
-              "trades": 63,
-              "profit_factor": 1.75,
-              "win_rate_pct": 63.49,
-              "expectancy_pct_per_trade": 0.0541
+              "trades": 75,
+              "profit_factor": 2.04,
+              "win_rate_pct": 64.0,
+              "expectancy_pct_per_trade": 0.0649
             }
           ],
           "equity_curve_sample": [
             {
               "i": 1,
-              "equity": 1.0029,
-              "profit_factor": 0.13,
-              "date": "2026-09-11"
+              "equity": 0.9997,
+              "profit_factor": 0.0,
+              "date": "2026-09-12"
             },
             {
               "i": 19,
-              "equity": 0.9911,
-              "profit_factor": 0.59,
+              "equity": 1.0106,
+              "profit_factor": 1.4,
               "date": "2026-09-14"
             },
             {
-              "i": 36,
-              "equity": 0.9937,
-              "profit_factor": 0.82,
-              "date": "2026-09-17"
+              "i": 38,
+              "equity": 1.018,
+              "profit_factor": 1.58,
+              "date": "2026-09-18"
             },
             {
-              "i": 54,
-              "equity": 1.0156,
-              "profit_factor": 1.2,
-              "date": "2026-09-20"
+              "i": 56,
+              "equity": 1.0158,
+              "profit_factor": 1.13,
+              "date": "2026-09-22"
             },
             {
-              "i": 72,
-              "equity": 1.0084,
-              "profit_factor": 1.0,
-              "date": "2026-09-24"
-            },
-            {
-              "i": 90,
-              "equity": 1.0184,
+              "i": 74,
+              "equity": 1.0197,
               "profit_factor": 1.15,
               "date": "2026-09-25"
             },
             {
-              "i": 107,
-              "equity": 1.0255,
-              "profit_factor": 1.18,
-              "date": "2026-09-27"
+              "i": 92,
+              "equity": 1.0195,
+              "profit_factor": 1.11,
+              "date": "2026-09-26"
             },
             {
-              "i": 125,
-              "equity": 1.0236,
+              "i": 111,
+              "equity": 1.022,
               "profit_factor": 1.11,
               "date": "2026-09-29"
             },
             {
-              "i": 143,
-              "equity": 1.0378,
-              "profit_factor": 1.13,
+              "i": 129,
+              "equity": 1.0325,
+              "profit_factor": 1.1,
               "date": "2026-10-01"
             },
             {
-              "i": 161,
-              "equity": 1.0467,
-              "profit_factor": 1.16,
+              "i": 147,
+              "equity": 1.0548,
+              "profit_factor": 1.21,
+              "date": "2026-10-03"
+            },
+            {
+              "i": 165,
+              "equity": 1.0679,
+              "profit_factor": 1.26,
               "date": "2026-10-04"
             },
             {
-              "i": 178,
-              "equity": 1.075,
-              "profit_factor": 1.28,
-              "date": "2026-10-06"
+              "i": 184,
+              "equity": 1.068,
+              "profit_factor": 1.26,
+              "date": "2026-10-10"
             },
             {
-              "i": 196,
-              "equity": 1.0634,
-              "profit_factor": 1.23,
-              "date": "2026-10-10"
+              "i": 202,
+              "equity": 1.086,
+              "profit_factor": 1.35,
+              "date": "2026-10-12"
             }
           ]
         },
         "rolling_90d": {
-          "trades": 643,
-          "profit_factor": 1.23,
-          "win_rate_pct": 53.19,
-          "expectancy_pct_per_trade": 0.0155,
+          "trades": 650,
+          "profit_factor": 1.27,
+          "win_rate_pct": 53.69,
+          "expectancy_pct_per_trade": 0.0188,
           "max_drawdown_pct": 10.85,
-          "period_start": "2026-07-13",
-          "period_end": "2026-10-10",
-          "cumulative_compound_return_pct": 10.18,
+          "period_start": "2026-07-14",
+          "period_end": "2026-10-12",
+          "cumulative_compound_return_pct": 12.7,
           "monthly": [
             {
               "month": "2026-07",
-              "trades": 135,
-              "profit_factor": 1.12,
-              "win_rate_pct": 53.33,
-              "expectancy_pct_per_trade": 0.0046
+              "trades": 130,
+              "profit_factor": 1.16,
+              "win_rate_pct": 54.62,
+              "expectancy_pct_per_trade": 0.0109
             },
             {
               "month": "2026-08",
@@ -833,277 +833,277 @@
             },
             {
               "month": "2026-10",
-              "trades": 63,
-              "profit_factor": 1.75,
-              "win_rate_pct": 63.49,
-              "expectancy_pct_per_trade": 0.0541
+              "trades": 75,
+              "profit_factor": 2.04,
+              "win_rate_pct": 64.0,
+              "expectancy_pct_per_trade": 0.0649
             }
           ],
           "equity_curve_sample": [
             {
               "i": 1,
-              "equity": 0.9965,
-              "profit_factor": 0.0,
-              "date": "2026-07-13"
+              "equity": 1.0032,
+              "profit_factor": 0.29,
+              "date": "2026-07-14"
             },
             {
-              "i": 59,
-              "equity": 1.0212,
-              "profit_factor": 1.73,
-              "date": "2026-07-20"
+              "i": 60,
+              "equity": 1.0327,
+              "profit_factor": 1.92,
+              "date": "2026-07-21"
             },
             {
-              "i": 118,
-              "equity": 1.0007,
-              "profit_factor": 1.1,
+              "i": 119,
+              "equity": 1.0183,
+              "profit_factor": 1.18,
               "date": "2026-07-30"
             },
             {
-              "i": 176,
-              "equity": 1.0323,
-              "profit_factor": 1.36,
-              "date": "2026-08-04"
+              "i": 178,
+              "equity": 1.0424,
+              "profit_factor": 1.39,
+              "date": "2026-08-05"
             },
             {
-              "i": 234,
-              "equity": 1.093,
-              "profit_factor": 1.67,
-              "date": "2026-08-10"
+              "i": 237,
+              "equity": 1.0976,
+              "profit_factor": 1.62,
+              "date": "2026-08-11"
             },
             {
-              "i": 293,
-              "equity": 1.1289,
-              "profit_factor": 1.65,
-              "date": "2026-08-23"
+              "i": 296,
+              "equity": 1.1448,
+              "profit_factor": 1.66,
+              "date": "2026-08-24"
             },
             {
-              "i": 351,
-              "equity": 1.0934,
-              "profit_factor": 1.42,
-              "date": "2026-08-29"
+              "i": 355,
+              "equity": 1.0987,
+              "profit_factor": 1.41,
+              "date": "2026-08-30"
             },
             {
-              "i": 410,
-              "equity": 1.0468,
-              "profit_factor": 1.33,
-              "date": "2026-09-06"
+              "i": 414,
+              "equity": 1.0481,
+              "profit_factor": 1.3,
+              "date": "2026-09-07"
             },
             {
-              "i": 468,
-              "equity": 1.0268,
-              "profit_factor": 1.21,
-              "date": "2026-09-14"
+              "i": 473,
+              "equity": 1.0385,
+              "profit_factor": 1.22,
+              "date": "2026-09-15"
             },
             {
-              "i": 526,
-              "equity": 1.0465,
-              "profit_factor": 1.2,
-              "date": "2026-09-24"
-            },
-            {
-              "i": 585,
-              "equity": 1.0728,
-              "profit_factor": 1.21,
-              "date": "2026-10-01"
-            },
-            {
-              "i": 643,
-              "equity": 1.1018,
+              "i": 532,
+              "equity": 1.0637,
               "profit_factor": 1.23,
-              "date": "2026-10-10"
+              "date": "2026-09-25"
+            },
+            {
+              "i": 591,
+              "equity": 1.0952,
+              "profit_factor": 1.23,
+              "date": "2026-10-02"
+            },
+            {
+              "i": 650,
+              "equity": 1.127,
+              "profit_factor": 1.27,
+              "date": "2026-10-12"
             }
           ]
         },
         "last_30_trades": {
           "trades": 30,
-          "profit_factor": 1.62,
-          "win_rate_pct": 60.0,
-          "expectancy_pct_per_trade": 0.0358,
-          "max_drawdown_pct": 1.91,
-          "period_start": "2026-10-04",
-          "period_end": "2026-10-10",
-          "cumulative_compound_return_pct": 1.07,
+          "profit_factor": 1.7,
+          "win_rate_pct": 53.33,
+          "expectancy_pct_per_trade": 0.0127,
+          "max_drawdown_pct": 1.89,
+          "period_start": "2026-10-06",
+          "period_end": "2026-10-12",
+          "cumulative_compound_return_pct": 0.37,
           "monthly": [
             {
               "month": "2026-10",
               "trades": 30,
-              "profit_factor": 1.62,
-              "win_rate_pct": 60.0,
-              "expectancy_pct_per_trade": 0.0358
+              "profit_factor": 1.7,
+              "win_rate_pct": 53.33,
+              "expectancy_pct_per_trade": 0.0127
             }
           ],
           "equity_curve_sample": [
             {
               "i": 1,
-              "equity": 0.997,
-              "profit_factor": 0.0,
-              "date": "2026-10-04"
+              "equity": 1.003,
+              "profit_factor": 0.27,
+              "date": "2026-10-06"
             },
             {
               "i": 4,
-              "equity": 1.0038,
-              "profit_factor": 2.05,
-              "date": "2026-10-04"
+              "equity": 0.9968,
+              "profit_factor": 0.26,
+              "date": "2026-10-07"
             },
             {
               "i": 6,
-              "equity": 1.0116,
-              "profit_factor": 4.03,
-              "date": "2026-10-04"
+              "equity": 0.9902,
+              "profit_factor": 0.17,
+              "date": "2026-10-07"
             },
             {
               "i": 9,
-              "equity": 1.0208,
-              "profit_factor": 6.57,
-              "date": "2026-10-05"
+              "equity": 0.9868,
+              "profit_factor": 0.2,
+              "date": "2026-10-07"
             },
             {
               "i": 12,
-              "equity": 1.0217,
-              "profit_factor": 3.79,
-              "date": "2026-10-06"
+              "equity": 0.9871,
+              "profit_factor": 0.48,
+              "date": "2026-10-10"
             },
             {
               "i": 14,
-              "equity": 1.0216,
-              "profit_factor": 2.56,
-              "date": "2026-10-06"
+              "equity": 0.9878,
+              "profit_factor": 0.53,
+              "date": "2026-10-10"
             },
             {
               "i": 17,
-              "equity": 1.0153,
-              "profit_factor": 1.57,
-              "date": "2026-10-07"
+              "equity": 0.9897,
+              "profit_factor": 0.67,
+              "date": "2026-10-10"
             },
             {
               "i": 19,
-              "equity": 1.0084,
-              "profit_factor": 1.48,
-              "date": "2026-10-07"
+              "equity": 0.9892,
+              "profit_factor": 0.65,
+              "date": "2026-10-11"
             },
             {
               "i": 22,
-              "equity": 1.0114,
-              "profit_factor": 1.65,
-              "date": "2026-10-09"
+              "equity": 0.9926,
+              "profit_factor": 0.9,
+              "date": "2026-10-11"
             },
             {
               "i": 25,
-              "equity": 1.0085,
-              "profit_factor": 1.52,
-              "date": "2026-10-10"
+              "equity": 0.9994,
+              "profit_factor": 1.62,
+              "date": "2026-10-11"
             },
             {
               "i": 27,
-              "equity": 1.0093,
-              "profit_factor": 1.56,
-              "date": "2026-10-10"
+              "equity": 1.001,
+              "profit_factor": 1.65,
+              "date": "2026-10-11"
             },
             {
               "i": 30,
-              "equity": 1.0107,
-              "profit_factor": 1.62,
-              "date": "2026-10-10"
+              "equity": 1.0037,
+              "profit_factor": 1.7,
+              "date": "2026-10-12"
             }
           ]
         },
         "last_90_trades": {
           "trades": 90,
-          "profit_factor": 1.35,
-          "win_rate_pct": 58.89,
-          "expectancy_pct_per_trade": 0.0434,
+          "profit_factor": 1.77,
+          "win_rate_pct": 62.22,
+          "expectancy_pct_per_trade": 0.0647,
           "max_drawdown_pct": 1.91,
-          "period_start": "2026-09-27",
-          "period_end": "2026-10-10",
-          "cumulative_compound_return_pct": 3.95,
+          "period_start": "2026-09-29",
+          "period_end": "2026-10-12",
+          "cumulative_compound_return_pct": 5.96,
           "monthly": [
             {
               "month": "2026-09",
-              "trades": 27,
-              "profit_factor": 0.88,
-              "win_rate_pct": 48.15,
-              "expectancy_pct_per_trade": 0.0184
+              "trades": 15,
+              "profit_factor": 1.05,
+              "win_rate_pct": 53.33,
+              "expectancy_pct_per_trade": 0.0638
             },
             {
               "month": "2026-10",
-              "trades": 63,
-              "profit_factor": 1.75,
-              "win_rate_pct": 63.49,
-              "expectancy_pct_per_trade": 0.0541
+              "trades": 75,
+              "profit_factor": 2.04,
+              "win_rate_pct": 64.0,
+              "expectancy_pct_per_trade": 0.0649
             }
           ],
           "equity_curve_sample": [
             {
               "i": 1,
-              "equity": 1.0024,
-              "profit_factor": 0.44,
-              "date": "2026-09-27"
-            },
-            {
-              "i": 9,
-              "equity": 0.9987,
-              "profit_factor": 0.84,
-              "date": "2026-09-28"
-            },
-            {
-              "i": 17,
-              "equity": 1.0051,
-              "profit_factor": 1.13,
+              "equity": 1.0031,
+              "profit_factor": 0.56,
               "date": "2026-09-29"
             },
             {
-              "i": 25,
-              "equity": 1.0118,
-              "profit_factor": 1.02,
+              "i": 9,
+              "equity": 1.0073,
+              "profit_factor": 1.36,
               "date": "2026-09-30"
             },
             {
-              "i": 33,
-              "equity": 1.0088,
-              "profit_factor": 1.0,
+              "i": 17,
+              "equity": 1.0074,
+              "profit_factor": 0.95,
               "date": "2026-10-01"
             },
             {
-              "i": 41,
-              "equity": 1.0186,
-              "profit_factor": 1.19,
-              "date": "2026-10-02"
+              "i": 25,
+              "equity": 1.0192,
+              "profit_factor": 1.33,
+              "date": "2026-10-01"
             },
             {
-              "i": 50,
-              "equity": 1.0263,
-              "profit_factor": 1.26,
+              "i": 33,
+              "equity": 1.029,
+              "profit_factor": 1.55,
               "date": "2026-10-03"
             },
             {
-              "i": 58,
-              "equity": 1.0285,
-              "profit_factor": 1.27,
+              "i": 41,
+              "equity": 1.0276,
+              "profit_factor": 1.43,
+              "date": "2026-10-03"
+            },
+            {
+              "i": 50,
+              "equity": 1.0312,
+              "profit_factor": 1.44,
               "date": "2026-10-04"
+            },
+            {
+              "i": 58,
+              "equity": 1.0558,
+              "profit_factor": 1.85,
+              "date": "2026-10-05"
             },
             {
               "i": 66,
-              "equity": 1.0404,
-              "profit_factor": 1.38,
-              "date": "2026-10-04"
+              "equity": 1.0453,
+              "profit_factor": 1.51,
+              "date": "2026-10-07"
             },
             {
               "i": 74,
-              "equity": 1.0507,
-              "profit_factor": 1.43,
-              "date": "2026-10-06"
+              "equity": 1.0428,
+              "profit_factor": 1.52,
+              "date": "2026-10-10"
             },
             {
               "i": 82,
-              "equity": 1.0402,
-              "profit_factor": 1.34,
-              "date": "2026-10-09"
+              "equity": 1.0478,
+              "profit_factor": 1.6,
+              "date": "2026-10-11"
             },
             {
               "i": 90,
-              "equity": 1.0395,
-              "profit_factor": 1.35,
-              "date": "2026-10-10"
+              "equity": 1.0596,
+              "profit_factor": 1.77,
+              "date": "2026-10-12"
             }
           ]
         }
@@ -1132,16 +1132,16 @@
         },
         {
           "month": "2026-10",
-          "trades": 63,
-          "profit_factor": 1.75,
-          "win_rate_pct": 63.49,
-          "expectancy_pct_per_trade": 0.0541
+          "trades": 75,
+          "profit_factor": 2.04,
+          "win_rate_pct": 64.0,
+          "expectancy_pct_per_trade": 0.0649
         }
       ],
       "buy_hold_btc": {
         "price_start": 62533.82,
-        "price_end": 82988.0,
-        "return_pct": 32.71,
+        "price_end": 83930.0,
+        "return_pct": 34.22,
         "note": "No período do 1H compara processo vs mercado com cautela (não é buy&hold)."
       },
       "equity_curve_sample": [
@@ -1152,70 +1152,70 @@
           "date": "2026-07-13"
         },
         {
-          "i": 59,
-          "equity": 1.0212,
-          "profit_factor": 1.73,
-          "date": "2026-07-20"
+          "i": 60,
+          "equity": 1.0242,
+          "profit_factor": 1.78,
+          "date": "2026-07-21"
         },
         {
-          "i": 118,
-          "equity": 1.0007,
-          "profit_factor": 1.1,
+          "i": 120,
+          "equity": 1.007,
+          "profit_factor": 1.13,
           "date": "2026-07-30"
         },
         {
-          "i": 176,
-          "equity": 1.0323,
-          "profit_factor": 1.36,
+          "i": 179,
+          "equity": 1.0352,
+          "profit_factor": 1.38,
           "date": "2026-08-04"
         },
         {
-          "i": 234,
-          "equity": 1.093,
-          "profit_factor": 1.67,
-          "date": "2026-08-10"
+          "i": 239,
+          "equity": 1.0962,
+          "profit_factor": 1.65,
+          "date": "2026-08-11"
         },
         {
-          "i": 293,
-          "equity": 1.1289,
-          "profit_factor": 1.65,
+          "i": 298,
+          "equity": 1.1399,
+          "profit_factor": 1.68,
           "date": "2026-08-23"
         },
         {
-          "i": 351,
-          "equity": 1.0934,
+          "i": 358,
+          "equity": 1.0968,
           "profit_factor": 1.42,
-          "date": "2026-08-29"
+          "date": "2026-08-30"
         },
         {
-          "i": 410,
-          "equity": 1.0468,
-          "profit_factor": 1.33,
-          "date": "2026-09-06"
+          "i": 417,
+          "equity": 1.0401,
+          "profit_factor": 1.29,
+          "date": "2026-09-07"
         },
         {
-          "i": 468,
-          "equity": 1.0268,
+          "i": 477,
+          "equity": 1.0337,
           "profit_factor": 1.21,
-          "date": "2026-09-14"
+          "date": "2026-09-15"
         },
         {
-          "i": 526,
-          "equity": 1.0465,
-          "profit_factor": 1.2,
-          "date": "2026-09-24"
-        },
-        {
-          "i": 585,
-          "equity": 1.0728,
+          "i": 536,
+          "equity": 1.0521,
           "profit_factor": 1.21,
-          "date": "2026-10-01"
+          "date": "2026-09-25"
         },
         {
-          "i": 643,
-          "equity": 1.1018,
-          "profit_factor": 1.23,
-          "date": "2026-10-10"
+          "i": 596,
+          "equity": 1.0864,
+          "profit_factor": 1.22,
+          "date": "2026-10-02"
+        },
+        {
+          "i": 655,
+          "equity": 1.118,
+          "profit_factor": 1.26,
+          "date": "2026-10-12"
         }
       ],
       "notes": [
@@ -1226,7 +1226,7 @@
   ],
   "honest_failures": [
     "Junho/2026 no BOT_L foi um mês fraco (PF ≈ 1,06): ainda positivo, mas mostra que não é «todo mês igual».",
-    "Os últimos 30 trades do BOT_L (exp +0.0530%, PF 2.62) podem divergir dos 30 dias de calendário (PF 1.12) — variância de curto prazo é real; por isso usamos amostra grande e walk-forward.",
+    "Os últimos 30 trades do BOT_L (exp +0.0230%, PF 1.83) podem divergir dos 30 dias de calendário (PF 1.21) — variância de curto prazo é real; por isso usamos amostra grande e walk-forward.",
     "Paper ≠ live: slippage, latência e mudança de regime podem piorar o resultado real.",
     "Live e micro-live ainda não existem; em PRODUÇÃO o app mostra o capital a $0 até lá.",
     "Um patch de cada vez: sobe de QA para pré-produção só com o botão Subir, e para o robô live só quando o micro-live existir."
@@ -1236,8 +1236,8 @@
     "explanation": "Como ler a tabela: partimos do resultado médio por trade em paper, ajustamos para a conta notional (slippage + capital efetivamente em uso + reserva para drawdown) e multiplicamos pelos trades estimados no mês. Continua ilustrativo — não é promessa.",
     "exclusions_explained": "Estes três efeitos entram na conta notional: (1) Slippage live — desconto por trade. (2) Capital parado — só uma fração do capital conta como valor operado. (3) Drawdowns — reserva da projeção mensal para períodos ruins.",
     "base_robot_id": "BOT_L",
-    "trades_per_month_est": 339,
-    "trades_per_month_note": "Estimativa ≈ 1570 trades ÷ cerca de 4.6 meses de histórico (2026-05–2026-10).",
+    "trades_per_month_est": 338,
+    "trades_per_month_note": "Estimativa ≈ 1579 trades ÷ cerca de 4.7 meses de histórico (2026-05–2026-10).",
     "notional_adjustments": {
       "slippage_pct_per_trade": 0.01,
       "slippage_note": "Desconto fixo por trade vs paper (preço real um pouco pior).",
