@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-10-24T19:47:21-03:00",
+  "generated_at": "2026-10-24T19:52:23-03:00",
   "timezone": "America/Sao_Paulo",
   "git_sha": "6596e2d",
   "source": "VPS",
@@ -17423,16 +17423,6 @@
         "alert_ready": false
       },
       {
-        "patch": "A.8.E025",
-        "lane_id": "BOT_L_5M_A8E025",
-        "progress": "20/40",
-        "n": 20,
-        "verdict": "READY_REVERTER",
-        "pf_fee": 0.0594,
-        "pnl_usd_fee": -6.2965,
-        "alert_ready": true
-      },
-      {
         "patch": "A.8.E026",
         "lane_id": "BOT_L_5M_A8E026",
         "progress": "18/40",
@@ -17480,6 +17470,16 @@
         "verdict": "MEASURING",
         "pf_fee": 0.071,
         "pnl_usd_fee": -5.3428,
+        "alert_ready": false
+      },
+      {
+        "patch": "A.8.E031",
+        "lane_id": "BOT_L_5M_A8E031",
+        "progress": "0/40",
+        "n": 0,
+        "verdict": "MEASURING",
+        "pf_fee": null,
+        "pnl_usd_fee": 0.0,
         "alert_ready": false
       },
       {
@@ -17536,7 +17536,7 @@
       }
     ],
     "policy": "Sugere veredito — NÃO aplica patch / dormant / primário",
-    "generated_at": "2026-10-24T22:47:24"
+    "generated_at": "2026-10-24T22:52:26"
   },
   "shadows": [
     {
@@ -17810,16 +17810,6 @@
       "alert_ready": false
     },
     {
-      "patch": "A.8.E025",
-      "lane_id": "BOT_L_5M_A8E025",
-      "progress": "20/40",
-      "n": 20,
-      "verdict": "READY_REVERTER",
-      "pf_fee": 0.0594,
-      "pnl_usd_fee": -6.2965,
-      "alert_ready": true
-    },
-    {
       "patch": "A.8.E026",
       "lane_id": "BOT_L_5M_A8E026",
       "progress": "18/40",
@@ -17867,6 +17857,16 @@
       "verdict": "MEASURING",
       "pf_fee": 0.071,
       "pnl_usd_fee": -5.3428,
+      "alert_ready": false
+    },
+    {
+      "patch": "A.8.E031",
+      "lane_id": "BOT_L_5M_A8E031",
+      "progress": "0/40",
+      "n": 0,
+      "verdict": "MEASURING",
+      "pf_fee": null,
+      "pnl_usd_fee": 0.0,
       "alert_ready": false
     },
     {
@@ -18638,7 +18638,7 @@
         "patch_id": "A.8.E025",
         "target": "BOT_L",
         "kind": "entry",
-        "status": "MEASURING",
+        "status": "REVERTER",
         "title": "Skip score ∈[48,52)",
         "rank_score": 87.575,
         "rank": 72,
@@ -18668,11 +18668,11 @@
         "patch_id": "A.8.E031",
         "target": "BOT_L",
         "kind": "entry",
-        "status": "POSSIVEL",
+        "status": "MEASURING",
         "title": "Skip score ∈[55,65)",
         "rank_score": 87.219,
         "rank": 75,
-        "measuring_lane_id": null
+        "measuring_lane_id": "BOT_L_5M_A8E031"
       },
       {
         "patch_id": "A.8.E027",
