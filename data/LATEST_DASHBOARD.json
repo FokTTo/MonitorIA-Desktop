@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-10-24T09:49:03-03:00",
+  "generated_at": "2026-10-24T09:54:04-03:00",
   "timezone": "America/Sao_Paulo",
   "git_sha": "6596e2d",
   "source": "VPS",
@@ -17413,16 +17413,6 @@
         "alert_ready": false
       },
       {
-        "patch": "A.8.E023",
-        "lane_id": "BOT_L_5M_A8E023",
-        "progress": "20/40",
-        "n": 20,
-        "verdict": "READY_REVERTER",
-        "pf_fee": 0.0966,
-        "pnl_usd_fee": -5.0234,
-        "alert_ready": true
-      },
-      {
         "patch": "A.8.E024",
         "lane_id": "BOT_L_5M_A8E024",
         "progress": "5/40",
@@ -17546,7 +17536,7 @@
       }
     ],
     "policy": "Sugere veredito — NÃO aplica patch / dormant / primário",
-    "generated_at": "2026-10-24T12:49:06"
+    "generated_at": "2026-10-24T12:54:06"
   },
   "shadows": [
     {
@@ -17810,16 +17800,6 @@
       "alert_ready": false
     },
     {
-      "patch": "A.8.E023",
-      "lane_id": "BOT_L_5M_A8E023",
-      "progress": "20/40",
-      "n": 20,
-      "verdict": "READY_REVERTER",
-      "pf_fee": 0.0966,
-      "pnl_usd_fee": -5.0234,
-      "alert_ready": true
-    },
-    {
       "patch": "A.8.E024",
       "lane_id": "BOT_L_5M_A8E024",
       "progress": "5/40",
@@ -18028,11 +18008,11 @@
         "patch_id": "A.8.2E009",
         "target": "BOT_L_1H",
         "kind": "entry",
-        "status": "POSSIVEL",
+        "status": "MEASURING",
         "title": "1H allow-only hours [9, 15, 21]",
         "rank_score": 91.491,
         "rank": 9,
-        "measuring_lane_id": null
+        "measuring_lane_id": "BOT_L_1H_A82E009"
       },
       {
         "patch_id": "A.8.2E010",
@@ -18458,7 +18438,7 @@
         "patch_id": "A.8.E023",
         "target": "BOT_L",
         "kind": "entry",
-        "status": "MEASURING",
+        "status": "REVERTER",
         "title": "Skip score ∈[38,42)",
         "rank_score": 88.077,
         "rank": 52,
