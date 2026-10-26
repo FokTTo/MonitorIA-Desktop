@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-10-26T05:19:59-03:00",
+  "generated_at": "2026-10-26T05:25:00-03:00",
   "timezone": "America/Sao_Paulo",
   "git_sha": "6596e2d",
   "source": "VPS",
@@ -2162,60 +2162,86 @@
       "position_fraction": 1.0,
       "notional_usd": 100.0,
       "fee_round": 0.002,
-      "final_usd": 43.86,
-      "profit_usd": -56.14
+      "final_usd": 44.01,
+      "profit_usd": -55.99
     },
     "periods": {
       "daily": {
         "label": "Hoje",
         "since": "2026-10-26T03:00:00",
-        "trades": 7,
-        "wins": 4,
+        "trades": 8,
+        "wins": 5,
         "losses": 3,
-        "win_rate_pct": 57.1,
-        "pnl_usd": -0.5,
-        "profit_factor": 0.47,
-        "avg_pnl_usd": -0.07,
-        "expectancy_pct": -0.071
+        "win_rate_pct": 62.5,
+        "pnl_usd": -0.35,
+        "profit_factor": 0.63,
+        "avg_pnl_usd": -0.04,
+        "expectancy_pct": -0.044
       },
       "weekly": {
         "label": "Semana (dom—hoje)",
         "since": "2026-10-25T03:00:00",
-        "trades": 13,
-        "wins": 5,
+        "trades": 14,
+        "wins": 6,
         "losses": 8,
-        "win_rate_pct": 38.5,
-        "pnl_usd": -1.97,
-        "profit_factor": 0.23,
-        "avg_pnl_usd": -0.15,
-        "expectancy_pct": -0.152
+        "win_rate_pct": 42.9,
+        "pnl_usd": -1.83,
+        "profit_factor": 0.29,
+        "avg_pnl_usd": -0.13,
+        "expectancy_pct": -0.131
       },
       "monthly": {
         "label": "Mês atual",
         "since": "2026-10-01T03:00:00",
-        "trades": 355,
-        "wins": 121,
+        "trades": 356,
+        "wins": 122,
         "losses": 234,
-        "win_rate_pct": 34.1,
-        "pnl_usd": -56.14,
+        "win_rate_pct": 34.3,
+        "pnl_usd": -55.99,
         "profit_factor": 0.21,
         "avg_pnl_usd": -0.16,
-        "expectancy_pct": -0.158
+        "expectancy_pct": -0.157
       },
       "annual": {
         "label": "Anual (2026 · desde 02/10 · taxa 0.20%)",
         "since": "2026-05-22T03:00:00",
-        "trades": 355,
-        "wins": 121,
+        "trades": 356,
+        "wins": 122,
         "losses": 234,
-        "win_rate_pct": 34.1,
-        "pnl_usd": -56.14,
+        "win_rate_pct": 34.3,
+        "pnl_usd": -55.99,
         "profit_factor": 0.21,
         "avg_pnl_usd": -0.16,
-        "expectancy_pct": -0.158
+        "expectancy_pct": -0.157
       }
     },
     "recent_trades": [
+      {
+        "closed_at": "2026-10-26T08:23:29",
+        "opened_at": "2026-10-26T08:20:25",
+        "side": "LONG",
+        "exit_reason": "AI26_PROFIT_LOCK | short_return=0.35% | lock=0.30% (ai3=0.30%) | payload={'opened_minutes': 3.0555569, 'rule': 'profit_lock', 'exit_lock_pct': 0.003, 'ai3_lock_pct': 0.003}",
+        "exit_tag": "PROFIT_LOCK",
+        "entry_reason": "—",
+        "pnl_usd": 0.15,
+        "pnl_pct": 0.145,
+        "notional_usd": 100.0,
+        "entry_price": 79814.957848,
+        "exit_price": 80090.53,
+        "quantity": 0.001878,
+        "fee_usd": null,
+        "symbol": "BTC-USD",
+        "duration_min": 3.055635,
+        "mfe_usd": 0.517525,
+        "mae_usd": 0.203279,
+        "peak_return_pct": 0.35,
+        "peak_price": 80090.5303,
+        "trough_price": 79923.2001,
+        "entry_score": 30.0,
+        "position_id": 3175,
+        "portfolio_id": "BOT_L_5M_CLONE",
+        "timeframe": "5m"
+      },
       {
         "closed_at": "2026-10-26T08:08:35",
         "opened_at": "2026-10-26T08:00:28",
@@ -4267,32 +4293,6 @@
         "trough_price": 82483.2501,
         "entry_score": 41.8,
         "position_id": 3057,
-        "portfolio_id": "BOT_L_5M_CLONE",
-        "timeframe": "5m"
-      },
-      {
-        "closed_at": "2026-10-19T09:27:23",
-        "opened_at": "2026-10-19T09:11:03",
-        "side": "LONG",
-        "exit_reason": "AI26_PROFIT_LOCK | short_return=0.32% | lock=0.30% (ai3=0.30%) | payload={'opened_minutes': 16.3282737, 'rule': 'profit_lock', 'exit_lock_pct': 0.003, 'ai3_lock_pct': 0.003}",
-        "exit_tag": "PROFIT_LOCK",
-        "entry_reason": "—",
-        "pnl_usd": 0.12,
-        "pnl_pct": 0.117,
-        "notional_usd": 100.0,
-        "entry_price": 82727.905781,
-        "exit_price": 82989.93,
-        "quantity": 0.002175,
-        "fee_usd": null,
-        "symbol": "BTC-USD",
-        "duration_min": 16.328411,
-        "mfe_usd": 0.569903,
-        "mae_usd": 0.113196,
-        "peak_return_pct": 0.32,
-        "peak_price": 82989.9301,
-        "trough_price": 82779.9499,
-        "entry_score": 35.4,
-        "position_id": 3055,
         "portfolio_id": "BOT_L_5M_CLONE",
         "timeframe": "5m"
       }
@@ -17506,7 +17506,7 @@
       }
     ],
     "policy": "Sugere veredito — NÃO aplica patch / dormant / primário",
-    "generated_at": "2026-10-26T08:20:02"
+    "generated_at": "2026-10-26T08:25:03"
   },
   "shadows": [
     {
