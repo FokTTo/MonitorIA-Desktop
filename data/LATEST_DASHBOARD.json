@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-10-31T04:13:21-03:00",
+  "generated_at": "2026-10-31T04:18:22-03:00",
   "timezone": "America/Sao_Paulo",
   "git_sha": "6596e2d",
   "source": "VPS",
@@ -2162,42 +2162,42 @@
       "position_fraction": 1.0,
       "notional_usd": 100.0,
       "fee_round": 0.002,
-      "final_usd": 40.98,
-      "profit_usd": -59.02
+      "final_usd": 41.08,
+      "profit_usd": -58.92
     },
     "periods": {
       "daily": {
         "label": "Hoje",
         "since": "2026-10-31T03:00:00",
-        "trades": 4,
-        "wins": 2,
+        "trades": 5,
+        "wins": 3,
         "losses": 2,
-        "win_rate_pct": 50.0,
-        "pnl_usd": -0.02,
-        "profit_factor": 0.93,
-        "avg_pnl_usd": -0.01,
-        "expectancy_pct": -0.005
+        "win_rate_pct": 60.0,
+        "pnl_usd": 0.09,
+        "profit_factor": 1.31,
+        "avg_pnl_usd": 0.02,
+        "expectancy_pct": 0.017
       },
       "weekly": {
         "label": "Semana (dom—hoje)",
         "since": "2026-10-25T03:00:00",
-        "trades": 166,
-        "wins": 101,
+        "trades": 167,
+        "wins": 102,
         "losses": 65,
-        "win_rate_pct": 60.8,
-        "pnl_usd": -4.86,
+        "win_rate_pct": 61.1,
+        "pnl_usd": -4.75,
         "profit_factor": 0.75,
         "avg_pnl_usd": -0.03,
-        "expectancy_pct": -0.029
+        "expectancy_pct": -0.028
       },
       "monthly": {
         "label": "Mês atual",
         "since": "2026-10-01T03:00:00",
-        "trades": 508,
-        "wins": 217,
+        "trades": 509,
+        "wins": 218,
         "losses": 291,
-        "win_rate_pct": 42.7,
-        "pnl_usd": -59.02,
+        "win_rate_pct": 42.8,
+        "pnl_usd": -58.92,
         "profit_factor": 0.33,
         "avg_pnl_usd": -0.12,
         "expectancy_pct": -0.116
@@ -2205,17 +2205,43 @@
       "annual": {
         "label": "Anual (2026 · desde 02/10 · taxa 0.20%)",
         "since": "2026-05-22T03:00:00",
-        "trades": 508,
-        "wins": 217,
+        "trades": 509,
+        "wins": 218,
         "losses": 291,
-        "win_rate_pct": 42.7,
-        "pnl_usd": -59.02,
+        "win_rate_pct": 42.8,
+        "pnl_usd": -58.92,
         "profit_factor": 0.33,
         "avg_pnl_usd": -0.12,
         "expectancy_pct": -0.116
       }
     },
     "recent_trades": [
+      {
+        "closed_at": "2026-10-31T07:17:45",
+        "opened_at": "2026-10-31T06:47:33",
+        "side": "LONG",
+        "exit_reason": "AI26_PROFIT_LOCK | short_return=0.31% | lock=0.30% (ai3=0.30%) | payload={'opened_minutes': 30.196109783333334, 'rule': 'profit_lock', 'exit_lock_pct': 0.003, 'ai3_lock_pct': 0.003}",
+        "exit_tag": "PROFIT_LOCK",
+        "entry_reason": "—",
+        "pnl_usd": 0.11,
+        "pnl_pct": 0.108,
+        "notional_usd": 100.0,
+        "entry_price": 77242.813043,
+        "exit_price": 77480.75,
+        "quantity": 0.00194,
+        "fee_usd": null,
+        "symbol": "BTC-USD",
+        "duration_min": 30.196157,
+        "mfe_usd": 0.461598,
+        "mae_usd": 0.193567,
+        "peak_return_pct": 0.31,
+        "peak_price": 77480.7502,
+        "trough_price": 77342.5898,
+        "entry_score": 50.0,
+        "position_id": 3358,
+        "portfolio_id": "BOT_L_5M_CLONE",
+        "timeframe": "5m"
+      },
       {
         "closed_at": "2026-10-31T06:47:26",
         "opened_at": "2026-10-31T06:39:45",
@@ -4267,32 +4293,6 @@
         "trough_price": 80227.9998,
         "entry_score": 48.6,
         "position_id": 3269,
-        "portfolio_id": "BOT_L_5M_CLONE",
-        "timeframe": "5m"
-      },
-      {
-        "closed_at": "2026-10-28T20:12:48",
-        "opened_at": "2026-10-28T20:06:35",
-        "side": "LONG",
-        "exit_reason": "STOP_CLOSE | Stop atingido short_return=-0.22%",
-        "exit_tag": "STOP",
-        "entry_reason": "—",
-        "pnl_usd": -0.42,
-        "pnl_pct": -0.419,
-        "notional_usd": 100.0,
-        "entry_price": 81512.23575,
-        "exit_price": 81333.33,
-        "quantity": 0.001839,
-        "fee_usd": null,
-        "symbol": "BTC-USD",
-        "duration_min": 6.227193,
-        "mfe_usd": -0.000434,
-        "mae_usd": -0.329008,
-        "peak_return_pct": 0.0,
-        "peak_price": null,
-        "trough_price": 81333.3298,
-        "entry_score": 41.6,
-        "position_id": 3265,
         "portfolio_id": "BOT_L_5M_CLONE",
         "timeframe": "5m"
       }
@@ -17496,7 +17496,7 @@
       }
     ],
     "policy": "Sugere veredito — NÃO aplica patch / dormant / primário",
-    "generated_at": "2026-10-31T07:13:24"
+    "generated_at": "2026-10-31T07:18:25"
   },
   "shadows": [
     {
@@ -21857,14 +21857,14 @@
     ]
   },
   "lanes_observability": {
-    "generated_at": "2026-10-31T07:00:10",
+    "generated_at": "2026-10-31T07:15:10",
     "lanes": [
       {
         "lane_id": "BOT_L_5M",
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-13T17:38:26.396397",
-          "idle_minutes": 25281.7
+          "idle_minutes": 25296.7
         }
       },
       {
@@ -21872,23 +21872,23 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:52:33.227510",
-          "idle_minutes": 48967.6
+          "idle_minutes": 48982.6
         }
       },
       {
         "lane_id": "BOT_L_1H",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-31T06:58:06.089055",
-          "idle_minutes": 2.1
+          "last_at": "2026-10-31T07:13:09.366713",
+          "idle_minutes": 2.0
         }
       },
       {
         "lane_id": "BOT_L_5M_CLONE",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-31T06:59:50.765128",
-          "idle_minutes": 0.4
+          "last_at": "2026-10-31T07:14:41.222060",
+          "idle_minutes": 0.5
         }
       },
       {
@@ -21896,7 +21896,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:23:54.300692",
-          "idle_minutes": 48996.3
+          "idle_minutes": 49011.3
         }
       },
       {
@@ -21904,7 +21904,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-16T20:05:08.527561",
-          "idle_minutes": 20815.1
+          "idle_minutes": 20830.1
         }
       },
       {
@@ -21912,7 +21912,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-16T19:56:17.026401",
-          "idle_minutes": 20823.9
+          "idle_minutes": 20838.9
         }
       },
       {
@@ -21920,7 +21920,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-30T04:24:14.937029",
-          "idle_minutes": 44796.0
+          "idle_minutes": 44810.9
         }
       },
       {
@@ -21928,7 +21928,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-30T04:15:44.657404",
-          "idle_minutes": 44804.5
+          "idle_minutes": 44819.5
         }
       },
       {
@@ -21936,7 +21936,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:57:42.761232",
-          "idle_minutes": 48962.5
+          "idle_minutes": 48977.5
         }
       },
       {
@@ -21944,7 +21944,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-30T03:29:29.738529",
-          "idle_minutes": 44850.7
+          "idle_minutes": 44865.7
         }
       },
       {
@@ -21952,7 +21952,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-30T03:30:39.824226",
-          "idle_minutes": 44849.5
+          "idle_minutes": 44864.5
         }
       },
       {
@@ -21960,7 +21960,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-30T02:30:13.830671",
-          "idle_minutes": 44910.0
+          "idle_minutes": 44925.0
         }
       },
       {
@@ -21968,7 +21968,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:56:34.444494",
-          "idle_minutes": 48963.6
+          "idle_minutes": 48978.6
         }
       },
       {
@@ -21976,7 +21976,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:46:37.015562",
-          "idle_minutes": 48973.6
+          "idle_minutes": 48988.6
         }
       },
       {
@@ -21984,7 +21984,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:32:08.696289",
-          "idle_minutes": 48988.1
+          "idle_minutes": 49003.1
         }
       },
       {
@@ -21992,7 +21992,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:32:54.000312",
-          "idle_minutes": 48987.3
+          "idle_minutes": 49002.3
         }
       },
       {
@@ -22000,7 +22000,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:33:45.460937",
-          "idle_minutes": 48986.4
+          "idle_minutes": 49001.4
         }
       },
       {
@@ -22008,7 +22008,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:34:24.192392",
-          "idle_minutes": 48985.8
+          "idle_minutes": 49000.8
         }
       },
       {
@@ -22016,7 +22016,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:55:12.758055",
-          "idle_minutes": 48965.0
+          "idle_minutes": 48980.0
         }
       },
       {
@@ -22024,7 +22024,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:50:54.405521",
-          "idle_minutes": 48969.3
+          "idle_minutes": 48984.3
         }
       },
       {
@@ -22032,7 +22032,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:36:38.996989",
-          "idle_minutes": 48983.6
+          "idle_minutes": 48998.6
         }
       },
       {
@@ -22040,7 +22040,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:37:23.880898",
-          "idle_minutes": 48982.8
+          "idle_minutes": 48997.8
         }
       },
       {
@@ -22048,7 +22048,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:38:09.007806",
-          "idle_minutes": 48982.1
+          "idle_minutes": 48997.1
         }
       },
       {
@@ -22056,7 +22056,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:38:53.887192",
-          "idle_minutes": 48981.3
+          "idle_minutes": 48996.3
         }
       },
       {
@@ -22064,7 +22064,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T07:00:09.549381",
-          "idle_minutes": 48960.1
+          "idle_minutes": 48975.0
         }
       },
       {
@@ -22072,7 +22072,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:55:47.222413",
-          "idle_minutes": 48964.4
+          "idle_minutes": 48979.4
         }
       },
       {
@@ -22080,23 +22080,23 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:56:38.774712",
-          "idle_minutes": 48963.6
+          "idle_minutes": 48978.6
         }
       },
       {
         "lane_id": "BOT_L_5M_E3",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-31T06:59:58.084856",
-          "idle_minutes": 0.2
+          "last_at": "2026-10-31T07:15:11.490657",
+          "idle_minutes": 0.0
         }
       },
       {
         "lane_id": "BOT_L_5M_X2",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-31T06:59:58.059969",
-          "idle_minutes": 0.2
+          "last_at": "2026-10-31T07:15:11.425525",
+          "idle_minutes": 0.0
         }
       },
       {
@@ -22104,7 +22104,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:58:53.164277",
-          "idle_minutes": 48961.3
+          "idle_minutes": 48976.3
         }
       },
       {
@@ -22112,23 +22112,23 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:59:38.195271",
-          "idle_minutes": 48960.6
+          "idle_minutes": 48975.6
         }
       },
       {
         "lane_id": "BOT_L_5M_P6",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-31T06:59:22.221669",
-          "idle_minutes": 0.8
+          "last_at": "2026-10-31T07:14:35.621364",
+          "idle_minutes": 0.6
         }
       },
       {
         "lane_id": "BOT_L_5M_P7",
         "heartbeat": {
           "ok": true,
-          "last_at": "2026-10-31T07:00:06",
-          "idle_minutes": 0.1
+          "last_at": "2026-10-31T07:14:59.566223",
+          "idle_minutes": 0.2
         }
       },
       {
@@ -22136,7 +22136,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:56:45.620417",
-          "idle_minutes": 48963.5
+          "idle_minutes": 48978.4
         }
       },
       {
@@ -22144,7 +22144,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:57:31.316792",
-          "idle_minutes": 48962.7
+          "idle_minutes": 48977.7
         }
       },
       {
@@ -22152,7 +22152,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:58:15.239307",
-          "idle_minutes": 48962.0
+          "idle_minutes": 48977.0
         }
       },
       {
@@ -22160,7 +22160,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:59:01.435549",
-          "idle_minutes": 48961.2
+          "idle_minutes": 48976.2
         }
       },
       {
@@ -22168,7 +22168,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:59:46.023447",
-          "idle_minutes": 48960.5
+          "idle_minutes": 48975.4
         }
       },
       {
@@ -22176,7 +22176,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:55:23.353540",
-          "idle_minutes": 48964.8
+          "idle_minutes": 48979.8
         }
       },
       {
@@ -22184,7 +22184,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:56:08.312011",
-          "idle_minutes": 48964.1
+          "idle_minutes": 48979.1
         }
       },
       {
@@ -22192,7 +22192,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:51:45.779811",
-          "idle_minutes": 48968.5
+          "idle_minutes": 48983.4
         }
       },
       {
@@ -22200,7 +22200,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:52:32.386112",
-          "idle_minutes": 48967.7
+          "idle_minutes": 48982.7
         }
       },
       {
@@ -22208,7 +22208,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-16T20:05:08.283336",
-          "idle_minutes": 20815.1
+          "idle_minutes": 20830.1
         }
       },
       {
@@ -22216,7 +22216,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-16T20:05:08.069941",
-          "idle_minutes": 20815.1
+          "idle_minutes": 20830.1
         }
       },
       {
@@ -22224,7 +22224,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-29T05:01:12.910633",
-          "idle_minutes": 46199.0
+          "idle_minutes": 46214.0
         }
       },
       {
@@ -22232,7 +22232,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:55:30.411923",
-          "idle_minutes": 48964.7
+          "idle_minutes": 48979.7
         }
       },
       {
@@ -22240,7 +22240,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:56:15.665023",
-          "idle_minutes": 48964.0
+          "idle_minutes": 48979.0
         }
       },
       {
@@ -22248,7 +22248,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:57:01.845229",
-          "idle_minutes": 48963.2
+          "idle_minutes": 48978.2
         }
       },
       {
@@ -22256,7 +22256,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-16T19:45:11.153170",
-          "idle_minutes": 20835.0
+          "idle_minutes": 20850.0
         }
       },
       {
@@ -22264,7 +22264,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:59:25.071028",
-          "idle_minutes": 48960.8
+          "idle_minutes": 48975.8
         }
       },
       {
@@ -22272,7 +22272,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-27T06:59:08.182228",
-          "idle_minutes": 48961.1
+          "idle_minutes": 48976.1
         }
       },
       {
@@ -22280,7 +22280,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:37:52.050610",
-          "idle_minutes": 12682.4
+          "idle_minutes": 12697.3
         }
       },
       {
@@ -22288,7 +22288,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:37:24.283099",
-          "idle_minutes": 12682.8
+          "idle_minutes": 12697.8
         }
       },
       {
@@ -22296,7 +22296,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:33:25.833918",
-          "idle_minutes": 12626.8
+          "idle_minutes": 12641.8
         }
       },
       {
@@ -22304,7 +22304,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:37:08.940388",
-          "idle_minutes": 12683.1
+          "idle_minutes": 12698.1
         }
       },
       {
@@ -22312,7 +22312,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:37:29.154842",
-          "idle_minutes": 12682.7
+          "idle_minutes": 12697.7
         }
       },
       {
@@ -22320,7 +22320,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:37:10.360531",
-          "idle_minutes": 12683.1
+          "idle_minutes": 12698.0
         }
       },
       {
@@ -22328,7 +22328,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-07T23:29:24.442689",
-          "idle_minutes": 33570.8
+          "idle_minutes": 33585.8
         }
       },
       {
@@ -22336,7 +22336,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:37:29.419213",
-          "idle_minutes": 12682.7
+          "idle_minutes": 12697.7
         }
       },
       {
@@ -22344,7 +22344,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-07T23:06:17.392641",
-          "idle_minutes": 33593.9
+          "idle_minutes": 33608.9
         }
       },
       {
@@ -22352,7 +22352,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:37:37.982015",
-          "idle_minutes": 12682.6
+          "idle_minutes": 12697.6
         }
       },
       {
@@ -22360,7 +22360,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-29T01:34:10.048490",
-          "idle_minutes": 46406.1
+          "idle_minutes": 46421.0
         }
       },
       {
@@ -22368,7 +22368,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-29T14:24:57.366184",
-          "idle_minutes": 45635.3
+          "idle_minutes": 45650.3
         }
       },
       {
@@ -22376,7 +22376,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-29T14:24:57.390185",
-          "idle_minutes": 45635.3
+          "idle_minutes": 45650.3
         }
       },
       {
@@ -22384,7 +22384,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-29T14:24:57.416186",
-          "idle_minutes": 45635.3
+          "idle_minutes": 45650.3
         }
       },
       {
@@ -22392,7 +22392,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-09-29T01:32:55.591713",
-          "idle_minutes": 46407.3
+          "idle_minutes": 46422.3
         }
       },
       {
@@ -22400,7 +22400,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-07T19:09:47.001403",
-          "idle_minutes": 33830.4
+          "idle_minutes": 33845.4
         }
       },
       {
@@ -22416,7 +22416,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-01T17:23:57.615941",
-          "idle_minutes": 42576.3
+          "idle_minutes": 42591.3
         }
       },
       {
@@ -22424,7 +22424,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-01T17:23:57.641942",
-          "idle_minutes": 42576.3
+          "idle_minutes": 42591.3
         }
       },
       {
@@ -22432,7 +22432,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:37:44.103677",
-          "idle_minutes": 12682.5
+          "idle_minutes": 12697.5
         }
       },
       {
@@ -22440,7 +22440,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-01T11:45:57.222578",
-          "idle_minutes": 42914.3
+          "idle_minutes": 42929.3
         }
       },
       {
@@ -22448,7 +22448,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-01T11:45:57.258579",
-          "idle_minutes": 42914.3
+          "idle_minutes": 42929.3
         }
       },
       {
@@ -22456,7 +22456,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:59:39.415203",
-          "idle_minutes": 12600.6
+          "idle_minutes": 12615.6
         }
       },
       {
@@ -22464,7 +22464,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-01T11:45:57.299580",
-          "idle_minutes": 42914.3
+          "idle_minutes": 42929.3
         }
       },
       {
@@ -22472,7 +22472,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-01T11:45:57.343582",
-          "idle_minutes": 42914.3
+          "idle_minutes": 42929.3
         }
       },
       {
@@ -22480,7 +22480,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-01T11:45:57.382583",
-          "idle_minutes": 42914.3
+          "idle_minutes": 42929.3
         }
       },
       {
@@ -22488,7 +22488,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:37:21.974475",
-          "idle_minutes": 12682.9
+          "idle_minutes": 12697.9
         }
       },
       {
@@ -22496,7 +22496,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:37:29.718826",
-          "idle_minutes": 12682.7
+          "idle_minutes": 12697.7
         }
       },
       {
@@ -22504,7 +22504,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:38:07.276662",
-          "idle_minutes": 12682.1
+          "idle_minutes": 12697.1
         }
       },
       {
@@ -22512,7 +22512,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:33:21.889511",
-          "idle_minutes": 12686.9
+          "idle_minutes": 12701.9
         }
       },
       {
@@ -22520,7 +22520,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:37:28.555860",
-          "idle_minutes": 12682.8
+          "idle_minutes": 12697.7
         }
       },
       {
@@ -22528,7 +22528,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:37:36.472438",
-          "idle_minutes": 12682.6
+          "idle_minutes": 12697.6
         }
       },
       {
@@ -22536,7 +22536,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:36:31.788907",
-          "idle_minutes": 12683.7
+          "idle_minutes": 12698.7
         }
       },
       {
@@ -22544,7 +22544,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:37:24.729930",
-          "idle_minutes": 12682.8
+          "idle_minutes": 12697.8
         }
       },
       {
@@ -22552,7 +22552,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:37:21.093107",
-          "idle_minutes": 12682.9
+          "idle_minutes": 12697.9
         }
       },
       {
@@ -22560,7 +22560,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:37:34.910049",
-          "idle_minutes": 12682.7
+          "idle_minutes": 12697.6
         }
       },
       {
@@ -22568,7 +22568,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:37:16.453646",
-          "idle_minutes": 12683.0
+          "idle_minutes": 12698.0
         }
       },
       {
@@ -22576,7 +22576,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:38:14.094989",
-          "idle_minutes": 12682.0
+          "idle_minutes": 12697.0
         }
       },
       {
@@ -22584,7 +22584,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:37:23.102951",
-          "idle_minutes": 12682.9
+          "idle_minutes": 12697.8
         }
       },
       {
@@ -22592,7 +22592,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:37:22.859680",
-          "idle_minutes": 12682.9
+          "idle_minutes": 12697.8
         }
       },
       {
@@ -22600,7 +22600,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:37:22.227669",
-          "idle_minutes": 12682.9
+          "idle_minutes": 12697.9
         }
       },
       {
@@ -22608,7 +22608,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:38:13.387025",
-          "idle_minutes": 12682.0
+          "idle_minutes": 12697.0
         }
       },
       {
@@ -22616,7 +22616,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:37:21.498827",
-          "idle_minutes": 12682.9
+          "idle_minutes": 12697.9
         }
       },
       {
@@ -22624,7 +22624,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:37:29.811113",
-          "idle_minutes": 12682.7
+          "idle_minutes": 12697.7
         }
       },
       {
@@ -22632,7 +22632,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T11:37:49.963765",
-          "idle_minutes": 12682.4
+          "idle_minutes": 12697.4
         }
       },
       {
@@ -22640,7 +22640,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:44:00.448007",
-          "idle_minutes": 12616.2
+          "idle_minutes": 12631.2
         }
       },
       {
@@ -22648,7 +22648,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:42:18.706947",
-          "idle_minutes": 12617.9
+          "idle_minutes": 12632.9
         }
       },
       {
@@ -22656,7 +22656,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-16T20:11:22.402651",
-          "idle_minutes": 20808.9
+          "idle_minutes": 20823.9
         }
       },
       {
@@ -22664,7 +22664,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:31:02.744053",
-          "idle_minutes": 12629.2
+          "idle_minutes": 12644.2
         }
       },
       {
@@ -22672,7 +22672,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:53:18.640235",
-          "idle_minutes": 12606.9
+          "idle_minutes": 12621.9
         }
       },
       {
@@ -22680,7 +22680,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:58:51.018376",
-          "idle_minutes": 12601.4
+          "idle_minutes": 12616.4
         }
       },
       {
@@ -22688,7 +22688,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:44:01.516594",
-          "idle_minutes": 12616.2
+          "idle_minutes": 12631.2
         }
       },
       {
@@ -22696,7 +22696,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:44:18.860387",
-          "idle_minutes": 12615.9
+          "idle_minutes": 12630.9
         }
       },
       {
@@ -22704,7 +22704,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:44:01.836321",
-          "idle_minutes": 12616.2
+          "idle_minutes": 12631.2
         }
       },
       {
@@ -22712,7 +22712,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:44:01.424646",
-          "idle_minutes": 12616.2
+          "idle_minutes": 12631.2
         }
       },
       {
@@ -22720,7 +22720,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:44:18.803234",
-          "idle_minutes": 12615.9
+          "idle_minutes": 12630.9
         }
       },
       {
@@ -22728,7 +22728,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:59:27.195202",
-          "idle_minutes": 12600.8
+          "idle_minutes": 12615.8
         }
       },
       {
@@ -22736,7 +22736,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:59:26.559693",
-          "idle_minutes": 12600.8
+          "idle_minutes": 12615.8
         }
       },
       {
@@ -22744,7 +22744,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:59:27.438451",
-          "idle_minutes": 12600.8
+          "idle_minutes": 12615.8
         }
       },
       {
@@ -22752,7 +22752,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:59:27.517090",
-          "idle_minutes": 12600.8
+          "idle_minutes": 12615.8
         }
       },
       {
@@ -22760,7 +22760,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:59:27.025421",
-          "idle_minutes": 12600.8
+          "idle_minutes": 12615.8
         }
       },
       {
@@ -22768,7 +22768,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:59:27.473328",
-          "idle_minutes": 12600.8
+          "idle_minutes": 12615.8
         }
       },
       {
@@ -22776,7 +22776,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:59:08.076035",
-          "idle_minutes": 12601.1
+          "idle_minutes": 12616.1
         }
       },
       {
@@ -22784,7 +22784,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:59:07.943667",
-          "idle_minutes": 12601.1
+          "idle_minutes": 12616.1
         }
       },
       {
@@ -22792,7 +22792,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:59:07.780826",
-          "idle_minutes": 12601.1
+          "idle_minutes": 12616.1
         }
       },
       {
@@ -22800,7 +22800,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:59:09.103817",
-          "idle_minutes": 12601.1
+          "idle_minutes": 12616.1
         }
       },
       {
@@ -22808,7 +22808,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:59:08.238577",
-          "idle_minutes": 12601.1
+          "idle_minutes": 12616.1
         }
       },
       {
@@ -22816,7 +22816,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:59:08.155707",
-          "idle_minutes": 12601.1
+          "idle_minutes": 12616.1
         }
       },
       {
@@ -22824,7 +22824,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:34:15.425538",
-          "idle_minutes": 12626.0
+          "idle_minutes": 12641.0
         }
       },
       {
@@ -22832,7 +22832,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:34:14.904853",
-          "idle_minutes": 12626.0
+          "idle_minutes": 12641.0
         }
       },
       {
@@ -22840,7 +22840,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:34:16.250587",
-          "idle_minutes": 12626.0
+          "idle_minutes": 12641.0
         }
       },
       {
@@ -22848,7 +22848,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:34:15.970637",
-          "idle_minutes": 12626.0
+          "idle_minutes": 12641.0
         }
       },
       {
@@ -22856,7 +22856,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:34:45.858469",
-          "idle_minutes": 12625.5
+          "idle_minutes": 12640.5
         }
       },
       {
@@ -22864,7 +22864,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:44:27.177686",
-          "idle_minutes": 12615.8
+          "idle_minutes": 12630.8
         }
       },
       {
@@ -22872,7 +22872,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:34:43.168082",
-          "idle_minutes": 12625.5
+          "idle_minutes": 12640.5
         }
       },
       {
@@ -22880,7 +22880,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:34:42.313338",
-          "idle_minutes": 12625.5
+          "idle_minutes": 12640.5
         }
       },
       {
@@ -22888,7 +22888,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:44:43.737326",
-          "idle_minutes": 12615.5
+          "idle_minutes": 12630.5
         }
       },
       {
@@ -22896,7 +22896,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-24T03:48:58.246035",
-          "idle_minutes": 10271.3
+          "idle_minutes": 10286.3
         }
       },
       {
@@ -22904,7 +22904,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-23T19:45:41.538166",
-          "idle_minutes": 10754.6
+          "idle_minutes": 10769.5
         }
       },
       {
@@ -22912,7 +22912,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-24T12:48:58.138633",
-          "idle_minutes": 9731.3
+          "idle_minutes": 9746.3
         }
       },
       {
@@ -22920,7 +22920,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-25T23:48:40.892484",
-          "idle_minutes": 7631.6
+          "idle_minutes": 7646.6
         }
       },
       {
@@ -22928,7 +22928,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-28T18:55:42.697594",
-          "idle_minutes": 3604.5
+          "idle_minutes": 3619.5
         }
       },
       {
@@ -22936,7 +22936,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-24T22:50:19.193733",
-          "idle_minutes": 9129.9
+          "idle_minutes": 9144.9
         }
       },
       {
@@ -22944,7 +22944,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-24T23:50:33.625613",
-          "idle_minutes": 9069.7
+          "idle_minutes": 9084.7
         }
       },
       {
@@ -22952,7 +22952,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-25T01:50:37.575635",
-          "idle_minutes": 8949.6
+          "idle_minutes": 8964.6
         }
       },
       {
@@ -22960,7 +22960,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:56:58.623150",
-          "idle_minutes": 12603.3
+          "idle_minutes": 12618.3
         }
       },
       {
@@ -22968,7 +22968,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-22T12:59:15.283610",
-          "idle_minutes": 12601.0
+          "idle_minutes": 12616.0
         }
       },
       {
@@ -22976,7 +22976,7 @@
         "heartbeat": {
           "ok": false,
           "last_at": "2026-10-21T02:32:58.912566",
-          "idle_minutes": 14667.3
+          "idle_minutes": 14682.3
         }
       }
     ],
